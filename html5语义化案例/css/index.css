@@ -1,0 +1,55 @@
+* {
+    font-family: Arial;
+    box-sizing: border-box;
+}
+
+.paper {
+    width: 750px;
+    margin: 80px auto;
+    border: 1px solid #e2e2e2;
+    overflow: hidden;
+    border-left: 25px solid #fb6b2b;
+}
+
+header {
+    float: left;
+    background: #222;
+    color: #fff;
+    padding: 40px;
+    padding-bottom: 99999px;
+    margin-bottom: -99999px;
+
+}
+
+figure {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #fb6b2b;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h2 {
+    color: #bb9200;
+}
+
+header h3 {
+    color: #bb9200;
+    font-size: 24px;
+}
+
+.contract ul {
+    padding: 0;
+}
+
+.contract li {
+    margin: 15px 0;
+    list-style: none;
+}
+article{
+    padding: 20px 40px 40px 322px;
+}

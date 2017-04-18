@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一号店首页</title>
+    <script src="js/jquery-1.6.min.js"></script>
+    <script src="js/myJs.js"></script>
+    <link rel="stylesheet" href="css/yihao.css">
+    <link rel="stylesheet" href="js/style.css">
+
+</head>
+<body>
+<div class="page">
+    <div class="header">
+        <div class="title">
+            <div class="login"><span id="place">Hi,请</span><a href="#" style="color: blue;">登录/注册</a></div>
+            <div class="nav">
+                <ul class="menu">
+                    <li><a href="#">我的一号店
+                        <lable id="one"></lable>
+                        <lable id="xian">|</lable>
+                        <ul class="menu2">
+                            <li><a href="#">我的订单</a></li>
+                            <li><a href="#">我的积分</a></li>
+                            <li><a href="#">我的红包</a></li>
+                            <li><a href="#">我的抵用券</a></li>
+                            <li><a href="#">我的评论</a></li>
+                            <li><a href="#">会员专享</a></li>
+                        </ul>
+                    </a>
+                    </li>
+                    <li><a href="#">收藏夹
+                        <lable id="one"></lable>
+                        <lable id="xian">|</lable>
+                        <ul class="menu2">
+                            <li><a href="#">商品收藏</a></li>
+                            <li><a href="#">店铺收藏</a></li>
+
+                        </ul>
+                    </a></li>
+                    <li><a href="#">掌上一号店
+                        <lable id="one"></lable>
+                        <lable id="xian">|</lable>
+                        <ul class="menu2">
+                            <li><a href="#">包裹追踪</a></li>
+
+                        </ul>
+                    </a>
+                    </li>
+                    <li><a href="#">企业采购
+                        <lable id="one"></lable>
+                        <lable id="xian">|</lable>
+                        <ul class="menu2">
+                            <li><a href="#">礼品卡</a></li>
+                            <li><a href="#">分销平台</a></li>
+                        </ul>
+                    </a>
+                    </li>
+                    <li><a href="#">客户服务
+                        <lable id="one"></lable>
+                        <lable id="xian">|</lable>
+                    </a>
+                        <ul class="menu2">
+                            <li><a href="#">包裹追踪</a></li>
+                            <li><a href="#">常见问题</a></li>
+                            <li><a href="#">在线投诉</a></li>
+                            <li><a href="#">配送范围</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">网站导航
+                        <lable id="one"></lable>
+                        <lable id="xian">|</lable>
+                    </a>
+                    </li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">
+                        <lable class="weibo"></lable>
+                    </a></li>
+                    <li><a href="#">
+                        <lable class="weixin"></lable>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="logo">
+            <div class="logo-left">
+                <a href="#"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="logo-right">
+                <form method="post" name="f2">
+                    <!--原始版本-->
+                    <!-- <table style=" width: 350px;" border="0">
+                         <tr>
+                             <td id="goods"><input type="button" value="商品"></td>
+                             <td id="search"><input type="text" placeholder="请输入关键字" name="search"></td>
+                             <td id="res"><input
+                                     type="button" value="搜索" name="res"></td>
+                         </tr>
+                     </table>-->
+                    <div style=" width: 341px; height:30px; border: 2px solid red;">
+                        <div style="float: left; border-right: 1px solid lightgray;">
+                            <select name="goods" id="good"
+                                    style="height: 30px; width: 80px; border: 0px;">
+                                <option value="1">商品</option>
+                                <option value="1">店铺</option>
+                            </select></div>
+                        <div style="float: left; ">
+                            <input type="text" placeholder="请输入关键字"
+                                   style="height: 30px; width: 180px; border: 0px; "></div>
+                        <div style="float: left; ">
+                            <input type="button" value="搜索"
+                                   style="height: 30px; width: 80px; border: 0px;background-color: red; color: white;">
+                        </div>
+                    </div>
+                    <p>
+                        <span><a href="#">毛巾</a></span>
+                        <span><a href="#">卫生纸</a></span>
+                        <span><a href="#">电池</a></span>
+                        <span><a href="#">洗发露</a></span>
+                        <span><a href="#">衣服</a></span>
+                        <span><a href="#">鞋子</a></span>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <div class="bannerbot">
+            <!--所有商品分类-->
+            <div class="banner-title">
+                <div style="height: 40px; position: relative; width: 100%;">
+                    <div class="wapper">
+                        <!--所有商品分类div高度-->
+                        <div class="top_3_left" style="width:100%;height: 32px; ">
+
+                            <a href="#"
+                               style=" padding-left: 50px;height: 22px;line-height: 40px; display: block; color: white;font-weight: bold; ">所有商品分类</a>
+                            <lable id="logo-title"><img src="img/xiajiantou.jpg" alt=""
+                                                        style="background-color: #fe3c3c;"></lable>
+                            <div class="side">
+
+                                <div class="side_list">
+                                    <h3 class="dao_01" style="margin-left: 0px;">
+                                        <lable id="food"></lable>
+                                        <a title="进口食品、生鲜" href="http://down.admin5.com">进口食品、生鲜、海购
+                                            <span>></span></a>
+                                    </h3>
+
+                                    <div class="side_list_con" style="width: 240px; display: none;">
+                                        <dl>
+                                            <dt class="dt666">
+                                                <a title="进口食品、生鲜、海购" href="http://down.admin5.com">进口食品、生鲜、海购</a></dt>
+                                            <dd class="ddd">
+                                                <a title="服装" href="http://down.admin5.com">服装</a>
+                                                <a title="鞋帽箱包" href="http://down.admin5.com">鞋帽箱包</a>
+                                                <a title="户外用品" href="http://down.admin5.com">户外用品</a>
+                                                <a title="饰品装饰" href="http://down.admin5.com">饰品装饰</a>
+                                                <a title="美容护肤" href="http://down.admin5.com">美容护肤</a>
+
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                </div>
+
+                                <div class="side_list">
+                                    <h3 class="dao_02">
+                                        <lable id="food2"></lable>
+                                        <a title="食品、饮料、酒" href="http://down.admin5.com">食品、饮料、酒<span>></span></a>
+                                    </h3>
+
+                                    <div class="side_list_con" style="width: 240px;">
+                                        <dl>
+                                            <dt class="dt666">
+
+                                                <a title="食品、饮料、酒" href="http://down.admin5.com">食品、饮料、酒</a></dt>
+                                            <dd class="ddd">
+                                                <a title="五金" href="http://down.admin5.com">五金</a>
+                                                <a title="门窗照明" href="http://down.admin5.com">门窗照明</a>
+                                                <a title="汽车汽配" href="http://down.admin5.com">汽车汽配</a>
+                                                <a title="电子电工" href="http://down.admin5.com">电子电工</a>
+                                                <a title="机械设备" href="http://down.admin5.com">机械设备</a>
+                                                <a title="仪器器材" href="http://down.admin5.com">仪器器材</a>
+                                                <a title="安防监控" href="http://down.admin5.com">安防监控</a>
+
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                </div>
+
+                                <div class="side_list">
+                                    <h3 class="dao_03">
+                                        <lable id="food3"></lable>
+                                        <a title="母婴、玩具、童装" href="http://down.admin5.com">母婴、玩具、童装<span>></span></a>
+                                    </h3>
+
+                                    <div class="side_list_con" style="width: 240px;">
+                                        <dl>
+                                            <dt class="dt666">
+                                                <a title="母婴、玩具、童装" href="http://down.admin5.com">母婴、玩具、童装</a></dt>
+                                            <dd class="ddd">
+                                                <a title="建筑建材" href="http://down.admin5.com">建筑建材</a>
+                                                <a title="纺织辅料" href="http://down.admin5.com">纺织辅料</a>
+                                                <a title="化工涂料" href="http://down.admin5.com">化工涂料</a>
+                                                <a title="橡胶塑料" href="http://down.admin5.com">橡胶塑料</a>
+                                                <a title="环保回收" href="http://down.admin5.com">环保回收</a>
+                                                <a title="农业畜牧" href="http://down.admin5.com">农业畜牧</a>
+                                                <a title="生物科技" href="http://down.admin5.com">生物科技</a>
+
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                </div>
+
+                                <div class="side_list">
+                                    <h3 class="dao_04">
+                                        <lable id="food4"></lable>
+                                        <a title="厨卫清洁、纸、清洁剂" href="http://down.admin5.com">厨卫清洁、纸、清洁剂<span>></span></a>
+                                    </h3>
+
+                                    <div class="side_list_con" style="width: 240px;">
+                                        <dl>
+                                            <dt class="dt666">
+                                                <a title="厨卫清洁、纸、清洁剂" href="http://down.admin5.com">厨卫清洁、纸、清洁剂</a></dt>
+                                            <dd class="ddd">
+                                                <a title="手机数码" href="http://down.admin5.com">手机数码</a>
+                                                <a title="电脑" href="http://down.admin5.com">电脑</a>
+                                                <a title="电器" href="http://down.admin5.com">电器</a>
+                                                <a title="家私家具" href="http://down.admin5.com">家私家具</a>
+                                                <a title="家居家纺" href="http://down.admin5.com">家居家纺</a>
+                                                <a title="日用百货" href="http://down.admin5.com">日用百货</a>
+
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                </div>
+
+                                <div class="side_list">
+                                    <h3 class="dao_05">
+                                        <lable id="food5"></lable>
+                                        <a title="家具、家装、宠物" href="http://down.admin5.com">家具、家装、宠物<span>></span></a>
+                                    </h3>
+
+                                    <div class="side_list_con" style="width: 240px;">
+                                        <dl>
+                                            <dt class="dt666">
+                                                <a title="家具、家装、宠物" href="http://down.admin5.com">家具、家装、宠物</a></dt>
+                                            <dd class="ddd">
+                                                <a title="食品饮料" href="http://down.admin5.com">食品饮料</a>
+                                                <a title="蔬果" href="http://down.admin5.com">蔬果</a>
+                                                <a title="茶叶茶具" href="http://down.admin5.com">茶叶茶具</a>
+                                                <a title="酒类" href="http://down.admin5.com">酒类</a>
+                                                <a title="养生保健" href="http://down.admin5.com">养生保健</a>
+
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                </div>
+
+                                <div class="side_list">
+                                    <h3 class="dao_06">
+                                        <lable id="food6"></lable>
+                                        <a title="美妆、个人护理、洗护" href="http://down.admin5.com">美妆、个人护理、洗护<span>></span></a>
+                                    </h3>
+
+                                    <div class="side_list_con" style="width: 240px;">
+                                        <dl>
+                                            <dt class="dt666">
+                                                <a title="美妆、个人护理、洗护" href="http://down.admin5.com">美妆、个人护理、洗护</a></dt>
+                                            <dd class="ddd">
+                                                <a title="礼品" href="http://down.admin5.com">礼品</a>
+                                                <a title="玩具乐器" href="http://down.admin5.com">玩具乐器</a>
+                                                <a title="文具" href="http://down.admin5.com">文具</a>
+                                                <a title="小商品" href="http://down.admin5.com">小商品</a>
+
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                </div>
+
+                                <div class="side_list">
+                                    <h3 class="dao_07">
+                                        <lable id="food7"></lable>
+                                        <a title="女装内衣、男装、珠宝" href="http://down.admin5.com">女装内衣、男装、珠宝<span>></span></a>
+                                    </h3>
+
+                                    <div class="side_list_con" style="width: 240px;">
+                                        <dl>
+                                            <dt class="dt666">
+                                                <a title="女装内衣、男装、珠宝" href="http://down.admin5.com">女装内衣、男装、珠宝</a></dt>
+                                            <dd class="ddd">
+                                                <a title="鲜花绿植" href="http://down.admin5.com">鲜花绿植</a>
+                                                <a title="婚庆" href="http://down.admin5.com">婚庆</a>
+                                                <a title="摄影" href="http://down.admin5.com">摄影</a>
+                                                <a title="宠物" href="http://down.admin5.com">宠物</a>
+                                                <a title="装修装潢" href="http://down.admin5.com">装修装潢</a>
+                                                <a title="生活服务" href="http://down.admin5.com">生活服务</a>
+
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                </div>
+
+                                <div class="side_list">
+                                    <h3 class="dao_08">
+                                        <lable id="food8"></lable>
+                                        <a title="鞋靴、箱包、运动户外" href="http://down.admin5.com">鞋靴、箱包、运动户外<span>></span></a>
+                                    </h3>
+
+                                    <div class="side_list_con" style="width: 240px;">
+                                        <dl>
+                                            <dt class="dt666">
+                                                <a title="鞋靴、箱包、运动户外" href="http://down.admin5.com">鞋靴、箱包、运动户外</a></dt>
+                                            <dd class="ddd">
+                                                <a title="餐饮美食" href="http://down.admin5.com">餐饮美食</a>
+                                                <a title="酒店会所" href="http://down.admin5.com">酒店会所</a>
+                                                <a title="旅游服务" href="http://down.admin5.com">旅游服务</a>
+
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                </div>
+
+                                <div class="side_list">
+                                    <h3 class="dao_09">
+                                        <lable id="food9"></lable>
+                                        <a title="手机、数码、电脑办公" href="http://down.admin5.com">手机、数码、电脑办公<span>></span></a>
+                                    </h3>
+
+                                    <div class="side_list_con" style="width: 240px;">
+                                        <dl>
+                                            <dt class="dt666">
+                                                <a title="手机、数码、电脑办公" href="http://down.admin5.com">手机、数码、电脑办公</a></dt>
+                                            <dd class="ddd">
+                                                <a title="金融保险" href="http://down.admin5.com">金融保险</a>
+                                                <a title="贸易" href="http://down.admin5.com">贸易</a>
+                                                <a title="物流" href="http://down.admin5.com">物流</a>
+                                                <a title="房地产" href="http://down.admin5.com">房地产</a>
+                                                <a title="工商服务" href="http://down.admin5.com">工商服务</a>
+                                                <a title="人力资源" href="http://down.admin5.com">人力资源</a>
+                                                <a title="法律服务" href="http://down.admin5.com">法律服务</a>
+
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                </div>
+
+                                <div class="side_list">
+                                    <h3 class="dao_10">
+                                        <lable id="food10"></lable>
+                                        <a title="大家电、小家电、汽车" href="http://down.admin5.com">大家电、小家电、汽车<span>></span></a>
+                                    </h3>
+
+                                    <div class="side_list_con" style="width: 240px;">
+                                        <dl>
+                                            <dt class="dt666">
+                                                <a title="大家电、小家电、汽车" href="http://down.admin5.com">大家电、小家电、汽车</a></dt>
+                                            <dd class="ddd">
+                                                <a title="文化传媒" href="http://down.admin5.com">文化传媒</a>
+                                                <a title="广告" href="http://down.admin5.com">广告</a>
+                                                <a title="印刷包装" href="http://down.admin5.com">印刷包装</a>
+                                                <a title="展览设计" href="http://down.admin5.com">展览设计</a>
+                                                <a title="园林设计" href="http://down.admin5.com">园林设计</a>
+
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                </div>
+
+                                <div class="side_list">
+                                    <h3 class="dao_11">
+                                        <lable id="food11"></lable>
+                                        <a title="保健滋补、医药、成人" href="http://down.admin5.com">保健滋补、医药、成人<span>></span></a>
+                                    </h3>
+
+                                    <div class="side_list_con" style="width: 240px;">
+                                        <dl>
+                                            <dt class="dt666">
+                                                <a title="保健滋补、医药、成人" href="http://down.admin5.com">保健滋补、医药、成人</a></dt>
+                                            <dd class="ddd">
+                                                <a title="学校" href="http://down.admin5.com">学校</a>
+                                                <a title="教育培训" href="http://down.admin5.com">教育培训</a>
+                                                <a title="政府" href="http://down.admin5.com">政府</a>
+                                                <a title="机构组织" href="http://down.admin5.com">机构组织</a>
+                                                <a title="医院/制药" href="http://down.admin5.com">医院/制药</a>
+
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                </div>
+
+                                <div class="side_list">
+                                    <h3 class="dao_12">
+                                        <lable id="food12"></lable>
+                                        <a title="礼品卡、旅游、图书" href="http://down.admin5.com">礼品卡、旅游、图书<span>></span></a>
+                                    </h3>
+
+                                    <div class="side_list_con" style="width: 240px;">
+                                        <dl>
+                                            <dt class="dt666">
+                                                <a title="礼品卡、旅游、图书" href="http://down.admin5.com">礼品卡、旅游、图书</a></dt>
+                                            <dd class="ddd">
+                                                <a title="IT" href="http://down.admin5.com">IT</a>
+                                                <a title="在线商城" href="http://down.admin5.com">在线商城</a>
+                                                <a title="行业门户" href="http://down.admin5.com">行业门户</a>
+
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top_3_right">
+                            <div class="menu"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--ul实现二级菜单效果没有鼠标移入效果-->
+            <!--<div demo="banner-title">
+                <ul>
+                    <li><a href="#">所有商品分类</a>
+                        <lable id="logo-title"><img src="img/xiajiantou.jpg" alt=""></lable>
+                        <ul demo="menu3">
+                            <li>
+                                <lable id="food"></lable>
+                                <a href="#">
+                                    进口食品、生鲜 <span>&nbsp;&nbsp;  ></span></a></li>
+                            <li>
+                                <lable id="food2"></lable>
+                                <a href="#">食品、饮料、酒<span>&nbsp;&nbsp;&nbsp;></span></a></li>
+                            <li>
+                                <lable id="food3"></lable>
+                                <a href="#">母婴、玩具、童装<span>&nbsp;&nbsp;></span></a></li>
+                            <li>
+                                <lable id="food4"></lable>
+                                <a href="#">家具、家庭清洁、纸品<span>></span></a></li>
+                            <li>
+                                <lable id="food5"></lable>
+                                <a href="#">美妆、个人护理、洗护<span>></span></a></li>
+                            <li>
+                                <lable id="food6"></lable>
+                                <a href="#">女装、内衣、中老年<span>&nbsp;></span></a></li>
+                            <li>
+                                <lable id="food7"></lable>
+                                <a href="#">鞋靴、箱包、腕表配饰<span>></span></a></li>
+                            <li>
+                                <lable id="food8"></lable>
+                                <a href="#">男装、户外、户外健身<span>></span></a></li>
+                            <li>
+                                <lable id="food9"></lable>
+                                <a href="#">手机、数码、电脑办公<span>></span></a></li>
+                            <li>
+                                <lable id="food10"></lable>
+                                <a href="#">小家电、大家电、汽车<span>></span></a></li>
+                            <li>
+                                <lable id="food11"></lable>
+                                <a href="#">保健滋补、医药、成人<span>></span></a></li>
+                            <li>
+                                <lable id="food12"></lable>
+                                <a href="#">礼品、旅游、充值<span>&nbsp;&nbsp;></span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>-->
+
+            <!--导航-->
+            <div class="banner-mainnav">
+                <ul>
+                    <li><a href="#"><span>首页</span></a></li>
+                    <li><a href="#"><span>自营</span></a></li>
+                    <li><a href="#"><span>1号团</span></a></li>
+                    <li><a href="#">1号商城</a></li>
+                    <li><a href="#">闪购</a></li>
+                    <li><a href="#">活色生鲜</a></li>
+                    <li><a href="#">医药</a></li>
+                    <li><a href="#">1号钱包</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <!--主宣传海报-->
+        <div class="ban-left">
+            <!--海报轮播效果按钮-->
+            <ul>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <!--右边表单-->
+        <div class="ban-right">
+            <div class="pic">
+                <div><img src="img/1.jpg" alt="">
+                    <p><a href="#">0元试用</a></p></div>
+                <div><img src="img/2.jpg" alt="">
+                    <p><a href="#">会员俱乐部</a></p></div>
+                <div><img src="img/3.jpg" alt="">
+                    <p><a href="#">礼品卡</a></p></div>
+            </div>
+            <hr class="unline">
+            <div class="contain-search">
+                <table>
+                    <tr>
+                        <td><a href="#"><span>【社区】</span>当红明星教你送七夕情人礼！</a></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><span>【社区】</span>全球口碑姨妈巾都在这儿！</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><span>【促销】</span>V3会员甜蜜免费领！</a></td>
+                    </tr>
+                </table>
+            </div>
+            <!--<hr>-->
+            <!--<div demo="btnuser">
+                <table>
+                    <tr>
+                        <td><a href="#">话费充值</a></td>
+                        <td><a href="#">彩票</a></td>
+                        <td><a href="#">网游点卡</a></td>
+                    </tr>
+                </table>
+            </div>-->
+            <!--<div demo="chongzhi">
+                <form action="" method="post" name="f4">
+                    <table border="0">
+                        <tr>
+                            <td demo="phone">手机号码：</td>
+                            <td demo="phone-cont"><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td demo="phone">面值：</td>
+                            <td><select name="mianzhi" id="mainzhi">
+                                <option value="1">&yen;10.00</option>
+                                <option value="2">&yen;20.00</option>
+                                <option value="3">&yen;50.00</option>
+                                <option value="4">&yen;80.00</option>
+                                <option value="5">&yen;100.00</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td demo="phone">售价：</td>
+                            <td><span>&yen;10.14</span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="button" value="立即充值" id="btnchonzhi"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>-->
+            <!--充值彩票等业务-->
+            <div id="tab">
+                <div class="tablist">
+                    <ul>
+                        <li class="cur"><span>话费充值</span></li>
+                        <li><span>彩票</span></li>
+                        <li><span>网游点卡</span></li>
+                    </ul>
+                </div>
+                <div class="tabcon">
+                    <div class="cur" style="display: block;">
+                        <table>
+                            <tr>
+                                <td class="hanzi">手机号码：</td>
+                                <td><input type="text" style="width: 150px;" placeholder="请输入手机号码"></td>
+                            </tr>
+                            <tr>
+                                <td class="hanzi"> 面值：</td>
+                                <td><select name="" id="sec" style=" width: 150px;">
+                                    <option value="1">&yen;10</option>
+                                    <option value="1">&yen;20</option>
+                                    <option value="1">&yen;40</option>
+                                    <option value="1">&yen;100</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td class="hanzi">售价：</td>
+                                <td><span>&yen;10.14</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="now"><input type="submit" value="立即充值"></td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div id="caipiao" style="display: none;">
+                        <table border="0">
+                            <!--<p style="margin-top: 10px; margin-left: 10px;"><a href="#"
+                                                                               style=" text-decoration: none">大乐透</a><a
+                                    href="#" style=" text-decoration: none;margin-left: 20px;">大乐透</a><a href="#"
+                                                                                                         style=" text-decoration: none;margin-left: 20px;">大乐透</a>
+                            </p>
+                            <p style="margin-left: 10px; margin-top: 10px;"><a href="#"
+                                                                               style=" text-decoration: none">大乐透</a><a
+                                    href="#" style=" text-decoration: none;margin-left: 20px;">大乐透</a><a
+                                    href="#" style=" text-decoration: none; margin-left: 20px;">大乐透</a></p>-->
+                            <tr>
+                                <td><a href="#">大乐透</a></td>
+                                <td><a href="#">七乐彩</a></td>
+                                <td><a href="#">15选5</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">竞彩足球</a></td>
+                                <td><a href="#">竞彩篮球</a></td>
+                                <td><a href="#">竞彩篮球</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="dianka" style="display: none">
+                        <table border="0">
+                            <tr>
+                                <td>游戏：</td>
+                                <td><select name="game" id="game">
+                                    <option value="1">Q币</option>
+                                    <option value="1">QQ会员</option>
+                                    <option value="1">QQ绿钻</option>
+                                    <option value="1">QQ黄钻</option>
+                                    <option value="1">QQ紫钻</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td>面额：</td>
+                                <td><select name="num" id="num">
+                                    <option value="2">5个</option>
+                                    <option value="2">10个</option>
+                                    <option value="2">15个</option>
+                                    <option value="2">20个</option>
+                                    <option value="2">25个</option>
+                                    <option value="2">30个</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td>售价：</td>
+                                <td><span>&yen;96.56</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="now"><input type="submit" value="立即充值"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--充值结束-->
+        </div>
+    </div>
+    <!--食品饮料标题-->
+    <div class="container-title">
+        <div class="food-drink">食品饮料</div>
+        <div class="otherfood">
+            <ul>
+                <li><a href="#">咖啡&nbsp;|</a></li>
+
+                <li><a href="#">休闲零食&nbsp;|</a></li>
+
+                <li><a href="#">饼干糕点&nbsp;|</a></li>
+
+                <li><a href="#">啤酒&nbsp;|</a></li>
+
+                <li><a href="#">粮油米面</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--食品饮料内容-->
+    <div class="container">
+        <div class="drink">
+            <div class="drink-left">
+                <div class="drink-msg">
+                    <table border="0">
+                        <tr>
+                            <td><a href="#">饼干糕点</a></td>
+                            <td><a href="#">休闲零食</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">饮料果汁</a></td>
+                            <td><a href="#">牛奶乳品</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">冲饮谷物</a></td>
+                            <td><a href="#">营养保健</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="drink-banner"><p id="bannerone">banner</p>
+                    <p>banner</p></div>
+                <div class="drink-pic"><img src="img/sec1.jpg" alt=""></div>
+            </div>
+            <div class="sec1-1"><a href="#"><img src="img/sec1-1.jpg" alt=""></a>
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+            <div class="chihuo">
+                <div class="chihuo-one"><a href="#"><p>吃货天堂</p>
+                    <p class="man">满49减10</p><img src="img/sec1-2.jpg" alt=""></a></div>
+                <div class="cihuo-two"><a href="#"><p>1号酒窖</p>
+                    <p class="man">百威哈啤酒两件七折</p><img src="img/sec1-3.jpg" alt=""></a></div>
+            </div>
+            <div class="year"><a href="#"><p>夏季美食嘉年华</p>
+                <p class="qiang">粮油1元抢；爆款5折起</p><img src="img/sec1-4.jpg" alt=""></a></div>
+            <div class="yinliao">
+                <div class="chihuo-three"><a href="#"><p>饮料饮品</p>
+                    <p class="man">爆款满99减25</p><img src="img/sec1-5.jpg" alt=""></a></div>
+                <div class="cihuo-three"><a href="#"><p>甜蜜蜜七夕好礼</p>
+                    <p class="man">燕窝买一送一</p><img src="img/sec1-6.jpg" alt=""></a></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-title">
+        <div class="per-cook">个人厨卫</div>
+        <div class="otherfood">
+            <ul>
+                <li><a href="#">面部防晒&nbsp;|</a></li>
+
+                <li><a href="#">沐浴清洁&nbsp;|</a></li>
+
+                <li><a href="#">纸巾&nbsp;|</a></li>
+
+                <li><a href="#">洗衣液&nbsp;|</a></li>
+
+                <li><a href="#">驱蚊神器</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--个人厨卫内容-->
+    <div class="person">
+        <div class="person-main">
+            <div class="per-left">
+                <!--左上方内容汉字-->
+                <div class="per-table">
+                    <table border="0">
+                        <tr>
+                            <td><a href="#">洗发护发</a></td>
+                            <td><a href="#">脱毛膏/贴</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">牙膏牙刷</a></td>
+                            <td><a href="#">抽纸</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">消毒液</a></td>
+                            <td><a href="#">保鲜膜</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="per">
+                    <div class="per-yueliang"><a href="#"><p class="per-yueliang-shendian">蓝月亮洁净盛典</p>
+                        <p class="per-yueliang-wuzhe">热销商品5折起</p><img src="img/sec1-7.jpg" alt=""></a></div>
+                    <div class="per-yueliang-two"><a href="#"><p class="per-yueliang-shendian">妮飘满99减25</p>
+                        <p class="per-yueliang-wuzhe">与你的浪漫七夕</p><img src="img/sec1-17.jpg" alt=""
+                                                                      style="margin-top: 50px;"></a></div>
+                </div>
+            </div>
+            <!--左上第二张图-->
+            <div class="per-left2">
+                <div class="per-img"><a href="#"><img src="img/sec1-8.jpg" alt=""></a>
+                    <ul>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="per-img2">
+                    <div class="per-dazao"><a href="#"><p>逼格生活由我打造</p>
+                        <p class="per-dazao-new">新品上新</p>
+                        <p class="per-dazao-jiawu">品质生活轻松家务</p></a></div>
+                    <div class="per-img3"><img src="img/sec1-16.jpg" alt=""></div>
+                </div>
+            </div>
+            <!--第三张图片-->
+            <div class="per-pingbai">
+                <div class="per-pingbai-one"><p><A HREF="#">自营纸质品牌团</A></p>
+                    <p class="per-pingbai-tuan"><a href="#">团购疯抢中</a></p><img src="img/sec1-9.jpg" alt=""></div>
+                <div class="per-pingbai-one"><p><a href="#">自营衣物洗护团</a></p>
+                    <p class="per-pingbai-tuan"><a href="#">爆款5折起</a></p><img src="img/sec1-10.jpg" alt=""></div>
+                <div><p><a href="#">自营家庭清洁品牌团</a></p>
+                    <p class="per-pingbai-tuan"><a href="#">爆款团购2.3折起</a></p><img src="img/sec1-15.jpg" alt=""></div>
+            </div>
+            <!--第四列内容-->
+            <div class="per-four">
+                <div class="per-pingbai-one"><p><a href="#">自营美容护理</a></p>
+                    <p class="per-pingbai-tuan"><a href="#">8.18爆款一贵就赔</a></p><img src="img/sec1-11.jpg" alt=""></div>
+                <div><p><a href="#">自营女性护理</a></p>
+                    <p class="per-pingbai-tuan"><a href="#">更多商品第二件2折</a></p><img src="img/sec1-14.jpg" alt=""></div>
+            </div>
+            <!--第五列内容-->
+            <div class="per-five">
+                <div class="per-pingbai-one"><p><a href="#">自营口腔护理</a></p>
+                    <p class="per-pingbai-tuan"><a href="#">更多商品第二件2折</a></p><img src="img/sec1-12.jpg" alt=""></div>
+                <div><p><a href="#">自营洗发护发</a></p>
+                    <p class="per-pingbai-tuan"><a href="#">更多商品第二件2折</a></p><img src="img/sec1-13.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <!--结尾处理-->
+    <div class="footer">
+        <div class="help">
+            <ul>
+                <li><a href="#">关于1号店 |</a></li>
+
+                <li><a href="#">我们的团队 |</a></li>
+
+                <li><a href="#">网站联盟 |</a></li>
+
+                <li><a href="#">热门搜索 |</a></li>
+
+                <li><a href="#">友情链接 |</a></li>
+
+                <li><a href="#">1号店社区 |</a></li>
+
+                <li><a href="#">诚征英才 |</a></li>
+
+                <li><a href="#">商家登录 |</a></li>
+
+                <li><a href="#">供应商登录 |</a></li>
+
+                <li><a href="#">放心搜 |</a></li>
+
+                <li><a href="#">1号店新品 |</a></li>
+
+                <li><a href="#">开放平台</a></li>
+
+            </ul>
+        </div>
+        <div class="zhizhao">
+            <ul>
+                <li><a href="#"> 沪ICP备13044278号 | </a></li>
+                <li><a href="#"> &nbsp;合字B1.B2-20130004 | </a></li>
+                <li><a href="#">&nbsp;营业执照 | </a></li>
+                <li><a href="#">&nbsp;互联网药品信息服务资格证 | </a></li>
+                <li><a href="#">&nbsp;互联网药品交易服务资格证 </a></li>
+            </ul>
+        </div>
+        <div class="copy">
+            <ul>
+                <li><a href="#">Copyright&copy;1号店网上超市2007-2015，All Rights Reserved</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="application/javascript">
+    window.onload = function () {
+        /*<!--var odiv = document.getElementById("tab")-->
+         <!--var oli = odiv.getElementsByTagName("div")[0].getElementsByTagName("li")-->
+         <!--var acon = odiv.getElementsByTagName("div")[1].getElementsByTagName("div")-->
+         <!--var timer = null;-->
+         <!--for (var i = 0; i < oli.length; i++) {-->
+         <!--oli[i].index = i;-->
+         <!--oli[i].onmouseover = function () {-->
+         <!--show(this.index);-->
+         <!--}-->*/
+    }
+    /* <!--function show(a) {-->
+     <!--index = a;-->
+     <!--var alpha = 0;-->
+     <!--for (var j = 0; j < oli.length; j++) {-->
+     <!--oli[j].className = "";-->
+     <!--acon[j].classname = "";-->
+     <!--acon[j].style.opacity = 0;-->
+     <!--acon[j].style.filter = "alpha(opacity=0)";-->
+     <!--}-->
+     <!--oli[index].classname = "cur";-->
+     <!--clearInterval(timer);-->
+     <!--timer = setInterval(function () {-->
+     <!--alpha += 2;-->
+     <!--alpha > 100 && (alpha = 100);-->
+     <!--acon[index].style.opacity = alpha / 100;-->
+     <!--acon[index].style.filter = "alpha(opacity=" + alpha + ")";-->
+     <!--alpha == 100 && clearInterval(timer)-->
+     <!--}, 5)-->
+     <!--}-->*/
+    //    }
+</script>
+</body>
+</html>

@@ -1,0 +1,1518 @@
+/*初始化*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+
+}
+
+li a {
+    text-decoration: none;
+}
+
+.page {
+    /*width: 1366px;*/
+    width: 100%;
+    margin: 0 auto;
+    /*width: 1115px;*/
+    border: 1px solid gainsboro;
+    /*height: 1734px;*/
+}
+
+.header, .banner, .container, .footer {
+    width: 100%;
+    border: 1px solid ghostwhite;
+}
+
+.title {
+    width: 100%;
+    height: 30px;
+    background-color: ghostwhite;
+}
+
+#one {
+    display: block;
+    background: url("../img/indexhead_sprite.png") no-repeat;
+    border: 0px solid black;
+    width: 9px;
+    height: 10px;
+    line-height: 10px;
+    background-position: -288px -260px;
+    float: right;
+    margin-left: -5px;
+    margin-top: 5px;
+    position: relative;
+}
+
+#xian {
+    float: right;
+    display: block;
+    position: relative;
+    left: 13px;
+    margin-top: 5px;
+}
+
+#place {
+    font-size: 10px;
+}
+
+.page .header .title a {
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.page .header .title ul {
+    list-style: none;
+
+}
+
+.page .header .title ul li {
+    float: left;
+    text-align: center;
+}
+
+/*左边登录注册*/
+.page .header .title .login {
+    float: left;
+    margin-left: 100px;
+    padding-top: 5px;
+}
+
+/*右边菜单栏*/
+.page .header .title .nav {
+    float: left;
+    height: 50px;
+    margin-left: 600px;
+    padding-top: 5px;
+
+}
+
+/*每个li的距离设置*/
+.page .header .title .nav .menu li {
+    margin-left: 10px;
+    color: black;
+    /*width: 100px;*/
+    /*width: 100px;*/
+}
+
+.page .header .title .nav .menu li a {
+    color: black;
+
+}
+
+.page .header .title .nav .menu li a:hover {
+    color: red;
+}
+
+/*默认隐藏菜单*/
+.page .header .title .nav .menu li .menu2 {
+    display: none;
+    position: absolute;
+    width: 60px;
+    background-color: white;
+    padding-top: 15px;
+    float: left;
+
+}
+
+/*鼠标移入显示二级菜单*/
+.page .header .title .nav .menu li:hover .menu2 {
+    display: block;
+    width: 60px;
+    text-align: center;
+
+}
+
+/*二级菜单*/
+.page .header .title .nav .menu li:hover .menu2 li {
+    margin-top: 5px;
+    width: 60px;
+    text-align: center;
+    margin-left: 0;
+}
+
+.page .header .title .nav .menu li:hover .menu2 li a {
+    color: black;
+}
+
+.logo {
+    /*width:1115px;*/
+    width: 100%;
+    border: 0px solid black;
+    height: 110px;
+    /*background: yellow;*/
+    float: left;
+    margin: 0 auto;
+    text-align: center;
+    /*padding-left: 200px;*/
+    /*box-sizing: border-box;*/
+}
+
+.logo-left {
+    width: 88px;
+    height: 90px;
+    /*margin: 0 auto;*/
+    text-align: center;
+    margin-left: 100px;
+    /*  width: 100px;
+      height: 110px;*/
+    float: left;
+    /*text-align: left;*/
+    /*background: black;*/
+    /*line-height: 90px;*/
+    border: 0px solid black;
+}
+
+.logo .logo-left a {
+    width: 88px;
+    height: 110px;
+    margin: 0 auto;
+}
+
+.logo-right {
+    margin-left: 290px;
+    width: 600px;
+    height: 40px;
+    /*line-height: 30px;*/
+    float: left;
+    border: 0px solid black;
+}
+
+.logo-right table {
+    border: 3px solid red;
+    height: 30px;
+    /*background-color: red;*/
+}
+
+.logo-right table #goods input {
+    width: 80px;
+    height: 30px;
+    background-color: ghostwhite;
+    border: 0px;
+    border-right: 1px solid gainsboro;
+}
+
+#goods {
+    width: 80px;
+    text-align: center;
+}
+
+.logo-right #search {
+
+    width: 250px;
+    height: 30px;
+    /*margin-left: -8px;*/
+}
+
+.logo-right #search input {
+    height: 30px;
+    width: 300px;
+    border: 0px;
+}
+
+.logo-right #res {
+    width: 80px;
+    text-align: center;
+}
+
+.logo-right #res input {
+
+    width: 80px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    border: 0px;
+
+}
+
+/*热词排行*/
+.logo-right p {
+    float: left;
+    clear: both;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+
+}
+
+.logo-right p span a {
+    text-decoration: none;
+    color: gainsboro;
+}
+
+.logo-right p span a:hover {
+    color: red;
+}
+
+/*首页的导航栏盒子*/
+.bannerbot {
+    width: 100%;
+    height: 30px;
+    clear: both;
+    border: 0px solid black;
+}
+
+.bannerbot .banner-title {
+    cursor: pointer;
+    float: left;
+    /*margin-left: 100px;*/
+    margin-left: 82px;
+    height: 31px;
+    line-height: 31px;
+    background-color: #fe3c3c;
+    width: 250px;
+}
+
+.bannerbot .banner-title ul {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.bannerbot .banner-title ul li a {
+    color: white;
+}
+
+.bannerbot .banner-mainnav {
+    float: left;
+    margin-left: 100px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.bannerbot .banner-mainnav ul li {
+    float: left;
+}
+
+/*所有商品分类下箭头*/
+/*.bannerbot .banner-title #logo-title {
+    display: block;
+    background: url("../img/indexhead_sprite.png") no-repeat;
+    border: 0px solid black;
+    width: 10px;
+    height: 10px;
+    background-position: -100px -115px;
+    float: right;
+    margin-top: 10px;
+    padding-left: 15px;
+    border: 0px;
+    background-color: red;
+}*/
+
+/*所有商品分类背景设置*/
+*.bannerbot .banner-title #logo-title {
+    display: block;
+    float: right;
+    margin-right: 5px;
+    margin-top: -14px;
+    /*padding-top: 5px;*/
+}
+
+.bannerbot .banner-title ul li .menu3 {
+    display: none;
+    height: 400px;
+    text-align: left;
+}
+
+.bannerbot .banner-title ul li:hover .menu3 {
+    display: block;
+    background-color: darkred;
+    /*opacity: 0.5;*/
+}
+
+/*雪碧图定位*/
+#food {
+    display: block;
+    background: url("../img/nav.png") no-repeat;
+    border: 0px solid black;
+    width: 20px;
+    height: 20px;
+    background-position: 0px 0px;
+    float: left;
+    color: white;
+    margin-top: 5px;
+    margin-left: -33px;
+}
+
+#food2 {
+    display: block;
+    background: url("../img/nav.png") no-repeat;
+    border: 0px solid black;
+    width: 20px;
+    height: 20px;
+    background-position: 0px -47px;
+    float: left;
+    color: white;
+
+    margin-top: 5px;
+    margin-left: -33px;
+}
+
+#food3 {
+    display: block;
+    background: url("../img/nav.png") no-repeat;
+    border: 0px solid black;
+    width: 20px;
+    height: 20px;
+    background-position: 0px -90px;
+    float: left;
+    color: white;
+
+    margin-top: 5px;
+    margin-left: -33px;
+}
+
+#food4 {
+    display: block;
+    background: url("../img/nav.png") no-repeat;
+    border: 0px solid black;
+    width: 20px;
+    height: 20px;
+    background-position: 0px -133px;
+    float: left;
+    color: white;
+
+    margin-top: 5px;
+    margin-left: -33px;
+}
+
+#food5 {
+    display: block;
+    background: url("../img/nav.png") no-repeat;
+    border: 0px solid black;
+    width: 20px;
+    height: 20px;
+    background-position: 0px -170px;
+    float: left;
+    color: white;
+
+    margin-top: 5px;
+    margin-left: -33px;
+}
+
+#food6 {
+    display: block;
+    background: url("../img/nav.png") no-repeat;
+    border: 0px solid black;
+    width: 20px;
+    height: 20px;
+    background-position: 0px -210px;
+    float: left;
+    color: white;
+
+    margin-top: 5px;
+    margin-left: -33px;
+}
+
+#food7 {
+    display: block;
+    background: url("../img/nav.png") no-repeat;
+    border: 0px solid black;
+    width: 20px;
+    height: 20px;
+    background-position: 0px -250px;
+    float: left;
+    color: white;
+
+    margin-top: 5px;
+    margin-left: -33px;
+}
+
+#food8 {
+    display: block;
+    background: url("../img/nav.png") no-repeat;
+    border: 0px solid black;
+    width: 20px;
+    height: 20px;
+    background-position: 0px -330px;
+    float: left;
+    color: white;
+    margin-top: 5px;
+    margin-left: -33px;
+}
+
+#food9 {
+    display: block;
+    background: url("../img/nav.png") no-repeat;
+    border: 0px solid black;
+    width: 20px;
+    height: 20px;
+    background-position: 0px -330px;
+    float: left;
+    color: white;
+    margin-top: 5px;
+    margin-left: -33px;
+}
+
+#food10 {
+    display: block;
+    background: url("../img/nav.png") no-repeat;
+    border: 0px solid black;
+    width: 20px;
+    height: 20px;
+    background-position: 0px -370px;
+    float: left;
+    color: white;
+    margin-top: 5px;
+    margin-left: -33px;
+}
+
+#food11 {
+    display: block;
+    background: url("../img/nav.png") no-repeat;
+    border: 0px solid black;
+    width: 20px;
+    height: 20px;
+    background-position: 0px -405px;
+    float: left;
+    color: white;
+    margin-top: 5px;
+    margin-left: -33px;
+}
+
+#food12 {
+    display: block;
+    background: url("../img/nav.png") no-repeat;
+    border: 0px solid black;
+    width: 20px;
+    height: 20px;
+    background-position: 0px -445px;
+    float: left;
+    color: white;
+    /*line-height: 25px;*/
+    margin-top: 5px;
+    margin-left: -33px;
+}
+
+/*雪碧图定位结束*/
+.bannerbot .banner-title ul li .menu3 li a span {
+    margin-left: 20px;
+}
+
+.banner-mainnav ul li {
+    margin-left: 25px;
+}
+
+.banner-mainnav ul li a {
+    font-weight: bold;
+    color: black;
+}
+
+.banner-mainnav ul li a:hover {
+    color: red;
+}
+
+.banner-mainnav ul li a span {
+    color: red;
+}
+
+/*轮播大div*/
+.banner {
+    width: 100%;
+    height: 398px;
+    border: 0px solid black;
+    background-color: red;
+}
+
+/*左边大图*/
+.banner .ban-left {
+    width: 750px;
+    height: 398px;
+    background: url("../img/banner.jpg") no-repeat;
+    float: left;
+    margin-left: 334px;
+}
+
+.banner .ban-left ul li a {
+    float: left;
+    text-decoration: none;
+    width: 20px;
+    height: 20px;
+    border: 0px solid black;
+    text-align: center;
+    background-color: gainsboro;
+    margin-left: 10px;
+}
+
+.banner .ban-left ul li a:hover {
+    background-color: red;
+}
+
+.banner .ban-left ul li {
+    margin-left: 280px;
+    margin-top: 370px;
+    /*position: relative;*/
+}
+
+/*右边查询信息*/
+.banner .ban-right {
+    height: 398px;
+    width: 250px;
+    background-color: white;
+    float: left;
+
+}
+
+/*0元试用几个图片位置*/
+.banner .ban-right .pic div {
+    float: left;
+    margin-left: 15px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.banner .ban-right .pic div p a {
+    text-decoration: none;
+    color: black;
+}
+
+/*下划线*/
+.banner .ban-right .unline {
+    margin-top: 90px;
+}
+
+/*社区表格样式*/
+.banner .ban-right .contain-search table {
+    text-align: left;
+    margin-left: 7px;
+    background-color: white;
+    border-color: white;
+
+}
+
+.banner .ban-right .contain-search table tr td {
+    padding-top: 10px;
+    font-size: 14px;
+    /*padding-top: 4px;*/
+}
+
+.banner .ban-right .contain-search table tr td a {
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+
+}
+
+.banner .ban-right .contain-search table tr td a span {
+    font-weight: bold;
+}
+
+.banner .ban-right .contain-search table tr td a:hover {
+    color: red;
+}
+
+/*充值业务*/
+.banner .ban-right #tab {
+    position: relative;
+    margin-top: 10px;
+}
+
+/*彩票充值3个盒子样式*/
+#tab .tablist ul li {
+    float: left;
+    background-color: gainsboro;
+    background: -moz-linear-gradient(top, #fefefe, #ededed);
+    /*background: -o-linear-gradient(left top, left bottom, from(#fefefe), to(#ededed));*/
+    background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#ededed));
+    border: 1px solid gainsboro;
+    padding: 5px 0;
+    width: 82px;
+    text-align: center;
+    margin-left: -1px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+#tab .tablist ul li span:hover {
+    color: red;
+}
+
+#tab .tablist ul li.cur {
+    border-bottom: none;
+    background-color: #fff;
+}
+
+/*充值内容的3个盒子样式*/
+#tab .tabcon {
+    position: absolute;
+    left: -1px;
+    top: 32px;
+    border-top: none;
+    width: 248px;
+    height: 185px;
+}
+
+#tab .tabcon .cur table {
+    background-color: white;
+    border: 0px;
+}
+
+#tab .tabcon div {
+    position: absolute;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+#tab .tabcon div.cur {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+#tab .tabcon div.cur table tr td {
+    padding-top: 15px;
+}
+
+#tab .tabcon tr .hanzi {
+    text-align: right;
+}
+
+#tab .tabcon .cur tr td span {
+    color: red;
+}
+
+#tab .tabcon .cur tr .now {
+    text-align: center;
+}
+
+/*设置立即充值样式*/
+#tab .tabcon .cur tr .now input {
+    color: white;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    background-color: red;
+    border: 1px solid gainsboro;
+    cursor: pointer;
+}
+
+/*彩票*/
+#caipiao table {
+    margin-left: 20px;
+    margin-top: 20px;
+    background-color: white;
+    border: 0px;
+}
+
+#caipiao table tr td {
+    text-align: center;
+
+}
+
+#tab .tabcon #caipiao a {
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+    font-weight: bold;
+    display: block;
+}
+
+#tab .tabcon #caipiao a:hover {
+    cursor: pointer;
+    color: red;
+    background-color: #ff6600;
+}
+
+/*网游点卡*/
+#tab .tabcon #dianka table {
+    background-color: white;
+    border: 0px;
+    margin-left: 20px;
+    width: 190px;
+    margin-top: 20px;
+}
+
+#tab .tabcon #dianka table tr td {
+    text-align: center;
+}
+
+#tab .tabcon #dianka table tr td span {
+    color: red;
+}
+
+#tab .tabcon #dianka table tr .now input {
+    background-color: red;
+    color: white;
+    border: 0px;
+    margin-top: 20px;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#tab .tabcon #dianka table tr td #game {
+    width: 100px;
+}
+
+#tab .tabcon #dianka table tr td #num {
+    width: 100px;
+}
+
+/*充值业务结束*/
+
+.btnuser table {
+    background-color: gainsboro;
+    width: 249px;
+    border: 0px solid black;
+}
+
+.btnuser table tr td {
+    border: 0px solid black;
+    width: 90px;
+    text-align: center;
+    color: red;
+}
+
+/*鼠标移入背景变成白色*/
+.btnuser table tr td:hover {
+    background-color: white;
+    color: red;
+    border-right: 1px solid darkgray;
+
+}
+
+.btnuser table tr td a {
+    text-decoration: none;
+    color: black;
+}
+
+/*鼠标移入字变红色*/
+.btnuser table tr td a:hover {
+    color: red;
+}
+
+/*原有充值样式现在没用*/
+.chongzhi table {
+    margin-top: 30px;
+    width: 90px;
+    height: 150px;
+    background-color: white;
+    border: 0px solid black;
+}
+
+.chongzhi table tr td {
+    width: 100px;
+    height: 20px;
+    line-height: 20px;
+    text-align: left;
+}
+
+.chongzhi table tr .phone {
+    text-align: right;
+}
+
+.chongzhi table tr .phone-cont input {
+    width: 100px;
+}
+
+.chongzhi table tr td #mainzhi {
+    width: 100px;
+}
+
+/*售价颜色*/
+.chongzhi table tr td span {
+    color: red;
+}
+
+/*立即充值按钮*/
+.chongzhi table tr td #btnchonzhi {
+    color: white;
+    background-color: #e60000;
+    border: 0px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 100px;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    height: 360px;
+    clear: both;
+    margin-left: 100px;
+    border-top: 2px solid red;
+}
+
+.container-title {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: 100px;
+    /*border-bottom: 2px solid red;*/
+}
+
+.container-title .food-drink {
+    margin-left: 10px;
+    color: orangered;
+    font-weight: bold;
+    float: left;
+}
+
+.container-title .otherfood {
+    float: right;
+    margin-right: 120px;
+}
+
+.container-title .otherfood ul li {
+    list-style: none;
+    float: left;
+
+}
+
+.container-title .otherfood ul li a {
+    color: black;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 10px;
+}
+
+.container-title .otherfood ul li a:hover {
+    color: red;
+}
+
+/*食品饮料部分*/
+/*.container  {
+    width: 100%;
+    height: 360px;
+    background-color: #ff6600;
+}*/
+
+/*最左边部分*/
+.container .drink .drink-left {
+    height: 360px;
+    float: left;
+    /*margin-right: 50px;*/
+    /*background-color: #ff6600;*/
+    /*margin-right: -100px;*/
+    /*padding-left: -50px;*/
+}
+
+/*.drink {*/
+/*margin-right: 50px;*/
+/*border: 1px solid black;*/
+/*}*/
+
+.container .drink-left .drink-msg {
+    text-align: center;
+    width: 200px;
+    border: 0px solid black;
+
+}
+
+/*详细信息表的属性设置*/
+.container .drink-left .drink-msg table {
+    width: 200px;
+    background-color: white;
+    margin-top: 10px;
+    border: 0px solid white;
+}
+
+/*左边详细信息每个单元格的距离*/
+.container .drink-left .drink-msg table tr td {
+    padding-top: 5px;
+}
+
+.container .drink-left .drink-msg table tr td a {
+    text-decoration: none;
+    color: black;
+}
+
+.container .drink-left .drink-msg table tr td a:hover {
+    color: red;
+}
+
+.container .drink-left .drink-banner {
+    width: 200px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.container .drink-left .drink-banner #bannerone {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container .drink-left .drink-pic {
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+/*第二张图设置*/
+.sec1-1 {
+    float: left;
+}
+
+/*轮播效果*/
+.sec1-1 ul li a {
+    text-decoration: none;
+    float: left;
+    width: 30px;
+    height: 5px;
+    border: 0px solid black;
+    text-align: center;
+    margin-left: 10px;
+    background-color: ghostwhite;
+    color: white;
+}
+
+.sec1-1 ul li {
+
+    margin-left: 100px;
+    margin-bottom: -20px;
+    position: relative;
+}
+
+.sec1-1 ul li :hover {
+    background-color: red;
+    height: 8px;
+}
+
+/*第三张图设置*/
+.chihuo {
+    height: 360px;
+    width: 210px;
+    float: left;
+    border-right: 1px solid ghostwhite;
+}
+
+.chihuo .chihuo-one {
+    text-align: center;
+    border-bottom: 1px solid ghostwhite;
+    margin-top: 10px;
+
+}
+
+.chihuo .chihuo-one a {
+    text-decoration: none;
+    color: black;
+}
+
+.chihuo .cihuo-two a {
+    text-decoration: none;
+    color: black;
+}
+
+.chihuo .man {
+    font-size: 10px;
+    color: darkgray;
+    margin-top: 10px;
+}
+
+.chihuo .cihuo-two {
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+/*夏季美食嘉年华样式*/
+.year {
+    width: 210px;
+    float: left;
+    text-align: center;
+    margin-top: 10px;
+    border-right: 1px solid ghostwhite;
+    height: 350px;
+}
+
+.year a {
+    text-decoration: none;
+    color: black;
+}
+
+.year .qiang {
+    font-size: 10px;
+    color: darkgray;
+    margin-top: 10px;
+}
+
+.yinliao {
+    text-align: center;
+    /*width: 50px;*/
+    /*background-color: #ff6600;*/
+    /*border-bottom: 1px solid black;*/
+}
+
+.drink .yinliao .chihuo-three {
+    border-bottom: 1px solid ghostwhite;
+    padding-top: 10px;
+    /*margin-right: 170px;*/
+
+}
+
+.yinliao .chihuo-three .man {
+    font-size: 10px;
+    color: darkgray;
+    margin-top: 10px;
+
+}
+
+.yinliao .cihuo-three {
+    padding-top: 10px;
+    margin-right: 100px;
+    /*margin-right: 170px;*/
+}
+
+.yinliao .chihuo-three {
+    margin-right: 100px;
+}
+
+.yinliao .chihuo-three a {
+    text-decoration: none;
+    color: black;
+}
+
+.yinliao .cihuo-three a {
+    text-decoration: none;
+    color: black;
+}
+
+/*二级小字属性*/
+.yinliao .cihuo-three .man {
+    font-size: 10px;
+    color: darkgray;
+    margin-top: 10px;
+}
+
+/*个人厨卫属性设置*/
+.container-title .per-cook {
+    margin-left: 10px;
+    color: green;
+    font-weight: bold;
+    float: left;
+}
+
+/*个人厨卫内容项*/
+.person {
+    width: 100%;
+    height: 550px;
+    border-top: 2px solid green;
+    clear: both;
+    margin-left: 100px;
+    border-bottom: 1px solid ghostwhite;
+    border-left: 1px solid ghostwhite;
+}
+
+.person .person-main {
+    width: 100%;
+}
+
+/*左边内容项又边框*/
+.person .person-main .per-left {
+    width: 200px;
+    height: 550px;
+    border-right: 1px solid ghostwhite;
+    float: left;
+}
+
+.per-table {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.per-table table {
+    background-color: white;
+    border: 0px;
+    width: 200px;
+}
+
+.per-table table tr {
+    margin-left: 10px;
+
+}
+
+.per-table table tr td {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.per-table table tr td a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.per-table table tr td a:hover {
+    color: red;
+}
+
+.per-yueliang {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.per-yueliang a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.per-yueliang a .per-yueliang-shendian {
+    color: green;
+    font-weight: bold;
+    padding-top: 10px;
+
+}
+
+.per-yueliang a .per-yueliang-wuzhe {
+    font-size: 10px;
+    color: darkgray;
+    margin-top: 10px;
+}
+
+.per .per-yueliang {
+    text-align: center;
+    border-bottom: 1px solid ghostwhite;
+}
+
+.per .per-yueliang-two {
+    text-align: center;
+}
+
+.per .per-yueliang-two a {
+    text-decoration: none;
+}
+
+.per .per-yueliang-two .per-yueliang-shendian {
+    color: green;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.per .per-yueliang-two .per-yueliang-wuzhe {
+    font-size: 10px;
+    color: darkgray;
+    margin-top: 10px;
+}
+
+.per-left2 {
+    float: left;
+    height: 550px;
+    border-right: 1px solid ghostwhite;
+}
+
+.per-left2 .per-img2 {
+    width: 330px;
+    /*height: 190px;*/
+    /*position: fixed;*/
+    /*background-color: red;*/
+}
+
+/*个人厨卫轮播效果*/
+.per-left2 .per-img ul li a {
+    text-decoration: none;
+    float: left;
+    width: 30px;
+    height: 5px;
+    margin-left: 24px;
+    background-color: ghostwhite;
+
+}
+
+.per-left2 .per-img > ul li {
+
+    margin-bottom: -20px;
+    position: relative;
+}
+
+.per-left2 .per-img ul li a:hover {
+    background-color: red;
+}
+
+/*逼格生活由我打造样式*/
+.per-left2 .per-img2 .per-dazao {
+    float: left;
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 5px;
+}
+
+.per-left2 .per-img2 .per-dazao a {
+    text-decoration: none;
+    color: black;
+}
+
+/*新品上新*/
+.per-left2 .per-img2 .per-dazao .per-dazao-new {
+    font-size: 10px;
+    color: darkgray;
+    margin-top: 10px;
+}
+
+/*品质生活轻松家务*/
+.per-left2 .per-img2 .per-dazao .per-dazao-jiawu {
+    margin-top: 20px;
+    width: 140px;
+    height: 20px;
+    background-color: #e60000;
+    text-align: center;
+    color: white;
+
+}
+
+/*sec1-16.jpg*/
+.per-left2 .per-img2 .per-img3 {
+    float: right;
+    /*margin-bottom: -10px;*/
+    margin-top: 30px;
+}
+
+/*个人厨卫第3-5列呈现内容*/
+/*第三列完成*/
+.per-pingbai {
+    float: left;
+    border-right: 1px solid ghostwhite;
+    text-align: center;
+    height: 550px;
+    /*background-color: #ff6600;*/
+    width: 250px;
+}
+
+.per-pingbai div {
+
+    margin-top: 10px;
+}
+
+.per-pingbai div a {
+    text-decoration: none;
+    color: black;
+}
+
+.per-pingbai div > p {
+    margin-top: 10px;
+}
+
+.per-pingbai div .per-pingbai-tuan {
+    font-size: 10px;
+
+}
+
+.per-pingbai div img {
+    padding-top: 10px;
+}
+
+.per-pingbai div .per-pingbai-tuan > a {
+    color: darkgray;
+}
+
+.per-pingbai .per-pingbai-one {
+    border-bottom: 1px solid ghostwhite;
+}
+
+/*第四列*/
+.per-four {
+    float: left;
+    border-right: 1px solid ghostwhite;
+    text-align: center;
+    height: 550px;
+    width: 200px;
+    /*background-color: #ff6600;*/
+    /*margin-left: 20px;*/
+}
+
+.per-four div {
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.per-four div a {
+    text-decoration: none;
+    color: black;
+}
+
+.per-four div > p {
+    margin-top: 10px;
+}
+
+.per-four div .per-pingbai-tuan {
+    font-size: 10px;
+
+}
+
+.per-four div img {
+    padding-top: 10px;
+}
+
+.per-four div .per-pingbai-tuan > a {
+    color: darkgray;
+}
+
+.per-four .per-pingbai-one {
+    border-bottom: 1px solid ghostwhite;
+}
+
+/*第五列内容*/
+.per-five {
+    float: left;
+    border-right: 1px solid ghostwhite;
+    text-align: center;
+    height: 550px;
+    width: 240px;
+    /*background-color: #ff6600;*/
+    /*margin-left: 50px;*/
+}
+
+.per-five div {
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.per-five div a {
+    text-decoration: none;
+    color: black;
+}
+
+.per-five div > p {
+    margin-top: 10px;
+}
+
+.per-five div .per-pingbai-tuan {
+    font-size: 10px;
+
+}
+
+.per-five div img {
+    padding-top: 10px;
+}
+
+.per-five div .per-pingbai-tuan > a {
+    color: darkgray;
+}
+
+.per-five .per-pingbai-one {
+    border-bottom: 1px solid ghostwhite;
+}
+
+/*最后foot结尾*/
+.footer {
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    margin-top: 30px;
+    border: 0px;
+}
+
+.footer .help {
+    width: 100%;
+    height: 30px;
+    line-height: 20px;
+    float: left;
+
+    margin-left: 200px;
+}
+
+.footer .help ul li {
+    float: left;
+    /*margin-top: 20px;*/
+}
+
+.footer .help ul li a {
+    text-decoration: none;
+    color: darkgray;
+    margin-left: 10px;
+    font-size: 10px;
+
+}
+
+.footer .help ul li a:hover {
+    color: red;
+}
+
+/*营业执照内容*/
+.footer .zhizhao {
+    width: 100%;
+    height: 30px;
+    /*margin-top: 20px;*/
+    text-align: center;
+    float: left;
+    padding-left: 290px;
+}
+
+.footer .zhizhao ul li {
+    float: left;
+}
+
+.footer .zhizhao ul li a {
+    text-decoration: none;
+    color: darkgray;
+    font-size: 10px;
+}
+
+.footer .zhizhao ul li a:hover {
+    color: red;
+}
+
+/*最后的商标*/
+.footer .copy {
+    width: 100%;
+    float: left;
+    padding-left: 500px;
+}
+
+.footer .copy ul li {
+    float: left;
+
+}
+
+.footer .copy ul li a {
+    color: darkgray;
+    font-size: 10px;
+}
+
+.dt666 a {
+    color: black;
+    font-weight: bold;
+}
+
+.ddd a {
+    display: block;
+    width: 80px;
+    margin: 0px;
+}
+
+/*头部雪碧图*/
+.weibo {
+    display: block;
+    background: url("../img/indexhead_sprite.png") no-repeat;
+    border: 0px solid black;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    background-position: -284px -840px;
+    margin-top: 3px;
+}
+
+.weixin {
+    display: block;
+    background: url("../img/indexhead_sprite.png") no-repeat;
+    border: 0px solid black;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    background-position: -284px -930px;
+    margin-top: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

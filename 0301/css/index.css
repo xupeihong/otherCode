@@ -1,0 +1,171 @@
+body {
+    padding: 0;
+    margin: 0;
+
+}
+
+video {
+    display: block;
+}
+
+/*播放器盒子样式*/
+.wangyi {
+    width: 690px;
+    height: 430px;
+    margin: 50px auto;
+    background-color: black;
+}
+
+/*图标样式*/
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*静音*/
+#noSound {
+    margin-left: 250px;
+}
+
+#control {
+    text-align: center;
+    height: 12px;
+    line-height: 12px;
+    width: 690px;
+}
+
+/*显示时间*/
+#control span {
+    color: white;
+}
+
+/*播放全屏按钮*/
+#control button {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/*视频下方分享按钮*/
+#other {
+    margin-top: -50px;
+}
+
+/*按钮样式*/
+#other button {
+    width: 50px;
+    opacity: 0.5;
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+
+/*左上方标题*/
+#introduce {
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-bottom: -40px;
+    box-sizing: border-box;
+}
+
+/*视频盒子样式*/
+.main {
+    float: left;
+    width: 690px;
+    border: 1px solid black;
+    margin-left: 200px;
+    margin-top: 50px;
+    position: relative;
+}
+
+/*旁白样式*/
+.slider {
+    float: left;
+    width: 255px;
+    border: 0px solid ghostwhite;
+    margin-top: 50px;
+    margin-left: 30px;
+    overflow: hidden;
+
+}
+
+.slider ul {
+    padding: 0;
+    margin: 0;
+}
+
+.slider ul li {
+    list-style: none;
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+.slider hr {
+    opacity: 0.3;
+}
+
+.slider p {
+    font-size: 10px;
+}
+
+/*评论样式*/
+#pinlun {
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+#pinlun hr {
+    opacity: 0.3;
+}
+
+/*最新评论*/
+#news {
+    opacity: 0.5;
+}
+
+#send {
+    position: absolute;
+    right: 0;
+}
+
+#sound {
+    width: 100px;
+    height: 15px;
+    border: 1px solid black;
+    border-radius: 15px;
+    position: relative;
+    background-color: gray;
+    margin-top: -20px;
+    left: 450px;
+}
+
+#btn {
+    margin-left: -250px;
+}
+
+#biaoqing {
+    position: relative;
+    top: -15px;
+    left: 280px;
+}
+#full{
+    position: relative;
+    top: -15px;
+    left: 300px;
+}
+
+
+

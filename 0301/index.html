@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index2.css">
+
+</head>
+<body>
+<div class="main">
+    <a href="#" id="introduce">< 海岸线 <sub>李琦</sub> </a>
+    <div class="wangyi">
+        <video src="img/李琦%20-%20海岸线.mp4" id="video" width="690" height="380" preload="metadata"
+               oncanplaythrough="videofun()"></video>
+        <progress id="progress" value="0" style="width: 690px;height: 10px;background-color: black;"></progress>
+        <div id="control">
+            <button class=" iconfont" id="btn" style="margin-right: 10px;">&#xe778;</button>
+            <span id="btime">00:00</span><span>/</span><span id="ztime">00:00</span>
+            <button class="iconfont" id="noSound">&#xe637;</button>
+            <div id="sound">
+                <div id="clsound"></div>
+                <div id="cicle"></div>
+            </div>
+            <!--<input type="range" min="0" max="1" value="0.2" id="volue" step="0.1">-->
+            <button class="iconfont" id="biaoqing">&#xe67c;</button>
+            <button class="iconfont" id="full">&#xe621;</button>
+        </div>
+    </div>
+    <div id="other">
+        <button class="iconfont">&#xe60c;</button>
+        <button class="iconfont">&#xe62e;</button>
+        <button class="iconfont">&#xe606;</button>
+    </div>
+    <div id="pinlun">
+        <strong>评论(27)</strong>
+        <hr>
+        <textarea name="" id="" cols="95" rows="5" placeholder="请输入评论..."></textarea>
+        <button id="send">发送</button>
+        <p><span id="news">最新评论(27)</span></p>
+        <hr>
+        <p><img src="img/6.png" alt=""></p>
+    </div>
+</div>
+<div class="slider">
+    <b>MV介绍</b>
+    <hr>
+    <ul>
+        <li>发布时间：2017-02-28</li>
+        <li>播放次数：8669次</li>
+    </ul>
+    <p><span>李琦献唱《老爸当家》主题曲</span><br>
+        简介：《老爸当家》从一个平凡的父亲权来（张国立）着手，将家庭的悲喜各人的情感交织在一处，在父亲为家庭解开一个个难题的同时，也将一份坚强和乐观传递出来。</p>
+    <b>相关MV</b>
+    <hr>
+    <ul>
+        <li><a href="#"><img src="img/1.png" alt=""></a></li>
+        <li><a href="#"><img src="img/2.png" alt=""></a></li>
+        <li><a href="#"><img src="img/3.png" alt=""></a></li>
+        <li><a href="#"><img src="img/4.png" alt=""></a></li>
+        <li><a href="#"><img src="img/5.png" alt=""></a></li>
+
+    </ul>
+</div>
+
+<script src="js/index.js"></script>
+<script>
+    function videofun() {
+        var video = document.getElementById("video");
+        var num = "0" + Math.floor(video.duration / 60) + ":" + (video.duration % 60 / 100).toFixed(2).slice(-2);
+        var ztime = document.getElementById("ztime");
+        ztime.innerHTML = num;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/easyBackground-min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+    <script type="application/javascript">
+        $(document).ready(function () {
+            /* $('body').easyBackground({
+             wrapNeighbours: true
+             });*/
+//            var ran = parseInt(Math.random() * 6) + 1;
+            $("body").attr("background", "img/" + 5 + ".jpg");
+            $(".play").click(function () {
+                $(this).parent().remove();
+            })
+        });
+    </script>
+</head>
+<body>
+<div class="showscore">
+    <div id="scores">当前积分 <span id="score"></span></div>
+    <div id="bestScores">最好成绩 <br><span id="bestScore">0</span></div>
+</div>
+<div id="explain">
+    <h2>2048怎么玩？</h2>
+    <p>游戏规则很简单：
+    <h4>电脑:按键盘的方向键移动方块;<br>手机:手指滑动屏幕玩2048游戏。</h4>
+    每次控制所有方块向同一个方向运动，两个相同数字的方块撞在一起之后合并成为他们的和，
+    每次操作之后会在空白的方格处随机生成一个2或者4，最终得到一个"2048"的方块就算胜利了。
+    如果16个格子全部填满并且相邻的格子都不相同也就是无法移动的话，那么恭喜你,gameover。
+    </p>
+    <ul>
+        <li class="keys"><span>&#x25B2;</span><span>&#x25C0;</span><span>&#x25BC;</span><span>&#x25B6;</span></li>
+    </ul>
+</div>
+<!--<a href="javascript:void(0)" class="start" onclick="game.start()"> Ready GO</a>-->
+<a href="main.html" class="mainUI" ><strong><</strong>主画面</a>
+<div id="main">
+    <!--显示操作键-->
+    <div id="opreter"></div>
+    <div id="gridPanel">
+        <!--背景格-->
+        <!--第一行-->
+        <div id="g00" class="grid"></div>
+        <div id="g01" class="grid"></div>
+        <div id="g02" class="grid"></div>
+        <div id="g03" class="grid"></div>
+        <!--第二行-->
+        <div id="g10" class="grid"></div>
+        <div id="g11" class="grid"></div>
+        <div id="g12" class="grid"></div>
+        <div id="g13" class="grid"></div>
+        <!--第三行-->
+        <div id="g20" class="grid"></div>
+        <div id="g21" class="grid"></div>
+        <div id="g22" class="grid"></div>
+        <div id="g23" class="grid"></div>
+        <!--第四行-->
+        <div id="g30" class="grid"></div>
+        <div id="g31" class="grid"></div>
+        <div id="g32" class="grid"></div>
+        <div id="g33" class="grid"></div>
+
+        <!--前景格-->
+        <!--第一行-->
+        <div id="c00" class="cell row2 col3"></div>
+        <div id="c01" class="cell"></div>
+        <div id="c02" class="cell"></div>
+        <div id="c03" class="cell"></div>
+        <!--第二行-->
+        <div id="c10" class="cell"></div>
+        <div id="c11" class="cell"></div>
+        <div id="c12" class="cell"></div>
+        <div id="c13" class="cell"></div>
+        <!--第三行-->
+        <div id="c20" class="cell"></div>
+        <div id="c21" class="cell"></div>
+        <div id="c22" class="cell"></div>
+        <div id="c23" class="cell"></div>
+        <!--第四行-->
+        <div id="c30" class="cell"></div>
+        <div id="c31" class="cell"></div>
+        <div id="c32" class="cell"></div>
+        <div id="c33" class="cell"></div>
+
+    </div>
+    <div id="shadow"><a class="play" href="javascript:void(0)" onclick="game.start()">PLAY</a></div>
+    <div id="gameOver">
+        <div></div>
+        <p>
+            Game Over!<br>
+            Score: <span id="sum"></span><br>
+            <a href="javascript:void(0)" class="button" onclick="game.start()">再玩一次</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>

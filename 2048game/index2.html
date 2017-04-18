@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="js/jquery-1.11.0.js"></script>
+    <link rel="stylesheet" href="css/2048.css">
+    <script>
+        var initRC = [[0, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11], [12, 13, 14, 15]];//数组形式定义变量，比如initRC=[3][2];取出来是14
+        $(function () {
+            function getEmptyDiv() {
+                var divs = [];
+                $(".main div").each(function (index, elem) {
+                    if (elem.innerText == "") {
+                        divs.push(elem);
+                    };
+                });//清空所有div
+                return divs;
+            }
+
+            function addClassAll() {
+                $(".main div").each(function (index, elem) {
+                    var num = elem.innerText;
+                    $(elem).removeClass().addClass("bg" + num);
+                });//每个数字调用相同的颜色
+            }
+
+            $("#start").click(function () {
+                $(".main div").empty();//每点击一次清空所有的div
+                getRandomNum();
+                getRandomNum();
+                addClassAll();
+            });
+            function getRandomNum() {
+                var EmptyDivs = getEmptyDiv();
+                if (EmptyDivs.length == 0) {
+                   $(".gameover").fadeIn(1000);
+                }
+                var ranNum = Math.random() > 0.4 ? "2" : "4";
+                var divRanNum = parseInt(Math.random() * EmptyDivs.length);
+                EmptyDivs[divRanNum].innerHTML = ranNum;
+            }
+
+            /*
+             *  上下操作时的合并方法
+             *  每次比较上下的数是否一致
+             *  如果有下方有空位就移动到空位，如果有相同的就合并
+             *  比如下操作时，第一次循环比较的是相邻两列的第一个数，如：rowUpMove(3, 2)，第一次循环就是比较的左下角的两个8，第二次循环比较的是两个相邻的4。。。
+             *  修改后，只要发生合并操作，就不进行后续列的循环了，直接返回
+             */
+            /*
+             *    空 2 空 空
+             *    4  2 空 空
+             *    8  4 空 空
+             *    8  4 空 空
+             *
+             */
+            //rowUpMove定义个变量初始值，只要进行了移动或者合并，
+            // 就变为false，最后把变量return出去，外面接收着点，
+            // 等所有列合并操作都完成，如果有false出现，就可以执行getRangdom，反之则不可以
+            //| 和||的区别：
+              //  |是指前后判断都执行以后再进行以后的程序
+            //    ||是指其中一个判断为ture以后就进行以后的程序
+            function rowUpMove(row1, row2, flag) {
+                var ifmove = false;//没有进行任何移动和合并操作
+                var divs = $(".main div");
+                for (var i = 0; i < 4; i++) {
+                    var div1 = divs[initRC[row1][i]];
+                    var div2 = divs[initRC[row2][i]];
+                    if (div2.innerText == "") {
+                    } else if (div1.innerText == "") {
+                        div1.innerText = div2.innerText;
+                        div2.innerText = "";
+                        ifmove = true;//发生位移或者合并就返回ture
+                    } else if (div1.innerText == div2.innerText && flag[i] == 0) {
+                        div1.innerText = div1.innerText * 2;
+                        div2.innerText = "";
+                        flag[i] = 1; // 这列发生合并就记录上，保证下次这列不发生合并了
+                        ifmove = true;//发生位移或者合并就返回ture
+                    }
+                }
+                return ifmove;
+            }
+
+            function colLeftMove(col1, col2, flag) {
+                var ifmove = false;
+                var divs = $(".main div");
+                for (var i = 0; i < 4; i++) {
+                    if (divs[initRC[i][col2]].innerText == "") {
+                    } else if (divs[initRC[i][col1]].innerText == "") {
+                        divs[initRC[i][col1]].innerText = divs[initRC[i][col2]].innerText;
+                        divs[initRC[i][col2]].innerText = "";
+                        ifmove = true;
+                    } else if (divs[initRC[i][col1]].innerText == divs[initRC[i][col2]].innerText && flag[i] == 0) {
+                        divs[initRC[i][col1]].innerText = divs[initRC[i][col1]].innerText * 2;
+                        divs[initRC[i][col2]].innerText = "";
+                        flag[i] = 1; // 这列发生合并就记录上，保证下次这列不发生合并了
+                        ifmove = true;
+                    }
+                }
+                return ifmove;
+            }
+
+            $(window).keyup(function (e) {
+                var ev = e || event;
+                switch (e.keyCode) {
+                    case 37:
+                        //左
+                        var ifmove = false;
+                        var flag = [0, 0, 0, 0];
+                        for (var i = 0; i < 3; i++) {
+                            ifmove = ifmove | colLeftMove(0, 1, flag);
+                            ifmove = ifmove | colLeftMove(1, 2, flag);
+                            ifmove = ifmove | colLeftMove(2, 3, flag);
+                        }
+                        if (ifmove) {
+                            getRandomNum();
+                            addClassAll();
+                        }
+                        break;
+                    case 38:
+                        //上
+                        var ifmove = false;
+                        var flag = [0, 0, 0, 0];
+                        for (var i = 0; i < 3; i++) {
+                            ifmove = ifmove | rowUpMove(0, 1, flag);
+                            ifmove = ifmove | rowUpMove(1, 2, flag);
+                            ifmove = ifmove | rowUpMove(2, 3, flag);
+                        }
+                        if (ifmove) {
+                            getRandomNum();
+                            addClassAll();
+                        }
+                        break;
+                    case 40:
+                        //下.
+                        // 修改方法, 如果有任意合并，则下一次循环循环只执行空位移动不执行合并操作
+                        /*
+                         *    空 2 空 空                    空 空 空 空                    空 空 空 空                       空 空 空 空
+                         *    空 空 空 2                    空 2  空 空                    空 空 空 空                       空 空 空 空
+                         *    空 空 空 2   第一次循环变为   空 空 空 4    第二次循环变为   空 2  空 4  第三次循环变为        空 空 空 4
+                         *    空 空 空 4                    空 空 空 4                     空 空 空 4                        空 2  空 4
+                         *
+                         */
+                        // 以前的代码出现问题是因为，三次循环每次都去比较是否一致，数字一致就进行合并
+                        /*
+                         *    空 2 空 空                    空 空 空 空                    空 空 空 空                       空 空 空 空
+                         *    空 空 空 2                    空 2  空 空                    空 空 空 空                       空 空 空 空
+                         *    空 空 空 2   第一次循环变为   空 空 空 4    第二次循环变为   空 2  空 空  第三次循环变为       空 空 空 空
+                         *    空 空 空 4                    空 空 空 4                     空 空 空 8                        空 2  空 8
+                         *
+                         */
+                        var ifmove = false;
+                        var flag = [0, 0, 0, 0];
+                        for (var i = 0; i < 3; i++) {
+                            ifmove = ifmove | rowUpMove(3, 2, flag);// ifmove=ifmove | rowUpMove是为了判断，只要有任何一次移动，就变成true。因为true不论和什么的或关系，都是返回true
+                            ifmove = ifmove | rowUpMove(2, 1, flag);
+                            ifmove = ifmove | rowUpMove(1, 0, flag);
+                        }
+                        if (ifmove) {
+                            getRandomNum();
+                            addClassAll();
+                        }
+                        break;
+                    case 39:
+                        //右
+                        var ifmove = false;
+                        var flag = [0, 0, 0, 0];
+                        for (var i = 0; i < 3; i++) {
+                            ifmove = ifmove | colLeftMove(3, 2, flag);
+                            ifmove = ifmove | colLeftMove(2, 1, flag);
+                            ifmove = ifmove | colLeftMove(1, 0, flag);
+
+                        }
+                        if (ifmove) {
+                            getRandomNum();
+                            addClassAll();
+                        }
+                        break;
+                }
+            });
+        })
+    </script>
+
+</head>
+<body>
+<a href="main.html" style="cursor: pointer;font-size: 20px;font-weight: bold;">返回主界面</a>
+    <div class="all">
+        <div class="header">
+            <div class="title">
+                <h1>2048</h1>
+            </div>
+            <div class="newgame">
+                <a id="start">New Game</a>
+            </div>
+        </div>
+        <div class="gameover"><h4>Game Over</h4></div>
+        <div class="main">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>

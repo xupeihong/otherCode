@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2048主界面</title>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <style type="text/css">
+        #menu {
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            list-style-type: none;
+            z-index: 70;
+        }
+
+        #menu li {
+            float: left;
+            margin: 0 10px 0 0;
+            font-size: 14px;
+        }
+
+        #menu a {
+            float: left;
+            padding: 10px 20px;
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: #3d92b6;
+        }
+
+        #menu a:hover {
+            color: orange;
+        }
+
+        #menu .active a {
+            color: #fff;
+            background-color: #333;
+        }
+
+        .section {
+            text-align: center;
+            font: 50px "Microsoft Yahei";
+            color: #fff;
+        }
+
+
+    </style>
+    <script type="application/javascript">
+        $(function () {
+            $('#dowebok').fullpage({
+                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+                anchors: ['page1', 'page2', 'page3', 'page4'],
+                menu: '#menu'
+            });
+        });
+    </script>
+</head>
+<body>
+<ul id="menu">
+    <li data-menuanchor="page1" class="active"><a href="#page1">游戏解释</a></li>
+    <li data-menuanchor="page2"><a href="#page2">许培红</a></li>
+    <li data-menuanchor="page3"><a href="#page3">刘旭</a></li>
+    <li data-menuanchor="page4"><a href="#page4">刘俊</a></li>
+</ul>
+<div id="dowebok">
+    <div class="section" style="background: url('img/5.jpg')">
+        <span style="font-size: 50px;">2048怎么玩？</span>
+        <p style="font-size: 40px;"><span>游戏规则很简单：</span><br>
+            电脑:按键盘的方向键移动方块;手机:手指滑动屏幕玩2048游戏。每次控制所有方块向同一个方向运动，两个相同数字的方块撞在一起之后合并成为他们的和，每次操作之后会在空白的方格处随机生成一个2或者4，最终得到一个"2048"的方块就算胜利了。如果16个格子全部填满并且相邻的格子都不相同也就是无法移动的话，那么恭喜你,gameover。
+        </p>
+    </div>
+    <div class="section">
+        <p><a href="index.html"><img src="img/xu.png" alt=""></a></p>
+    </div>
+    <div class="section">
+        <p><a href="index2.html"><img src="img/liuxu.png" alt=""></a></p>
+    </div>
+    <div class="section">
+        <p><a href="2048.html"><img src="" alt=""><img src="img/liujun.png" alt=""></a></p>
+    </div>
+</div>
+
+
+</body>
+</html>

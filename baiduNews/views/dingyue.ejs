@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        @font-face {
+            font-family: 'iconfont';
+            src: url('../fonts/iconfont.eot');
+            src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/iconfont.woff') format('woff'),
+            url('../fonts/iconfont.ttf') format('truetype'),
+            url('../fonts/iconfont.svg#iconfont') format('svg');
+        }
+
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .title {
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            background: blue;
+            font-size: 14px;
+        }
+
+        /*搜索订阅关键词*/
+        .search, .dingyue, .dyDetail {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .search i {
+            position: relative;
+            left: 20px;
+            line-height: 20px;
+            height: 20px;
+            display: inline-block;
+            top: 4px;
+        }
+
+        .search input {
+            padding-left: 28px;
+            height: 30px;
+            width: 80%;
+            border: 1px solid #e4e4e4;
+        }
+
+        /*订阅详细信息*/
+        .dingyue {
+            height: 26px;
+            border-bottom: 1px solid #e4e4e4;
+        }
+
+        .dingyue ul li {
+            float: left;
+            list-style: none;
+            margin-left: 10px;
+        }
+
+        .dingyue span {
+            float: right;
+        }
+
+        .dingyue li a:hover {
+            color: blue;
+        }
+
+        .dyDetail table {
+            width: 100%;
+        }
+
+        .dyDetail table td i {
+            float: right;
+            color: blue;
+        }
+
+        .dyDetail table tr td {
+            height: 25px;
+            line-height: 25px;
+            border: 1px solid #e4e4e4;
+        }
+
+        .dyDetail table tr td a {
+            font-size: 13px;
+        }
+
+        /*管理我的订阅*/
+        .manage {
+            height: 30px;
+            line-height: 30px;
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+            background: blue;
+        }
+
+        .manage span {
+            color: #fff;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<div class="title">订阅中心</div>
+<div class="search">
+    <i class="iconfont">&#xe606;</i><input type="text" placeholder="搜索任意关键词即订阅">
+</div>
+<div class="dingyue">
+    <ul>
+        <li><a href="#">媒体</a></li>
+        <li><a href="#">频道</a></li>
+        <li><a href="#">话题</a></li>
+    </ul>
+    <span><a href="#">换一批</a></span>
+</div>
+<div class="dyDetail">
+    <table border="0">
+        <tr>
+            <td><a href="#">海外网</a> <i class="iconfont">&#xe648;</i></td>
+            <td><a href="#">南方都市</a> <i class="iconfont">&#xe648;</i></td>
+        </tr>
+        <tr>
+            <td><a href="#">上海观察</a> <i class="iconfont">&#xe648;</i></td>
+            <td><a href="#">齐鲁晚报网</a> <i class="iconfont">&#xe648;</i></td>
+        </tr>
+        <tr>
+            <td><a href="#">齐鲁网</a> <i class="iconfont">&#xe648;</i></td>
+            <td><a href="#">贵阳网</a> <i class="iconfont">&#xe648;</i></td>
+        </tr>
+        <tr>
+            <td><a href="#">汉网</a> <i class="iconfont">&#xe648;</i></td>
+            <td><a href="#">舜网</a> <i class="iconfont">&#xe648;</i></td>
+        </tr>
+        <tr>
+            <td><a href="#">21CN</a> <i class="iconfont">&#xe648;</i></td>
+            <td><a href="#">时尚网</a> <i class="iconfont">&#xe648;</i></td>
+        </tr>
+        <tr>
+            <td><a href="#">央视网</a> <i class="iconfont">&#xe648;</i></td>
+            <td><a href="#">太平洋时尚</a> <i class="iconfont">&#xe648;</i></td>
+        </tr>
+    </table>
+</div>
+<div class="manage"><a href="#"><span>管理我的订阅</span></a></div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.newsTitle{
+    font-weight: bold;
+    font-size: 16px;
+}

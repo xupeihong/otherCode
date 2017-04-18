@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/admin.css">
+    <!--分页样式-->
+    <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="/stylesheets/pageGroup.css">
+
+    <script src="/javascripts/jquery-3.0.0.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="panel panel-default col-md-12">
+    <div class="panel-heading newsTitle">百度新闻后台管理器</div>
+</div>
+<!--新闻发布器-->
+<div class="panel panel-default col-md-6">
+    <div class="panel-heading">
+        <h3 class="panel-title">新闻发布器</h3>
+    </div>
+    <div class="panel-body">
+        <form enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="newsTitle">新闻标题</label>
+                <input type="text" class="form-control" id="newsTitle" placeholder="请输入新闻标题">
+            </div>
+            <div class="form-group">
+                <label for="newsContent">新闻正文</label>
+                <textarea class="form-control" rows="3" id="newsContent"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="newsPICPath">新闻图片地址</label>
+
+                <!--<input type="file" id="file" name="file">-->
+                <!--<input id="input-1a" type="file" class="file" data-show-preview="false">-->
+                <input id="inputimg" type="file" accept="image/*" class="file-loading">
+                <input type="text" class="form-control" id="newsPICPath" placeholder="请输入新闻图片地址">
+            </div>
+            <div class="form-group">
+                <label for="newsSource">新闻来源</label>
+                <input type="text" class="form-control" id="newsSource" placeholder="请输入新闻来源">
+            </div>
+            <div class="form-group">
+                <label for="newsDate">新闻日期</label>
+                <input type="date" class="form-control" id="newsDate">
+            </div>
+            <div class="form-group">
+                <label for="newsTarget">新闻标签</label>
+                <select class="form-control" id="newsTarget">
+                    <option value="0">精选</option>
+                    <option value="1">百家</option>
+                    <option value="2">本地</option>
+                    <option value="3">娱乐</option>
+                    <option value="4">社会</option>
+                    <option value="5">军事</option>
+                    <option value="6">女人</option>
+                    <option value="7">搞笑</option>
+                    <option value="8">互联网</option>
+                    <option value="9">科技</option>
+                    <option value="10">生活</option>
+                    <option value="11">国际</option>
+                    <option value="12">国内</option>
+                    <option value="13">体育</option>
+                    <option value="14">汽车</option>
+                    <option value="15">财经</option>
+                    <option value="16">房产</option>
+                </select>
+            </div>
+            <button type="button" class="btn  btn-primary" id="btnsub">提交</button>
+        </form>
+    </div>
+</div>
+<!--新闻显示列表-->
+<div class="panel panel-default col-md-6">
+    <div class="panel-heading">
+        <h3 class="panel-title">新闻列表</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table table-hover">
+            <tr>
+                <th>新闻编号</th>
+                <th>新闻标题</th>
+                <th>新闻时间</th>
+                <th>操作</th>
+            </tr>
+            <% for(var i = 0;i < list.length;i++){ %>
+            <tr id=tr<%= list[i].newsId %>>
+                <td class="one"><%= list[i].newsId %></td>
+                <td><%= list[i].newsTitle %></td>
+                <td><%= list[i].newsDate %></td>
+                <td>
+                    <a href="javascript:void(0)" id=del<%= list[i].newsId %> class="btn btn-danger btn1">删除</a>
+                    <a href="javascript:void(0)" id=dell<%= list[i].newsId %> class="btn btn-warning btn2">修改</a>
+                </td>
+            </tr>
+            <% } %>
+        </table>
+    </div>
+    <!--分页-->
+    <div id="pageGro" class="cb">
+        <div class="pageUp" id=page<%= list.length %>>上一页</div>
+        <div class="pageList">
+            <ul>
+                <% for(var i = 1;i <= pagecount;i++){ %>
+                <a href=/admin/getpage/<%= i %>>
+                    <li class="linum"><%= i %></li>
+                </a>
+                <% } %>
+            </ul>
+        </div>
+        <div class="pageDown" onclick="pageDown(<%= pagecount %>)">下一页</div>
+    </div>
+</div>
+
+<script type="application/javascript">
+    var num = "";
+    $(function () {
+        // 判断文本框是否有值
+        $("#newsTitle").blur(function () {
+            var ttiel = $("#newsTitle").val();
+            if (ttiel != "" && ttiel != null) {
+                $("#newsTitle").css("border-color", "");
+            }
+        });
+        $("#newsContent").blur(function () {
+            var con = $("#newsContent").val();
+            if (con != "" && con != null) {
+                $("#newsContent").css("border-color", "");
+            }
+        });
+        $("#newsPICPath").blur(function () {
+            var pa = $("#newsPICPath").val();
+            if (pa != "" && pa != null) {
+                $("#newsPICPath").css("border-color", "");
+            }
+        });
+        $("#newsSource").blur(function () {
+            var sou = $("#newsSource").val();
+            if (sou != "" && sou != null) {
+                $("#newsSource").css("border-color", "");
+            }
+        });
+    });
+
+    //新增新闻按钮
+    $("#btnsub").click(function (e) {
+        var a = $("#inputimg").val();
+        alert(a);
+        if (num == "") {
+            e.preventDefault();
+            var title = $("#newsTitle").val();
+            var content = $("#newsContent").val();
+            var path = $("#newsPICPath").val();
+            var source = $("#newsSource").val();
+
+
+            //判断如果都是空的话不能进行提交，否则可以提交
+            if (title == "" || content == "" || path == "" || source == "") {
+                $("#newsTitle").css("border-color", "red");
+                $("#newsContent").css("border-color", "red");
+                $("#newsPICPath").css("border-color", "red");
+                $("#newsSource").css("border-color", "red");
+
+            }
+//        判断文本框的值来变边框色
+            if (title != "") {
+                $("#newsTitle").css("border-color", "");
+            }
+            if (content != "") {
+                $("#newsContent").css("border-color", "");
+            }
+            if (path != "") {
+                $("#newsPICPath").css("border-color", "");
+            }
+
+            if (source != "") {
+                $("#newsSource").css("border-color", "");
+            }
+            if (title != "" && content != "" && path != "" && source != "") {
+                $.ajax({
+                    url: "/admin/addNews",
+                    type: "post",
+                    data: {
+                        newsTitle: title,
+                        newsContent: content,
+                        newsPICPath: path,
+                        newsSource: source,
+                        newsDate: $("#newsDate").val(),
+                        newsTarget: $("#newsTarget").val()
+                    },
+                    success: function (data) {
+                        if (data.statue === "ok") {
+                            alert(data.message);
+                            $("#newsTitle").val("");
+                            $("#newsContent").val("");
+                            $("#newsPICPath").val("");
+                            $("#newsSource").val("");
+                            location.reload();
+                        }
+                    },
+                    error: function (err) {
+                        console.log(err);
+                    }
+                });
+            }
+        }
+        else {
+            var title = $("#newsTitle").val();
+            var content = $("#newsContent").val();
+            var path = $("#newsPICPath").val();
+            var source = $("#newsSource").val();
+
+            $.ajax({
+                url: "/admin/update",
+                type: "post",
+                cache: false,
+                processData: false,
+                contentType: false,
+                data: {
+                    id: num,
+                    newsTitle: title,
+                    newsContent: content,
+                    newsPICPath: path,
+                    newsSource: source,
+                    newsDate: $("#newsDate").val(),
+                    newsTarget: $("#newsTarget").val()
+                },
+                success: function (data) {
+                    if (data.status === "ok") {
+                        alert(data.message);
+                        $("#newsTitle").val("");
+                        $("#newsContent").val("");
+                        $("#newsPICPath").val("");
+                        $("#newsSource").val("");
+                        location.reload();
+                        num = "";
+                    }
+                }
+                , error: function (err) {
+                    console.log(err);
+                }
+            })
+        }
+    })
+    //删除新闻
+    $("table").on("click", ".btn1", function () {
+        if (confirm("是否删除新闻？")) {
+            var res = $(this).parent().parent();
+            var str = $(this).attr("id");//attr()获取属性的值
+            var id = str.substring(3, 10);//从第五位开始截取 到第10位数结束 xinxi1 xinxi2 取到得是1 2
+            $.ajax({
+                url: "/admin/deleteNews",
+                type: "get",
+                data: {
+                    id: id
+                },
+                success: function (data) {
+                    if (data.statue === "ok") {
+                        alert(data.message);
+                        $(res).remove();
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        }
+    })
+    //修改新闻
+    $("table").on("click", ".btn2", function () {
+        var str = $(this).attr("id");//attr()获取属性的值
+        var id = str.substring(4, 10);//从第五位开始截取 到第10位数结束 xinxi1 xinxi2 取到得是1 2
+        num = id;
+        $.ajax({
+            url: "/admin/updateNews",
+            type: "post",
+            data: {
+                id: id
+            },
+            success: function (data) {
+                if (data.status === "ok") {
+                    $("#newsTitle").val(data.list[0].newsTitle);
+                    $("#newsContent").val(data.list[0].newsContent);
+                    $("#newsPICPath").val(data.list[0].newsImgPath);
+                    $("#newsSource").val(data.list[0].newsSource);
+                    $("#newsDate").val(data.list[0].newsDate);
+                    $("#newsTarget").val(data.list[0].newsTarget);
+
+                }
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    })
+    //获取当前时间
+    var now = new Date();
+    var day = ("0" + now.getDate()).slice(-2);
+    var month = ("0" + (now.getMonth() + 1)).slice(-2);
+    var today = now.getFullYear() + "-" + (month) + "-" + (day);
+    document.getElementById("newsDate").value = today;
+
+
+</script>
+</body>
+</html>

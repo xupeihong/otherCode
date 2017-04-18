@@ -1,0 +1,738 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('iconfont.eot');
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+    url('iconfont.woff') format('woff'),
+    url('iconfont.ttf') format('truetype'),
+    url('iconfont.svg#iconfont') format('svg');
+}
+
+@media screen and (max-width: 1366px) and (min-width: 768px) {
+    /*菜单栏*/
+    .main {
+        width: 100%;
+        height: 8vh;
+        position: absolute;
+        background-color: #a8afba;
+    }
+
+    .main ul li {
+        float: left;
+        font-size: 0.2rem;
+        width: 80px;
+        height: 20px;
+        text-align: center;
+        position: relative;
+        top: -70px;
+        left: 569px;
+        line-height: 20px;
+    }
+
+    .main ul li a {
+        color: #fff;
+    }
+
+    /*logo*/
+    .logo {
+        width: 100%;
+        height: 35vh;
+        text-align: center;
+        background-color: #a9d3e2;
+
+    }
+
+    .logo img {
+        width: 35vw;
+        height: 35vh;
+    }
+
+    /*搜索*/
+    .search {
+        width: 100vw;
+        height: 13vh;
+        position: relative;
+        font-size: 20px;
+    }
+
+    .search form {
+        clear: both;
+        position: relative;
+        text-align: center;
+
+    }
+
+    .search input {
+        height: 5vh;
+        width: 14rem;
+    }
+
+    /*图标*/
+    .search i {
+        display: inline-block;
+        margin-left: -68px;
+    }
+
+    .search button {
+        height: 6vh;
+        left: 40px;
+        margin-top: 4px;
+        cursor: pointer;
+        position: relative;
+        background-color: blue;
+        color: #fff;
+        border: none;
+    }
+
+    /*新闻其他项*/
+    .other {
+        width: 100%;
+        height: 2vh;
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+        display: none;
+    }
+
+    .other ul li {
+        display: inline-block;
+        position: relative;
+        float: left;
+        font-size: 0.2rem;
+        top: -60px;
+        left: 276px;
+        width: 9vw;
+        height: 5vh;
+    }
+
+    .other ul li a {
+        text-decoration: none;
+        color: gray;
+    }
+
+    /*常用网址*/
+    .website {
+        position: relative;
+        width: 90%;
+        height: 20vh;
+        border: 1px solid #e4e4e4;
+        top: 30px;
+        margin: 0 auto;
+        display: none;
+    }
+
+    .website span {
+        display: inline-block;
+        border-bottom: 1px solid #e4e4e4;
+        font-size: 0.2rem;
+        color: gray;
+        font-weight: bold;
+        width: 100%;
+        position: relative;
+        top: -63px;
+    }
+
+    .website ul li a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .website ul li {
+        display: inline-block;
+        position: relative;
+        font-size: 0.2rem;
+        float: left;
+        top: -150px;
+        width: 9vw;
+        height: 5vh;
+    }
+
+    /*实时热点*/
+    .redian {
+        width: 90%;
+        height: 25vh;
+        border: 1px solid #e4e4e4;
+        margin: 0 auto;
+        position: relative;
+        top: 60px;
+        display: none;
+    }
+
+    .redian span {
+        display: inline-block;
+        border-bottom: 1px solid #e4e4e4;
+        font-size: 0.2rem;
+        color: gray;
+        font-weight: bold;
+        width: 100%;
+        position: relative;
+        top: -143px;
+    }
+
+    .redian ul li {
+        display: inline-block;
+        position: relative;
+        font-size: 0.2rem;
+        float: left;
+        top: -210px;
+        width: 9vw;
+        height: 5vh;
+    }
+
+    .redian ul li a {
+        text-decoration: none;
+        font-size: 0.2rem;
+        color: #000;
+    }
+
+    .life {
+        width: 90%;
+        height: 20vh;
+        border: 1px solid #e4e4e4;
+        margin: 0 auto;
+        position: relative;
+        top: 110px;
+        display: none;
+    }
+
+    .life ul {
+        position: absolute;
+        display: inline-block;
+        top: -20px;
+        text-align: center;
+
+    }
+
+    .life span {
+        display: inline-block;
+        border-bottom: 1px solid #e4e4e4;
+        font-size: 0.2rem;
+        color: gray;
+        font-weight: bold;
+        width: 100%;
+        position: relative;
+        top: -63px;
+    }
+
+    .life ul li {
+        display: inline-block;
+        float: left;
+        width: 9vw;
+        height: 5vh;
+        font-size: 0.2rem;
+    }
+
+    .life ul li a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    /*尾部*/
+    .footer {
+        position: relative;
+        width: 90%;
+        height: 10vh;
+        bottom: 0;
+        top: 3rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .footer span {
+        /*position: absolute;*/
+        display: inline-block;
+        font-size: 0.2rem;
+        text-align: center;
+        left: 40%;
+        margin: 0 auto;
+        line-height: 60px;
+    }
+
+}
+
+@media screen and (max-width: 768px)  and (min-width: 320px) {
+    .main {
+        display: none;
+    }
+
+    /*logo*/
+    .logo {
+        width: 100%;
+        height: 35vh;
+        text-align: center;
+        background-color: #a9d3e2;
+
+    }
+
+    .logo img {
+        width: 35vw;
+        height: 35vh;
+    }
+
+    /*搜索*/
+    .search {
+        width: 100vw;
+        height: 13vh;
+        position: relative;
+        font-size: 20px;
+    }
+
+    .search form {
+        clear: both;
+        position: relative;
+        text-align: center;
+
+    }
+
+    .search input {
+        height: 5vh;
+        width: 14rem;
+    }
+
+    /*图标*/
+    .search i {
+        display: inline-block;
+        margin-left: -68px;
+    }
+
+    .search button {
+        height: 6vh;
+        left: 40px;
+        margin-top: 4px;
+        cursor: pointer;
+        position: relative;
+        background-color: blue;
+        color: #fff;
+        border: none;
+    }
+
+    /*新闻其他项*/
+    .other {
+        width: 90%;
+        height: 10vh;
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        font-size: 20px;
+    }
+
+    .other ul li {
+        display: inline-block;
+        position: relative;
+        float: left;
+        font-size: 0.2rem;
+        top: -12px;
+        left: -17px;
+        width: 13vw;
+        height: 5vh;
+    }
+
+    .other ul li a {
+        text-decoration: none;
+        color: gray;
+    }
+
+    /*常用网址*/
+    .website {
+        position: relative;
+        width: 90%;
+        height: 20vh;
+        border: 1px solid #e4e4e4;
+        top: 30px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .website span {
+        display: inline-block;
+        border-bottom: 1px solid #e4e4e4;
+        font-size: 0.2rem;
+        color: gray;
+        font-weight: bold;
+        width: 100%;
+        position: relative;
+        top: -30px;
+        padding-left: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .website ul li a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .website ul li {
+        display: inline-block;
+        position: relative;
+        font-size: 0.2rem;
+        float: left;
+        top: -71px;
+        width: 20vw;
+        height: 5vh;
+    }
+
+    /*实时热点*/
+    .redian {
+        width: 43%;
+        height: 30vh;
+        border: 1px solid #e4e4e4;
+        margin: 0 auto;
+        position: relative;
+        top: 60px;
+        display: block;
+        float: left;
+        left: 32px;
+    }
+
+    .redian span {
+        display: inline-block;
+        border-bottom: 1px solid #e4e4e4;
+        font-size: 0.2rem;
+        color: gray;
+        font-weight: bold;
+        width: 100%;
+        position: relative;
+        top: -32px;
+        padding-left: 10px;
+        box-sizing: border-box;
+    }
+
+    .redian ul li {
+        display: inline-block;
+        position: relative;
+        font-size: 0.2rem;
+        float: left;
+        top: -79px;
+        width: 16vw;
+        height: 7vh;
+    }
+
+    .redian ul li a {
+        text-decoration: none;
+        font-size: 0.2rem;
+        color: #000;
+    }
+
+    /*生活服务*/
+    .life {
+        width: 43%;
+        height: 30vh;
+        border: 1px solid #e4e4e4;
+        margin: 0 auto;
+        position: relative;
+        top: 61px;
+        display: block;
+        float: left;
+        left: 55px;
+    }
+
+    .life ul {
+        position: absolute;
+        display: inline-block;
+        top: -20px;
+        text-align: center;
+
+    }
+
+    .life span {
+        display: inline-block;
+        border-bottom: 1px solid #e4e4e4;
+        font-size: 0.2rem;
+        color: gray;
+        font-weight: bold;
+        width: 100%;
+        position: relative;
+        top: -33px;
+        padding-left: 10px;
+        box-sizing: border-box;
+    }
+
+    .life ul li {
+        display: inline-block;
+        float: left;
+        width: 8vw;
+        height: 12vh;
+        font-size: 0.2rem;
+    }
+
+    .life ul li a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    /*尾部*/
+    .footer {
+        position: relative;
+        width: 90%;
+        height: 10vh;
+        bottom: 0;
+        top: 3rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .footer span {
+        /*position: absolute;*/
+        display: inline-block;
+        font-size: 0.2rem;
+        text-align: center;
+        left: 40%;
+        margin: 0 auto;
+        line-height: 60px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main {
+        display: none;
+    }
+
+    /*logo*/
+    .logo {
+        width: 100%;
+        height: 35vh;
+        text-align: center;
+        background-color: #a9d3e2;
+
+    }
+
+    .logo img {
+        width: 35vw;
+        height: 35vh;
+    }
+
+    /*搜索*/
+    .search {
+        width: 100vw;
+        height: 13vh;
+        position: relative;
+        font-size: 20px;
+    }
+
+    .search form {
+        clear: both;
+        position: relative;
+        text-align: center;
+
+    }
+
+    .search input {
+        height: 5vh;
+        width: 10rem;
+    }
+
+    /*图标*/
+    .search i {
+        display: inline-block;
+        margin-left: -68px;
+    }
+
+    .search button {
+        height: 6vh;
+        left: 40px;
+        margin-top: 4px;
+        cursor: pointer;
+        position: relative;
+        background-color: blue;
+        color: #fff;
+        border: none;
+    }
+
+    /*新闻其他项*/
+    .other {
+        width: 90%;
+        height: 10vh;
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        font-size: 20px;
+    }
+
+    .other ul li {
+        display: inline-block;
+        position: relative;
+        float: left;
+        font-size: 0.2rem;
+        top: -12px;
+        left: -24px;
+        width: 12vw;
+        height: 5vh;
+    }
+
+    .other ul li a {
+        text-decoration: none;
+        color: gray;
+    }
+
+    /*常用网址*/
+    .website {
+        position: relative;
+        width: 90%;
+        height: 20vh;
+        border: 1px solid #e4e4e4;
+        top: 30px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .website span {
+        display: inline-block;
+        border-bottom: 1px solid #e4e4e4;
+        font-size: 0.2rem;
+        color: gray;
+        font-weight: bold;
+        width: 100%;
+        position: relative;
+        top: 0px;
+        padding-left: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .website ul li a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .website ul li {
+        display: inline-block;
+        position: relative;
+        font-size: 0.2rem;
+        float: left;
+        top: -21px;
+        width: 18vw;
+        height: 5vh;
+    }
+
+    /*实时热点*/
+    .redian {
+        width: 90%;
+        height: 30vh;
+        border: 1px solid #e4e4e4;
+        margin: 0 auto;
+        position: relative;
+        top: 60px;
+        display: block;
+        /*float: left;*/
+        left: 16px;
+    }
+
+    .redian span {
+        display: inline-block;
+        border-bottom: 1px solid #e4e4e4;
+        font-size: 0.2rem;
+        color: gray;
+        font-weight: bold;
+        width: 100%;
+        position: relative;
+        top: 0px;
+        padding-left: 10px;
+        box-sizing: border-box;
+    }
+
+    .redian ul li {
+        display: inline-block;
+        position: relative;
+        font-size: 0.2rem;
+        float: left;
+        top: 0px;
+        width: 35vw;
+        height: 7vh;
+    }
+
+    .redian ul li a {
+        text-decoration: none;
+        font-size: 0.2rem;
+        color: #000;
+    }
+
+    /*生活服务*/
+    .life {
+        width: 90%;
+        height: 30vh;
+        border: 1px solid #e4e4e4;
+        margin: 0 auto;
+        position: relative;
+        top: 72px;
+        display: block;
+        float: left;
+        left: 16px;
+    }
+
+    .life ul {
+        position: absolute;
+        display: inline-block;
+        top: -20px;
+        text-align: center;
+
+    }
+
+    .life span {
+        display: inline-block;
+        border-bottom: 1px solid #e4e4e4;
+        font-size: 0.2rem;
+        color: gray;
+        font-weight: bold;
+        width: 100%;
+        position: relative;
+        top: 0px;
+        padding-left: 10px;
+        box-sizing: border-box;
+    }
+
+    .life ul li {
+        position: relative;
+        display: inline-block;
+        float: left;
+        width: 18vw;
+        height: 12vh;
+        font-size: 0.2rem;
+        top: 48px;
+
+    }
+
+    .life ul li a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    /*尾部*/
+    .footer {
+        position: relative;
+        width: 90%;
+        height: 10vh;
+        bottom: 0;
+        top: 3rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .footer span {
+        display: inline-block;
+        font-size: 0.2rem;
+        text-align: center;
+        left: 40%;
+        margin: 0 auto;
+        line-height: 60px;
+    }
+}

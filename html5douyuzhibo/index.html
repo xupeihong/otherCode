@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+<header>
+    <section class="main">
+        <section class="main-left">
+            <ul>
+                <li><a href="#"> <img src="img/logo.png" alt=""></a></li>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">直播</a></li>
+                <li><a href="#">分类</a></li>
+                <li><a href="#">游戏</a></li>
+                <li><a href="#">鱼吧</a></li>
+            </ul>
+        </section>
+        <section class="search">
+            <form action="" method="post">
+                <input type="text" placeholder="斗鱼直播">
+                <a href="#"><i class="iconfont">&#xe651;</i></a>
+            </form>
+        </section>
+        <section class="main-right">
+            <ul>
+                <i class="iconfont"> <a href="#">&#xe90e;</a></i>
+                <li><a href="#">登录</a><span class="shu">|</span></li>
+                <li><a href="#">注册</a></li>
+            </ul>
+        </section>
+    </section>
+</header>
+<article>
+    <section class="slider-main">
+        <section class="slider" style="display: none;">
+            <ul>
+                <li><a href="#"><i class="iconfont">&#xe6e4;</i><br>直播</a></li>
+                <li><a href="#"><i class="iconfont">&#xf0056;</i><br>分类</a></li>
+                <li><a href="#"><i class="iconfont">&#xe641;</i><br>排行榜</a></li>
+                <li><a href="#"><i class="iconfont">&#xe621;</i><br>关注</a></li>
+                <li><a href="#"><i class="iconfont">&#xe60c;</i><br>游戏</a></li>
+                <li><a href="#"><i class="iconfont">&#xe607;</i><br>客服</a></li>
+            </ul>
+        </section>
+    </section>
+    <section class="title">
+        <section class="logo">
+            <img src="img/logo.png" alt="">
+        </section>
+        <section class="logo-contetn">
+            <ul>
+                <li>极客学院的直播 <span class="jubao">举报</span></li>
+                <li>热门直播 / 教育行业 / 高新培训</li>
+                <li><i class="iconfont">&#xe633;</i>观看10万</li>
+            </ul>
+        </section>
+        <section class="logo-xin">
+            <button style="outline: none;"><i class="iconfont" id="xin">&#xe621;</i></button>
+            <button style="outline: none;">23456</button>
+            <img src="img/qr.png" alt="" width="100" height="100" style="display: none;z-index: 1;position: absolute;"
+                 class="img">
+        </section>
+    </section>
+    <section class="logo-pic"><a href="#"><img src="img/201612161232582097.png" alt="" width="292" height="85"></a>
+    </section>
+    <div class="player" id="player">
+        <video src="video/oceans.mp4" id="video" preload="metadata" width="935"
+               height="400">
+
+        </video>
+        <div class="btn" style="display:none;">
+            <!--播放-->
+            <i class="iconfont" id="play">&#xe610;</i>
+            <!--喇叭-->
+            <i class="iconfont" id="voluem">&#xe60d;</i>
+            <div class="volRound" id="volRound">
+                <div id="color"></div>
+                <div id="circle"></div>
+            </div>
+            <!--全屏-->
+            <i class="iconfont" id="quanping">&#xe614;</i>
+        </div>
+    </div>
+    <section class="gao">
+        <div>直播公告</div>
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deserunt nam odio quaerat
+            reprehenderit. Commodi corporis cumque doloribus enim est, fuga illo nobis odit quam quibusdam quis quo vero
+            vitae.
+        </div>
+    </section>
+</article>
+<script src="js/index.js"></script>
+</body>
+</html>

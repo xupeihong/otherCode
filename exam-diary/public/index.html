@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>我的日记本</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO页面关键词 -->
+    <meta name="keywords" content="your keywords">
+    <meta name="description" content="your description">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        .diary {
+            width: 500px;
+            margin: 80px auto;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="panel panel-default diary">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            我的日记本
+        </h3>
+    </div>
+    <div class="panel-body">
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" placeholder="再测试一个">
+            </div>
+            <div class="form-group">
+                <label for="emotion">Emotion</label>
+                <select class="form-control" id="emotion">
+                    <option>喜悦</option>
+                    <option>高兴</option>
+                    <option>失落</option>
+                    <option>一般</option>
+                    <option>沮丧</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" id="btn">添加日记</button>
+            <div class="form-group">
+                <label for="Content">日记</label><br>
+                <textarea class="form-control" rows="3" cols="60" id="Content"></textarea>
+            </div>
+        </form>
+        <hr>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>编号</th>
+                <th>日期</th>
+                <th>心情</th>
+
+            </tr>
+            </thead>
+            <tbody id="tb">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- 模态框 -->
+<div class="modal fade mo" tabindex="-1" role="dialog" id="myModal" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <!--<p>2</p>-->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="close">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script src="jquery/dist/jquery.min.js"></script>
+<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var num = "";
+        // 开启页面的时候获取所有日记渲染表格，需要动态生成tr标签与td标签
+        $.ajax({
+            url: "/getdiary",
+            type: "GET",
+            success: function (data) {
+//                console.log(data);
+                for (var i = 0; i < data.length; i++) {
+                    var tr = $("<tr></tr>");
+                    var td = $("<td>" + data[i].did + "</td>");
+                    var td2 = $("<td>" + data[i].diaryDate + "</td>");
+                    var td3 = $("<td>" + data[i].emotion + "</td>");
+                    var td4 = $('<td><button type="button" class="btn btn-info btn-xs chk"id="check' + data[i].did + '" data-toggle="modal" data-target="#myModal">查看</button></td>');
+                    var td5 = $('<td><button type="button" class="btn btn-info btn-xs del"id="del' + data[i].did + '">删除</button></td>');
+                    var td6 = $('<td><button type="button" class="btn btn-info btn-xs update"id="update' + data[i].did + '">修改</button></td>');
+                    tr.append(td);
+                    tr.append(td2);
+                    tr.append(td3);
+                    tr.append(td4);
+                    tr.append(td5);
+                    tr.append(td6);
+                    tr.appendTo($("#tb"));
+                }
+            }, error: function (err) {
+                console.log(err);
+            }
+        })
+        // 点击添加按钮添加日记并更新列表
+        $("#title").blur(function () {
+            var pa = $("#title").val();
+            if (pa != "" && pa != null) {
+                $("#title").css("border-color", "");
+            }
+        });
+        $("#Content").blur(function () {
+            var pa = $("#Content").val();
+            if (pa != "" && pa != null) {
+                $("#Content").css("border-color", "");
+            }
+        });
+
+        $("#btn").click(function (e) {
+            e.preventDefault();
+            if (num == "") {
+                var title = $("#title").val();
+                var emotion = $("#emotion").val();
+                var content = $("#Content").val();
+                if (title == "" || content == "") {
+                    $("#title").css("border-color", "red");
+                    $("#Content").css("border-color", "red");
+                }
+                if (title != "" && content != "") {
+                    $.ajax({
+                        url: "/add",
+                        type: "POST",
+                        data: {
+                            title: title,
+                            emotion: emotion,
+                            content: content
+                        }, success: function (data) {
+                            if (data.status === "ok") {
+                                alert(data.message);
+                                $("#title").val("");
+                                $("#Content").val("");
+                                location.reload();
+                            }
+                        }, error: function (err) {
+                            console.log(err);
+                        }
+                    })
+                }
+            }
+            else {
+                var title = $("#title").val();
+                var emotion = $("#emotion").val();
+                var content = $("#Content").val();
+//                alert(title);
+                $.ajax({
+                    url: "/updateDiarys",
+                    type: "POST",
+                    data: {
+                        num: num,
+                        title: title,
+                        emotion: emotion,
+                        content: content
+                    },
+                    success: function (data) {
+                        //待解决的问题
+//                        alert(1);
+                        if (data.status === "ok") {
+                            alert(data.message);
+                            $("#title").val("");
+                            $("#Content").val("");
+                            location.reload();
+                            num = "";
+                        }
+                    },
+                    error: function (err) {
+                        console.log(err);
+                    }
+                })
+            }
+        });
+        // 点击查看，蹦出模态框展示日记
+        //
+        $("tbody").on("click", ".chk", function () {
+            var str = $(this).attr("id");//attr()获取属性的值
+            var id = str.substring(5, 10);
+//            alert(id);
+            $.ajax({
+                url: "/getone",
+                type: "GET",
+                data: {id: id},
+                success: function (data) {
+                    //动态拼接
+                    var time = data[0].diaryDate;
+                    time = time.substring(0, 10);
+                    var pc = $("<p></p>");
+                    pc.html("" + time + "日记----心情：" + data[0].emotion + "----天气：" + data[0].weather + "").css("font-weight", "bold");
+                    var p = $("<h3>" + data[0].title + "</h3>");
+                    var p2 = $("<p>" + data[0].content + "</p>");
+                    p.appendTo($(".modal-body"));
+                    p2.appendTo($(".modal-body"));
+                    pc.appendTo($(".modal-title"));
+
+                }, error: function (err) {
+                    console.log(err);
+                }
+            })
+        });
+        //关闭刷新页面
+        $("#close").click(function () {
+            window.location.reload();
+        });
+        $(".close").click(function () {
+            window.location.reload();
+        });
+        //删除日记
+        $("tbody").on("click", ".del", function () {
+            if (confirm("是否真的要删除？")) {
+                var index = $(this).attr("id");
+                var num = index.substring(3, 10);
+                var res = $(this).parent().parent();
+                $.ajax({
+                    url: "/deldiary",
+                    type: "GET",
+                    data: {id: num},
+                    success: function (data) {
+                        if (data.status === "ok") {
+                            alert(data.message);
+                            $(res).remove();
+                        }
+                    }, error: function (err) {
+                        console.log(err);
+                    }
+                })
+            }
+        })
+        //修改日记
+        $("tbody").on("click", ".update", function () {
+            var str = $(this).attr("id");
+            var index = str.substring(6, 11);
+            num = index;
+            $.ajax({
+                url: "/update",
+                type: "POST",
+                data: {id: index},
+                success: function (data) {
+                    $("#title").val(data[0].title);
+                    $("#Content").val(data[0].content);
+                    $("#emotion").val(data[0].emotion);
+                }, error: function (err) {
+                    console.log(err);
+                }
+            })
+        })
+    });
+
+
+</script>
+</body>
+</html>

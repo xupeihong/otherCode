@@ -1,0 +1,2338 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0 none;
+    vertical-align: baseline;
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+
+}
+
+ul {
+    list-style: none;
+}
+
+h2, h3 {
+    display: block;
+    font-weight: bold;
+}
+
+div {
+    display: block;
+}
+
+img {
+    vertical-align: top;
+}
+
+em {
+    font-style: normal;
+}
+
+body, input, button, select, textarea, table {
+    font: 12px/1.5 Tahoma, Helvetica, Arial, sans-serif;
+}
+
+/*最大盒子*/
+.warp {
+    width: 1308px;
+    /*height: 1789px;*/
+    min-width: 1100px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+/*最上方导航栏*/
+.topnav {
+    width: 1008px;
+    height: 25px;
+    border: 1px solid #545652;
+    float: left;
+    background-color: #545652;
+}
+
+/*右上方搜索框*/
+.topnav-right {
+    position: relative;
+    width: 298px;
+    float: right;
+    height: 27px;
+    line-height: 25px;
+    background-color: #545652;
+    box-sizing: border-box;
+}
+
+.topnav-right input {
+    position: relative;
+    background-color: white;
+}
+
+/*一级菜单*/
+.nav > li {
+    float: left;
+    width: 80px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #545652;
+    text-align: center;
+
+}
+
+.nav li a {
+    color: #fff;
+}
+
+/*一级菜单的第一个*/
+.nav > li:nth-child(1) {
+    margin-left: 104px;
+}
+
+/*一级菜单的最后一个*/
+.nav > li:last-child {
+    margin-left: 630px;
+}
+
+/*默认二级菜单隐藏*/
+.nav ul {
+    display: none;
+}
+
+/*鼠标移入显示二级菜单*/
+.nav > li:hover ul {
+    display: block;
+    background-color: #fbfbfb;
+    text-align: center;
+    width: 100px;
+}
+
+.nav > li:nth-child(1):hover {
+    background-color: #fff;
+    border-top: 1px solid red;
+    color: orange;
+}
+
+.nav > li:nth-child(2):hover {
+    background-color: #fff;
+    border-top: 1px solid red;
+}
+
+.nav-2 li a {
+    color: gray;
+}
+
+.nav-2 li:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.li-1:hover {
+    color: orange;
+}
+
+/*去掉原点*/
+li {
+    list-style: none;
+}
+
+/*nav*/
+ul.nav {
+    width: 100%;
+    height: 100%;
+    list-style-type: none
+}
+
+/*默认箭头向下*/
+ul.nav span {
+    display: inline-block;
+    margin-left: 4px;
+    width: 12px;
+    height: 6px;
+    line-height: 5px;
+    background: url(../img/sj1.png) no-repeat center center
+
+}
+
+/*鼠标移入箭头向上*/
+ul.nav > li:hover span {
+    background: url(../img/sg3.jpg) no-repeat center center;
+    z-index: 100000;
+    transition-duration: .5s;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+/*贝壳图标*/
+#beike {
+    position: absolute;
+    clear: both;
+    width: 14px;
+    height: 13px;
+    line-height: 13px;
+    display: block;
+    background: url("../img/iconsB.png") no-repeat;
+    background-position: -119px 0px;
+    top: 10px;
+}
+
+.login2:hover {
+    text-decoration: underline;
+}
+
+/*搜索图标*/
+.ico_search {
+    width: 16px;
+    height: 20px;
+    vertical-align: top;
+    margin: 2px 0 0 -5px;
+    position: absolute;
+    /*padding-top: 10px;*/
+}
+
+/*鼠标悬浮显示红色图标*/
+.ico_search:hover {
+    position: absolute;
+    width: 16px;
+    height: 20px;
+    vertical-align: top;
+    margin: 2px 0 0 -5px;
+    background-position: -57px 4px;
+}
+
+.ico_gb_b {
+    display: inline-block;
+    background: url("../img/iconsB.png") no-repeat;
+    background-position: -42px 4px;
+}
+
+/*按钮样式*/
+#btnsearch {
+    cursor: pointer;
+    padding: 0;
+    overflow: visible;
+    background-color: #fff;
+}
+
+/*---------------------------------------*/
+/*主导航*/
+.header {
+    position: absolute;
+    width: 1308px;
+    height: 84px;
+    /*border: 1px solid black;*/
+    top: 28px;
+    background-color: #fcfcfc;
+    z-index: -1;
+    /*left: 140px;*/
+}
+
+/*logo*/
+.logo {
+    position: absolute;
+    width: 170px;
+    height: 84px;
+    line-height: 84px;
+    z-index: -1;
+    float: left;
+    left: 120px;
+}
+
+/*图片*/
+.logo img {
+    position: absolute;
+    width: 170px;
+    height: 46px;
+    top: 22px;
+
+}
+
+/*中间导航*/
+.main-nav {
+    position: absolute;
+    width: 738px;
+    height: 84px;
+    float: left;
+    /*border: 1px solid red;*/
+    left: 300px;
+
+}
+
+.main-nav .main-nav-left, .main-nav-mid {
+    /*width: 254px;*/
+    float: left;
+    position: relative;
+    height: 80px;
+    padding-left: 38px;
+    margin-left: -8px;
+    background: url("../img/header.png") no-repeat;
+    background-position: 0 -85px;
+}
+
+.main-nav-mid {
+    /*width: 146px;*/
+}
+
+/*赚字*/
+.mod_mainnav_taga {
+    background: url("../img/header.png") no-repeat;
+    background-position: 0 -676px;
+}
+
+.mod_mainnav_taga:hover {
+    background: url("../img/header.png") no-repeat;
+    background-position: -40px -676px;
+    width: 70px;
+}
+
+.mod_mainnav_tag {
+    display: block;
+    width: 41px;
+    height: 25px;
+    line-height: 99em;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 26px;
+
+}
+
+.main-nav-left ul li {
+    float: left;
+}
+
+.main-nav-left ul li a {
+    display: block;
+    height: 84px;
+    width: 108px;
+    line-height: 99em;
+    overflow: hidden;
+}
+
+/*返利商城*/
+.item_mall a {
+    background: url("../img/header.png") no-repeat;
+    background-position: 0 -170px;
+}
+
+.item_mall a:hover {
+    background: url("../img/header.png") no-repeat;
+    background-position: -108px -170px;
+}
+
+/*商旅频道*/
+.item_travel a {
+    background: url("../img/header.png") no-repeat;
+    background-position: 0 -254px;
+}
+
+.item_travel a:hover {
+    background: url("../img/header.png") no-repeat;
+    background-position: -108px -254px;
+}
+
+/*花积分*/
+.mod_mainnav_tagb {
+    background: url("../img/header.png") no-repeat;
+    background-position: -109px -676px;
+}
+
+/*花积分悬浮*/
+.mod_mainnav_tagb:hover {
+    background: url("../img/header.png") no-repeat;
+    background-position: -149px -676px;
+    width: 70px;
+}
+
+/*花积分模块*/
+.item_gmall a {
+    background: url("../img/header.png") no-repeat;
+    background-position: 0 -338px;
+}
+
+.item_gmall a:hover {
+    background: url("../img/header.png") no-repeat;
+    background-position: -108px -338px;
+}
+
+.main-nav-mid ul li a {
+    display: block;
+    height: 84px;
+    width: 108px;
+    line-height: 99em;
+    overflow: hidden;
+}
+
+.item_about {
+    position: relative;
+}
+
+.item_about a {
+    background: url("../img/header.png") no-repeat;
+    background-position: 0 -506px;
+}
+
+/*了解彩贝区域*/
+.main-nav-right {
+    /*width: 362px;*/
+    height: 84px;
+    float: left;
+    position: relative;
+    background: url("../img/header.png") no-repeat;
+    background-position: 0 -85px;
+    padding-left: 38px;
+    margin-left: -8px;
+}
+
+.main-nav-right ul li a {
+    display: block;
+    height: 84px;
+    width: 108px;
+    line-height: 99em;
+    overflow: hidden;
+}
+
+/*了解彩贝二级菜单*/
+.item_list {
+    position: absolute;
+    top: 68px;
+    left: -11px;
+    width: 138px;
+    height: 66px;
+    z-index: 1;
+    display: none;
+    background: url("../img/header_list.png") no-repeat;
+    background-position: 0 0;
+    opacity: 1;
+    text-align: center;
+    color: gray;
+    float: left;
+    overflow: hidden;
+}
+
+.main-nav-right .item_list p {
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.main-nav-right .item_list p:hover {
+    color: orange;
+}
+
+.clearfix:after {
+    display: block;
+    clear: both;
+    content: "\0020";
+    visibility: hidden;
+    height: 0;
+}
+
+/*item_list_bt{
+    width: 138px;
+    height: 7px;
+    background:url("../img/header_list.png")no-repeat;
+    background-position: 0 bottom;
+}*/
+.item_about a:hover {
+
+    background: url("../img/header.png") no-repeat;
+    background-position: -108px -506px;
+}
+
+/*彩贝活动*/
+.item_act a {
+    background: url("../img/header.png") no-repeat;
+    background-position: 0 -422px;
+}
+
+.item_act a:hover {
+    background: url("../img/header.png") no-repeat;
+    background-position: -108px -422px;
+}
+
+.main-nav-right li {
+    float: left;
+}
+
+/*个人中心*/
+.item_i a {
+    background: url("../img/header.png") no-repeat;
+    background-position: 0 -590px;
+}
+
+.item_i a:hover {
+    background: url("../img/header.png") no-repeat;
+    background-position: -108px -590px;
+}
+
+/*默认了解彩贝二级菜单隐藏*/
+.item_about ul {
+    width: 80px;
+    height: 50px;
+    display: none;
+}
+
+/*？？？？？？？*/
+.item_about ul > li:hover ul {
+    clear: both;
+    position: absolute;
+    top: 400px;
+    display: block;
+}
+
+/*右边链接*/
+.banner-lft {
+    position: relative;
+    margin-top: 32px;
+    margin-right: 146px;
+}
+
+.col_r {
+    float: right;
+    display: inline;
+}
+
+/*每个图标之间的距离*/
+.banner-lft a {
+    margin-left: 14px;
+}
+
+/*论坛图标*/
+.ico_bbs {
+    background: url("../img/iconsB.png") no-repeat;
+    background-position: 0 -21px;
+}
+
+.ico_bbs:hover {
+    background: url("../img/iconsB.png") no-repeat;
+    background-position: 0px -45px;
+}
+
+/*三个图标的样式*/
+.ico_bbs, .ico_mail, .ico_wb {
+    width: 24px;
+    height: 24px;
+    line-height: 99em;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+/**/
+.ico_gb_b {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*微博*/
+.ico_wb {
+    background: url("../img/iconsB.png") no-repeat;
+    background-position: -24px -21px;
+}
+
+.ico_wb:hover {
+    background: url("../img/iconsB.png") no-repeat;
+    background-position: -24px -45px;
+}
+
+/*邮箱*/
+.ico_mail {
+    background: url("../img/iconsB.png") no-repeat;
+    background-position: -49px -21px;
+}
+
+.ico_mail:hover {
+    background: url("../img/iconsB.png") no-repeat;
+    background-position: -49px -45px;
+}
+
+/*中间大图*/
+.sec-main {
+    width: 1308px;
+    height: 602px;
+    position: absolute;
+    clear: both;
+    /*border: 1px solid black;*/
+    top: 108px;
+    margin: 0 auto;
+    z-index: -2;
+}
+
+/*左菜单*/
+.sec-main-left {
+    width: 211px;
+    height: 602px;
+    float: left;
+    position: relative;
+    z-index: 3;
+    box-shadow: 2px 0 4px 0 #D5D5D5;
+    /*border: 1px solid black;*/
+    margin-left: 108px;
+}
+
+/*左上方标题*/
+.menu-left {
+    display: block;
+    background: url("../img/index.png") no-repeat;
+    background-position: 0 39px;
+    padding-bottom: 5px;
+    height: 39px;
+    line-height: 39px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+/*字体*/
+.f_tx1 {
+    font-family: "Microsoft YaHei", "微软雅黑", "黑体";
+}
+
+/*标题汉字*/
+.menu-left h2 {
+    background: #d03800;
+    height: 39px;
+}
+
+/*链接*/
+.menu-left h2 a {
+    display: block;
+    color: #fff;
+    cursor: pointer;
+}
+
+.ico_gb_b {
+
+    display: inline-block;
+}
+
+/*购物返彩贝图标*/
+.ico_businav {
+    width: 13px;
+    height: 15px;
+    background: url("../img/iconsB.png") no-repeat;
+    background-position: -73px 0;
+    vertical-align: -2px;
+    margin-right: 8px;
+}
+
+/*汉字*/
+.menu_left_hd_m {
+    display: inline-block;
+}
+
+/*具体菜单项*/
+.menu-left-bd {
+    background-color: #F0F0F0;
+    padding-top: 13px;
+    height: 549px;
+    margin-top: -5px;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    border-color: #D5D5D5;
+}
+
+/*数码家电盒子*/
+.busi-nav {
+    padding: 11px 19px;
+    position: relative;
+    cursor: pointer;
+    z-index: 4;
+}
+
+/*鼠标移入背景变黑色*/
+.busi-nav:hover {
+    background-color: #000000;
+}
+
+.busi-nav:hover h3 {
+    color: #fff;
+}
+
+.busi-nav:hover ul li a {
+    color: #fff;
+}
+
+.busi-nav h3 {
+    color: #555;
+    margin-bottom: 3px;
+}
+
+.busi-nav .busi-nav-item {
+    height: 18px;
+}
+
+.busi-nav-item li {
+    float: left;
+}
+
+/*每个类加下划线*/
+.busi-nav-item li a:hover {
+    text-decoration: underline;
+}
+
+/*默认字体颜色*/
+.busi-nav-item li a {
+    color: #888888;
+}
+
+.busi-nav-item::after {
+    content: "\0020";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+/*更多箭头*/
+.index-more {
+    width: 6px;
+    height: 9px;
+    line-height: 99em;
+    overflow: hidden;
+    background: url("../img/index.png") no-repeat;
+    background-position: 0 -6px;
+    position: absolute;
+    right: 19px;
+    top: 28px;
+    display: inline-block;
+}
+
+/*----------------------------------------------------------*/
+/*商品详细展示*/
+.busi-nav-panel {
+    width: 446px;
+    height: 296px;
+    opacity: 1;
+    display: none;
+    /*border: 1px solid black;*/
+    border-bottom: 1px solid #D5D5D5;
+    /*visibility: hidden;*/
+    position: absolute;
+    top: 0;
+    left: 210px;
+    background-color: #fff;
+    z-index: 5;
+    padding: 18px 34px;
+    box-shadow: inset 2px 0 5px 0 #D5D5D5, 2px 0 3px #E8E8E8;
+}
+
+/**/
+.detail:after, .mod_pt1:after {
+    display: block;
+    content: "\0020";
+    clear: both;
+}
+
+/*热门分类盒子*/
+.busi_nav_panel_hd {
+    border-bottom: 1px dotted #E2E2E2;
+    /* padding-bottom: 12px;
+     margin-bottom: 14px;*/
+}
+
+.busi-nav-panel h4 {
+    font-family: "Microsoft YaHei", "微软雅黑", "黑体";
+    font-size: 14px;
+    color: #e64e3e;
+    margin-bottom: 9px;
+    height: 18px;
+}
+
+/*几个热门分类*/
+.busi_nav_panel_hd div a {
+    color: #555;
+    display: inline-block;
+    margin-right: 16px;
+}
+
+.busi_nav_panel_hd div a:hover {
+    color: orange;
+    display: inline-block;
+    margin-right: 16px;
+    text-decoration: underline;
+}
+
+.lunbo_loading {
+    background: url("../img/load.gif") center 100% no-repeat;
+}
+
+.mod_busilist li a .bushi-fanli, .mod_busilist li a .bushi-fanli-bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 88px;
+    height: 56px;
+
+}
+
+.detail, mod_pt1 {
+    zoom: 1;
+}
+
+.detail li, .detail .li {
+    float: left;
+    display: inline;
+}
+
+/*最高返利汉字*/
+.mod_busilist li a .bushi-fanli-hd {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding-top: 10px;
+}
+
+.mod_busilist li {
+    width: 88px;
+    height: 56px;
+    border: 1px solid #EDEEEF;
+    margin: 0 0 -1px -1px;
+    background-color: #fff;
+}
+
+/*a标签*/
+.mod_busilist li a {
+    display: block;
+    width: 88px;
+    height: 56px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.mod_busilist .detail li a {
+    /*overflow: hidden;*/
+}
+
+/*图片样式*/
+.mod_busilist li a img {
+    width: 80px;
+    height: 27px;
+    margin-top: 14px;
+}
+
+.detail li a .bushi-fanli {
+    /*visibility: visible;*/
+    left: 0;
+    top: 100%;
+}
+
+/*最高返利黑色背景*/
+.detail .bushi-fanli {
+    line-height: 18px;
+    color: #fff;
+    text-decoration: none;
+    /*visibility: visible;*/
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+/*百分比数*/
+.mod_busilist li a .c_em1 {
+    display: block;
+}
+
+/**/
+.c_em1, .c_em1_1 {
+    color: orange;
+}
+
+.mod_busilist li:hover .bushi-fanli-bg {
+    background: rgba(000, 000, 000, 0.8);
+    position: absolute;
+    opacity: 0.7;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    width: 88px;
+    height: 44px;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 12px;
+    line-height: 16px;
+    color: #fff;
+}
+/*黑色阴影特效*/
+.bushi-fanli-bg {
+    display: block;
+    left: 0;
+    top: 100%;
+    transition: all 300ms  ease-out;
+}
+
+.mod_busilist li:hover .bushi-fanli-bg b {
+    display: block;
+    font-size: 12px;
+    margin-top: -3px;
+    color: orange;
+}
+
+.bushi-fanli-bg b {
+    display: none;
+}
+
+.busi-list {
+    position: relative;
+
+}
+
+/*查看全部商家*/
+.busi_nav_panel_btn {
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 15px;
+    padding: 0 10px;
+    color: #fff;
+    background-color: #E64E3E;
+}
+
+.busi_nav_panel_btn span {
+    display: inline-block;
+}
+
+/*箭头*/
+.busi_nav_panel_btn em {
+    width: 0;
+    height: 0;
+    margin-left: 6px;
+    overflow: hidden;
+    font-size: 0;
+    display: inline-block;
+    border-width: 4px;
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent #FFF;
+}
+
+/*奇数背景是白色*/
+.busi-nav-even {
+    background-color: #ffffff;
+}
+
+/*热门图标*/
+.ico_hot {
+    width: 30px;
+    height: 14px;
+    line-height: 99em;
+    overflow: hidden;
+    background: url("../img/iconsB.png") no-repeat;
+    background-position: -87px 0;
+    margin-left: 5px;
+}
+
+.busi-nav h3 .ico_hot {
+    vertical-align: 0;
+}
+
+/*----------------导航左边直接显示结束----------------------------------------------*/
+/*----------------鼠标移入显示详细---------------------------------------------------*/
+/*----------------中间靠右轮播加登陆按钮开始--------------------------------------------------------*/
+.sec-main-body {
+    float: left;
+    width: 855px;
+    height: 602px;
+    /*border: 1px solid black;*/
+}
+
+/*轮播盒子*/
+.sec-main-lunbo {
+    width: 666px;
+    height: 300px;
+    position: relative;
+    float: left;
+}
+
+/*轮播图片*/
+.sec-main-lunbo .img li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+/*轮播下方按钮*/
+.sec-main-lunbo .num {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    font-size: 0;
+    text-align: center;
+    width: 100%;
+}
+
+/*按钮样式*/
+.sec-main-lunbo .num li {
+    width: 333px;
+    height: 30px;
+    background-color: #681e28;
+    color: #f5e6e8;
+    text-align: center;
+    line-height: 30px;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    float: left;
+    opacity: 0.5;
+}
+
+/*默认第一个豪礼样式*/
+.sec-main-lunbo .num .active {
+    background-color: #ca3303;
+    opacity: 1;
+}
+
+/*登陆盒子*/
+.sec-main-login {
+    position: relative;
+    width: 187px;
+    height: 300px;
+    /*border: 1px solid black;*/
+    float: left;
+    background-color: #d03800;
+}
+
+/*登陆*/
+.btnlogin {
+    position: absolute;
+    width: 187px;
+    height: 160px;
+    padding: 67px 0 57px;
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom: 2px solid #d44612;
+}
+
+/*a标签*/
+.login {
+    width: 141px;
+    height: 41px;
+    background: url("../img/index.png") no-repeat;
+    background-position: 0 -16px;
+    line-height: 99em;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/*鼠标移入*/
+.login:hover {
+    width: 141px;
+    height: 41px;
+    background: url("../img/index.png") no-repeat;
+    background-position: 0 -58px;
+    line-height: 99em;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/*彩贝能做什么？*/
+.login-do {
+    position: absolute;
+    width: 187px;
+    height: 138px;
+    /*border-top: 2px solid #d44612;*/
+    /*border: 1px solid black;*/
+    top: 170px;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+
+.login-do > span {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.login-do ul li a {
+    color: #fff;
+}
+
+.login-do ul li a:hover {
+    text-decoration: underline;
+}
+
+.login-do ul li {
+    margin-top: 10px;
+}
+
+/*前方的小图标*/
+.list-desc {
+    margin-right: 10px;
+    margin-bottom: 3px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+    display: inline-block;
+    border-right: 8px solid #E8AFA3;
+    border-bottom: 8px dashed transparent;
+}
+
+/*------------轮播区域上部分结束，下部分开始-----------------------------------------------*/
+.sec-main-buttom {
+    height: 302px;
+}
+
+/*轮播下方区域*/
+.buttom-left {
+    width: 665px;
+    height: 302px;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: #E4E4E4;
+    position: absolute;
+}
+
+.left-one {
+    width: 224px;
+    height: 301px;
+    float: left;
+    border-right: 1px solid #E4E4E4;
+    position: relative;
+}
+
+.left-two {
+    /*position: relative;*/
+    width: 220px;
+    /*height: 150px;*/
+    float: left;
+    border-right: 1px solid #E4E4E4;
+}
+
+.left-three {
+    position: relative;
+    width: 220px;
+    height: 150px;
+    top: -294px;
+    left: 221px;
+    float: left;
+}
+
+.left-two-up, .left-three-up {
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.left-two-down {
+    border-right: 1px solid #E4E4E4;
+}
+
+/*-------------------------------------------*/
+.buttom-right {
+    width: 166px;
+    height: 302px;
+    padding: 0 18px;
+    background: url("../img/bg1.png") bottom no-repeat;
+    background-color: #F0F0F0;
+    float: right;
+    display: inline;
+    /*border: 1px solid black;*/
+    position: relative;
+}
+
+/**/
+.buttom-right-list {
+    border-bottom: 1px dotted #CBCBCB;
+    margin-bottom: 15px;
+    padding-top: 14px;
+    padding-bottom: 12px;
+}
+
+/*快速入口*/
+.rukou {
+    font-size: 16px;
+    font-family: "Microsoft YaHei", "微软雅黑", "黑体";
+    color: #343434;
+    margin-bottom: 16px;
+}
+
+/*列表浮动*/
+.buttom-right-list li {
+    float: left;
+    width: 50%;
+    padding-bottom: 8px;
+    height: 20px;
+}
+
+.buttom-right-list li a {
+    color: #7E7E7E;
+}
+
+/**/
+.ico_index_a {
+    background: url("../img/index.png") no-repeat;
+    background-position: 0 -99px;
+}
+
+.ico_index_a:hover {
+    background: url("../img/index.png") no-repeat;
+    background-position: 0 -114px;
+}
+
+.ico_index {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.buttom-right-list ul li a:hover {
+    display: block;
+    color: #d03800;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.ico_index_b {
+    background: url("../img/index.png") no-repeat;
+    background-position: -15px -99px;
+}
+
+.ico_index_b:hover {
+    background: url("../img/index.png") no-repeat;
+    background-position: -15px -114px;
+}
+
+.ico_index_c {
+    background: url("../img/index.png") no-repeat;
+    background-position: -30px -99px;
+}
+
+.ico_index_c:hover {
+    background: url("../img/index.png") no-repeat;
+    background-position: -30px -114px;
+}
+
+.ico_index_d {
+    background: url("../img/index.png") no-repeat;
+    background-position: -60px -99px;
+}
+
+.ico_index_d:hover {
+    background: url("../img/index.png") no-repeat;
+    background-position: -60px -114px;
+}
+
+.ico_index_e {
+    background: url("../img/index.png") no-repeat;
+    background-position: -75px -99px;
+}
+
+.ico_index_e:hover {
+    background: url("../img/index.png") no-repeat;
+    background-position: -75px -114px;
+}
+
+/*微信*/
+.weixincode {
+    width: 185px;
+    height: 80px;
+    background: url("../img/index.png") no-repeat;
+    background-position: 0 -129px;
+    display: inline-block;
+}
+
+/*----------------主区域完成-----------------------------------*/
+.jifenStroy {
+    position: absolute;
+    clear: both;
+    width: 1070px;
+    height: 34px;
+    top: 750px;
+    left: 120px;
+    border-bottom: 2px solid #e64e3e;
+    z-index: -3;
+}
+
+/*礼物图标*/
+.jifenStroy .gift {
+    background: url("../img/index.png") no-repeat;
+    background-position: -142px -16px;
+    display: inline-block;
+    height: 18px;
+    width: 13px;
+    float: left;
+    margin-right: 8px;
+    margin-top: 9px;
+}
+
+.jifenStroy h2 a {
+    float: left;
+    margin-right: 15px;
+    font-family: "Microsoft YaHei", "微软雅黑", "黑体";
+    color: #e64e3e;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.jifenStroy .num {
+    color: red;
+
+}
+
+.jifenStroy {
+    color: darkgray;
+}
+
+/*积分左边*/
+.jifen {
+    width: 300px;
+    height: 34px;
+    line-height: 34px;
+    float: left;
+}
+
+/*右边详细*/
+.jifenStroy .jifen-detail {
+    width: 500px;
+    height: 34px;
+    line-height: 34px;
+    float: right;
+    padding-left: 56px;
+    box-sizing: border-box;
+}
+
+.jifen-detail ul li {
+    float: left;
+    margin-left: 10px;
+}
+
+.jifen-detail ul li a:hover {
+    color: red;
+}
+
+/*|距离*/
+.jifen-detail ul li span {
+    display: inline-block;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+/*全部箭头定位*/
+.jifen-detail ul .jifen-all {
+    display: inline-block;
+    width: 3px;
+    height: 5px;
+    background: url("../img/index.png") no-repeat;
+    background-position: -7px -6px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/*放图片的盒子*/
+.jifen-img {
+    position: absolute;
+    width: 1070px;
+    height: 247px;
+    top: 788px;
+    left: 120px;
+    border-bottom: 1px solid #E4E4E4;
+    z-index: -3;
+}
+
+/*华为*/
+.huawei {
+    position: relative;
+    width: 400px;
+    height: 247px;
+    border-bottom: 1px solid #E4E4E4;
+    border-left: 1px solid #E4E4E4;
+    border-right: 1px solid #E4E4E4;
+    float: left;
+}
+
+/*后面的三张*/
+.qqhuiyuan {
+    float: left;
+    /*width: 221px;*/
+    height: 247px;
+    border-right: 1px solid #E4E4E4;
+}
+
+/*---------------彩贝商旅---------------------------------------*/
+.shanglv {
+    position: absolute;
+    width: 1070px;
+    height: 34px;
+    /*border: 1px solid black;*/
+    top: 1060px;
+    left: 120px;
+    border-bottom: 2px solid #e64e3e;
+}
+
+/*飞机图标*/
+.plan {
+    width: 20px;
+    height: 18px;
+    background: url("../img/index.png") no-repeat;
+    background-position: -156px -16px;
+    display: inline-block;
+    float: left;
+    margin-right: 8px;
+    margin-top: 4px;
+}
+
+.shanglv h2 a {
+    float: left;
+    font-family: "Microsoft YaHei", "微软雅黑", "黑体";
+    color: #e64e3e;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/*详细说明*/
+.shanglv .plan-mark {
+    float: left;
+    font-family: Verdana;
+    margin-top: 4px;
+    color: gray;
+    margin-left: 10px;
+}
+
+/*左边商旅*/
+.shanglv-plan {
+    width: 600px;
+    height: 34px;
+    position: relative;
+    float: left;
+}
+
+/*右边三个按钮*/
+.shanglv-other {
+    position: relative;
+    width: 250px;
+    height: 34px;
+    float: right;
+}
+
+.shanglv-other ul li {
+    float: left;
+    margin-left: 10px;
+}
+
+/*特价机票样式*/
+.shanglv-other .on {
+    background-color: #E64E3E;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.shanglv-other li a {
+    display: block;
+    width: 64px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+}
+
+/*特价机票下方的三角*/
+.upico {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+    border-width: 6px;
+    left: 40px;
+    border-color: transparent transparent #E64E3E transparent;
+    border-style: dashed dashed solid dashed;
+}
+
+/*-----------------彩贝商旅结束------------------------------------------*/
+/*商旅下方图片*/
+.shanglv-img {
+    position: absolute;
+    top: 1096px;
+    width: 1070px;
+    height: 250px;
+    border: 1px solid #E4E4E4;
+    left: 120px;
+}
+
+/*左边图片*/
+.shanglv-img-left {
+    width: 434px;
+    height: 250px;
+    position: relative;
+    float: left;
+}
+
+.shanglv-img-left a {
+    width: 434px;
+    height: 250px;
+    display: inline-block;
+}
+
+/*中间部分*/
+.shanglv-img-mid {
+    width: 420px;
+    height: 250px;
+    float: left;
+    position: relative;
+}
+
+.shanglv-img-mid table {
+    width: 420px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #E4E4E4;
+    border-top: 0px solid black;
+    text-align: center;
+}
+
+.shanglv-img-mid table tr {
+    height: 60px;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.shanglv-img-mid table tr:hover {
+    background-color: rgb(250, 235, 229);
+    cursor: pointer;
+}
+
+/*价格*/
+.shanglv-img-mid table tr td .ticket-price {
+    font-family: "Microsoft YaHei", "微软雅黑", "黑体";
+    font-size: 20px;
+    color: #E64E3E;
+}
+
+/*返彩贝盒子*/
+.shanglv-img-mid .ticket-pay div:nth-child(2) {
+    position: relative;
+    left: 8px;
+
+}
+
+.shanglv-img-mid .ticket-pay .tickt-fanli {
+    color: #E64E3E;
+}
+
+/*飞机图片*/
+.shanglv-img-mid .ticket-plan {
+    display: inline-block;
+    width: 40px;
+    height: 18px;
+    background: url("../img/index.png") no-repeat;
+    background-position: -144px -33px;
+    position: relative;
+    top: 10px;
+}
+
+.shanglv-img-right {
+    position: relative;
+}
+
+/*每张图片显示*/
+.shanglv-img-right ul li {
+    float: left;
+    border: 1px solid #E4E4E4;
+    border-width: 0 0 1px;
+    border-color: #F4F5F5;
+    width: 100px;
+    height: 49px;
+    line-height: 49px;
+    margin: 0;
+}
+
+.shanglv-img-right ul li a {
+    overflow: hidden;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    /*margin: 10px auto;*/
+}
+
+.xiaoyao-fanli {
+    width: 100px;
+    height: 62px;
+    visibility: visible;
+    margin-top: -63px;
+}
+
+/*最高返*/
+.gaoganli, .gaoganli2, .gaoganli3 {
+    padding-top: 7px;
+    position: relative;
+    z-index: 1;
+    display: none;
+    color: #fff;
+}
+
+.cel {
+    display: block;
+    color: #ff4e00;
+    position: relative;
+    top: -30px;
+    opacity: 1;
+    z-index: 1;
+}
+
+/*背景色*/
+.bgfanli, .bgfanli2, .bgfanli3 {
+    width: 100px;
+    height: 49px;
+    background: #000;
+    opacity: 0.7;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*shanglv-img-right li a:hover {
+    visibility: visible;
+    color: #fff;
+    text-decoration: none;
+    line-height: 18px;
+    display: none;
+}*/
+
+/*-----------------三个介绍图标----------------------------------------------*/
+.mod-click-top {
+    position: absolute;
+    left: 0px;
+    top: 1361px;
+    width: 91%;
+    height: 69px;
+    border-bottom: 1px solid #E4E4E4;
+    background-color: #f0f0f0;
+    padding-left: 120px;
+}
+
+/**/
+.mod-click-left, .mod-click-midd, .mod-click-right {
+    width: 300px;
+    height: 55px;
+    float: left;
+    margin-left: 50px;
+}
+
+/*第一张图标*/
+.mod-click-left .mod-l-ico {
+    display: inline-block;
+    height: 55px;
+    width: 58px;
+    float: left;
+    margin-left: 10px;
+    background: url("../img/cblink.png") no-repeat;
+}
+
+.mod-m-ico {
+    display: inline-block;
+    height: 55px;
+    width: 47px;
+    float: left;
+    margin-left: 10px;
+    background: url("../img/cblink.png") no-repeat;
+    background-position: -57px 0;
+}
+
+.mod-r-ico {
+    display: inline-block;
+    height: 55px;
+    width: 47px;
+    float: left;
+    margin-left: 10px;
+    background: url("../img/cblink.png") no-repeat;
+    background-position: -104px 0;
+}
+
+/*大汉字*/
+.mod-l-hanzi {
+    font-family: "Microsoft YaHei", "微软雅黑", "黑体";
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 2px;
+    position: relative;
+    left: 15px;
+    top: 7px;
+}
+
+/*小汉字*/
+.mod-l-hanzi2 {
+    position: relative;
+    color: gray;
+    left: 15px;
+    top: 8px;
+}
+
+/*--------------帮助部分开始----------------------------------------------------*/
+.mod-click-bd {
+    position: absolute;
+    left: 0px;
+    top: 1430px;
+    width: 91%;
+    height: 205px;
+    border: 1px solid #E4E4E4;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    padding-left: 120px;
+}
+
+/*帮助左边部分*/
+.mod-help-left {
+    width: 686px;
+    height: 182px;
+    float: left;
+    border-right: 1px solid #E4E4E4;
+    margin-top: 20px;
+}
+
+.mod-help-left > span {
+    font-family: "Microsoft YaHei", "微软雅黑", "黑体";
+    font-size: 14px;
+
+}
+
+.mod-help-left ul li a {
+    color: gray;
+}
+
+/*彩贝积分服务*/
+.help-one {
+    position: relative;
+    width: 120px;
+    height: 159px;
+    float: left;
+    /*border: 1px solid black;*/
+}
+
+/*赚取彩贝积分*/
+.help-two {
+    position: relative;
+    width: 120px;
+    height: 137px;
+    float: left;
+    left: 50px;
+    /*border: 1px solid black;*/
+
+}
+
+/*使用彩贝积分*/
+.help-three {
+    position: relative;
+    width: 120px;
+    height: 137px;
+    float: left;
+    left: 50px;
+    /*border: 1px solid black;*/
+}
+
+/*帮助中心*/
+.help-four {
+    position: relative;
+    width: 120px;
+    height: 137px;
+    float: left;
+    left: 50px;
+    /*border: 1px solid black;*/
+}
+
+/*客服中心图标*/
+.help-four .help-ico {
+    display: inline-block;
+    background: url("../img/iconsB.png") no-repeat;
+    vertical-align: middle;
+    background-position: -208px 0;
+    width: 92px;
+    height: 34px;
+    line-height: 99em;
+    overflow: hidden;
+}
+
+.mod-help-left .help-one {
+    margin-left: 20px;
+}
+
+/*每个盒子之间的距离*/
+.mod-help-left .help-two:nth-child(2), .help-three:nth-child(3), .help-four:nth-child(4) {
+    margin-left: 50px;
+}
+
+.mod-help-left div ul li:nth-child(1) {
+    margin-top: 10px;
+}
+
+/*-------------左边完成，右边开始----------------------------------------------*/
+.mod-help-right {
+    width: 354px;
+    height: 182px;
+    float: left;
+    margin-left: 25px;
+    /*border: 1px solid black;*/
+}
+
+.about-top {
+    width: 354px;
+    height: 91px;
+    /*border: 1px solid black;*/
+}
+
+.about-top-left, .about-top-right {
+    width: 150px;
+    height: 71px;
+    float: left;
+    margin-top: 18px;
+    /*border: 1px solid black;*/
+}
+
+/*.about-top-left > span {
+    font-family: "Microsoft YaHei", "微软雅黑", "黑体";
+    font-size: 14px;
+    color: #000;
+
+}*/
+.about-top div > span {
+    font-family: "Microsoft YaHei", "微软雅黑", "黑体";
+    font-size: 14px;
+    color: #000;
+}
+
+.about-top-left .ico_bbs, .ico_wb, .ico_email {
+    width: 24px;
+    height: 24px;
+    line-height: 99em;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/*论坛*/
+.about-top-left .ico_bbs {
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    background: url("../img/iconsB.png") no-repeat;
+    background-position: 0 -21px;
+}
+
+.about-top-left .ico_bbs:hover {
+    background: url("../img/iconsB.png") no-repeat;
+    background-position: 0px -45px;
+}
+
+/*微博*/
+.about-top-left .ico_wb {
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    margin-left: 10px;
+    background: url("../img/iconsB.png") no-repeat;
+    background-position: -24px -21px;
+}
+
+.about-top-left .ico_wb:hover {
+    background: url("../img/iconsB.png") no-repeat;
+    background-position: -24px -45px;
+}
+
+/*邮件*/
+.about-top-left .ico_email {
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    margin-left: 10px;
+    background: url("../img/iconsB.png") no-repeat;
+    background-position: -49px -21px;
+}
+
+.about-top-left .ico_email:hover {
+    background: url("../img/iconsB.png") no-repeat;
+    background-position: -49px -45px;
+}
+
+/*qq联盟图标*/
+.about-top-right .qqmeng {
+    margin-top: 10px;
+    position: relative;
+    top: 12px;
+}
+
+.about-bottom {
+    width: 354px;
+    height: 91px;
+    /*border: 1px solid black;*/
+}
+
+.about-bottom-left {
+    float: left;
+    width: 177px;
+    height: 91px;
+    /*border: 1px  solid black;*/
+}
+
+.about-bottom p {
+    font-size: 14px;
+    font-family: "Microsoft YaHei", "微软雅黑", "黑体";
+    color: #000;
+}
+
+.cbweiixn {
+    display: inline-block;
+    line-height: 99em;
+
+}
+
+/*--------------帮助结束-------------------------------------*/
+.copy {
+    position: absolute;
+    width: 1070px;
+    height: 100px;
+    /*border: 1px solid black;*/
+    left: 120px;
+    top: 1638px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+/*底部列表*/
+.copy ul li {
+    float: left;
+}
+
+/**/
+.copy .about-tx {
+    position: relative;
+    width: 1070px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 400px;
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    top: 30px;
+}
+
+/*copy*/
+.foot-copy {
+    display: inline-block;
+    margin-top: 30px;
+    text-align: center;
+    margin-left: 100px;
+}
+
+/*版权*/
+.foot-end {
+    margin-top: 5px;
+    margin-left: 80px;
+}
+
+/*---------------------登陆界面---------------------------------------*/
+/*登陆界面*/
+.login1 {
+    width: 370px;
+    height: 305px;
+    border: 1px solid #E4E4E4;
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 120px;
+    display: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.login1 > span {
+    display: inline-block;
+    font-family: "Microsoft YaHei", "微软雅黑", "黑体";
+    text-align: center;
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 16px;
+    margin-left: 120px;
+}
+
+/*扫二维码*/
+.qlogin-tips {
+    font-family: "Microsoft YaHei", "微软雅黑", "黑体";
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    zoom: 1;
+    margin-bottom: 36px;
+}
+
+.login1 ul {
+    display: inline-block;
+    margin: 0 auto;
+    margin-left: 163px;
+    position: relative;
+    bottom: -22px;
+    /*border: 1px solid black;*/
+}
+
+.login1 ul li {
+    margin: 0 auto;
+    float: left;
+    display: inline-block;
+}
+
+.login1 ul li a:hover {
+    text-decoration: underline;
+}
+
+.qlogin-tips a:hover {
+    text-decoration: underline;
+}
+
+/*关闭*/
+.close {
+    width: 47px;
+    height: 20px;
+    float: right;
+    outline: 0;
+    display: inline-block;
+    line-height: 99em;
+    background: url("../img/icon_3_tiny.png") no-repeat;
+    background-position: -221px -126px;
+    cursor: pointer;
+}
+
+/*关闭悬浮特效*/
+.close:hover {
+    width: 47px;
+    height: 20px;
+    float: right;
+    outline: 0;
+    display: inline-block;
+    line-height: 99em;
+    background: url("../img/icon_3_tiny.png") no-repeat;
+    background-position: -221px -152px;
+    cursor: pointer;
+}
+
+/*右边盒子样式*/
+.right-box {
+    position: absolute;
+    width: 151px;
+    height: 128px;
+    border: 1px solid #E4E4E4;
+    right: 0;
+    background-color: rgb(255 255 255);
+    top: 400px;
+    text-align: left;
+}
+
+.message a:hover {
+    text-decoration: underline;
+}
+
+.message a {
+    color: blue;
+    margin-left: 15px;
+}
+
+.message strong {
+    color: #F63;
+}
+
+.watch {
+    position: absolute;
+    width: 151px;
+    height: 51px;
+    border-top: 1px solid #E4E4E4;
+    text-align: center;
+    margin-top: 21px;
+}
+
+/*查看*/
+.watch .watch-a {
+    width: 91px;
+    height: 17px;
+    line-height: 17px;
+    color: #fff;
+    background: url("../img/bottom_act.png") no-repeat;
+    background-position: 0 -8px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+}
+
+.watch .watch-a:hover {
+    width: 91px;
+    height: 17px;
+    line-height: 17px;
+    color: #fff;
+    background: url("../img/bottom_act.png") no-repeat;
+    background-position: 0 -26px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+}
+
+/*向上*/
+.toTop {
+    width: 45px;
+    height: 124px;
+    position: fixed;
+    top: 393px;
+    right: 102px;
+    display: none;
+    background: url("../img/icon_top.png") no-repeat;
+    background-position: -11px -82px;
+    z-index: 1;
+}
+
+.toTop a:hover {
+    cursor: pointer;
+}
+
+/*向上箭头*/
+.mod-top-btn {
+    display: block;
+    width: 36px;
+    height: 39px;
+    background: url("../img/icon_top.png") no-repeat;
+    background-position: -63px -82px;
+    margin-left: 5px;
+    margin: 3px 0 0 6px;
+}
+
+.mod-top-btn:hover {
+    display: block;
+    width: 36px;
+    height: 39px;
+    background: url("../img/icon_top.png") no-repeat;
+    background-position: -100px -82px;
+    margin-left: 5px;
+    margin: 3px 0 0 6px;
+}
+
+/*彩贝*/
+.mod-top-edu {
+    display: block;
+    width: 40px;
+    height: 19px;
+    margin-top: 12px;
+    margin-left: 4px;
+}
+
+.edu-cb {
+    width: 21px;
+    height: 19px;
+    background: url("../img/icon_top.png") no-repeat;
+    background-position: -62px -145px;
+    display: block;
+    margin: 0 auto;
+}
+
+/*微信*/
+.mod-top-wx {
+    display: block;
+    text-align: center;
+    cursor: default;
+    width: 40px;
+    height: 19px;
+    margin-left: 5px;
+    margin-top: 19px;
+}
+
+/*微信图标*/
+.wx-sc {
+    display: block;
+    width: 23px;
+    height: 19px;
+    background: url("../img/icon_top.png") no-repeat;
+    background-position: -85px -145px;
+    margin-left: 9px;
+}
+
+/*关注彩贝微信*/
+.item_txt {
+    font-family: "Microsoft YaHei", "微软雅黑", "黑体";
+    display: block;
+    text-indent: 7px;
+    color: #555;
+}
+
+/*二维码*/
+.item_img {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-left: 44px;
+}
+
+.wx-bd {
+    position: fixed;
+    top: 393px;
+    right: 122px;
+    width: 197px;
+    height: 120px;
+    border: 1px solid #E4E4E4;
+    background: rgb(253, 253, 253);
+    border-right: none;
+    z-index: 0;
+}
+
+/*彩贝扩展*/
+.edu-db {
+    position: fixed;
+    height: 120px;
+    bottom: 2px;
+    right: 20px;
+    z-index: 0;
+    width: 700px;
+    border: 1px solid #E4E4E4;
+    background-color: rgba(254, 254, 254, 0.94);
+    top: 393px;
+    margin-right: 101px;
+    float: left;
+}
+
+/*步骤一说明*/
+.edu-img {
+    background: url("../img/icon_top.png") no-repeat;
+    background-position: 0 -206px;
+    width: 52px;
+    height: 42px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/*步骤二说明*/
+.edu-img2 {
+    background: url("../img/icon_top.png") no-repeat;
+    background-position: -52px -206px;
+    width: 52px;
+    height: 42px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/*步骤三说明*/
+.edu-img3 {
+    background: url("../img/icon_top.png") no-repeat;
+    background-position: -104px -206px;
+    width: 52px;
+    height: 42px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: 32px;
+}
+
+/*步骤四说明*/
+.edu-img4 {
+    background: url("../img/icon_top.png") no-repeat;
+    background-position: -153px -206px;
+    width: 52px;
+    height: 42px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/*步骤一*/
+.edu-step {
+    background: url("../img/icon_top.png") no-repeat;
+    background-position: -62px -123px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    float: left;
+    margin-left: 35px;
+    margin-top: 7px;
+}
+
+/*步骤2*/
+.edu-step2 {
+    background: url("../img/icon_top.png") no-repeat;
+    background-position: -83px -123px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    float: left;
+    margin-left: -5px;
+    margin-top: 7px;
+}
+
+/*步骤三*/
+.edu-step3 {
+    background: url("../img/icon_top.png") no-repeat;
+    background-position: -104px -123px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    float: left;
+    margin-left: 6px;
+    margin-top: 7px;
+}
+
+/*步骤四*/
+.edu-step4 {
+    background: url("../img/icon_top.png") no-repeat;
+    background-position: -125px -123px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    float: left;
+    margin-left: 6px;
+    margin-top: 7px;
+}
+
+/*返利商城*/
+.edu-step p, .edu-step2 p, .edu-step3 p, .edu-step4 p {
+    width: 124px;
+    height: 20px;
+    margin-left: 27px;
+    margin-top: 2px;
+    color: #b0947e;
+}
+
+.edu-db li {
+    float: left;
+    width: 164px;
+    height: 120px;
+    margin-right: 9px;
+    background: url("../img/icon_top.png") no-repeat;
+    background-position: 153px -82px;
+}
+
+/*最后一个订单核对*/
+.edu-db li:last-child {
+    float: left;
+    width: 164px;
+    height: 120px;
+    margin-right: 9px;
+    background: url("../img/icon_top.png") no-repeat;
+    background-position: 165px -82px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

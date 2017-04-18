@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <title>彩贝积分-拾味生活，贝添色彩 | 网上购物返彩贝 | 商旅预订返彩贝 | 彩贝积分当钱用</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<!--最主要盒子-->
+<div class="warp">
+    <!--最上方导航-->
+    <div class="topnav">
+        <ul class="nav">
+            <li><a href="#" class="li-1">赚彩贝</a><span></span>
+                <ul class="nav-2">
+                    <li><a href="#">全部返利商家</a></li>
+                    <li><a href="#">返利商城</a></li>
+                    <li><a href="#">彩贝商旅</a></li>
+                    <li><a href="#">拍拍返利</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="li-1">花彩贝</a><span></span>
+                <ul class="nav-2">
+                    <li><a href="#">积分兑换</a></li>
+                    <li><a href="#">积分抽奖</a></li>
+                </ul>
+            </li>
+            <li><span id="beike"></span><a href="#" style="color:#fff;" class="login2">登陆</a></li>
+        </ul>
+    </div>
+    <!--右上方搜索框-->
+    <div class="topnav-right">
+        <input type="text" placeholder="请输入商家名称" style="height: 20px;">
+        <button type="submit" title="搜索" id="btnsearch" class="ico_gb_b ico_search"></button>
+    </div>
+    <!--大导航栏-->
+    <div class="header">
+        <div class="logo"><a href="main.html"><img src="img/logo_170x46.png" alt="qq彩贝"></a></div>
+        <div class="main-nav">
+            <div class="main-nav-left">
+                <span class="mod_mainnav_tag mod_mainnav_taga">赚积分</span>
+                <ul>
+                    <li class="item_mall"><a href="http://localhost:63342/demo/QMO/Rebatemall.html">返利商城</a></li>
+
+
+                    <li class="item_travel"><a href="#">商旅频道</a></li>
+                </ul>
+
+            </div>
+            <div class="main-nav-mid">
+                <span class="mod_mainnav_tag mod_mainnav_tagb">花积分</span>
+                <ul>
+                    <li class="item_gmall"><a href="#"></a></li>
+                </ul>
+            </div>
+            <div class="main-nav-right">
+                <ul>
+                    <li class="item_about"><a href="#" class="leancaibei">了解彩贝</a>
+                        <div class="item_list">
+                            <p>彩贝积分介绍</p>
+                            <p>彩贝积分宣传</p>
+                        </div>
+                    </li>
+                    <li class="item_act"><a href="#">彩贝活动</a></li>
+                    <li class="item_i"><a href="#">个人中心</a></li>
+                </ul>
+                <div class="item_list_bt"></div>
+            </div>
+        </div>
+        <div class=" col_r  banner-lft">
+            <a href="#" class="ico_gb_b ico_bbs">论坛</a>
+            <a href="#" class="ico_gb_b ico_wb">微博</a>
+            <a href="#" class="ico_gb_b ico_mail">邮件</a>
+        </div>
+    </div>
+    <!--轮播区域-->
+    <div class="sec-main">
+        <!--左边导航-->
+        <div class="sec-main-left">
+            <!--左边上方标题-->
+            <div class="menu-left f_tx1">
+                <h2><a href="#">
+                    <span class="ico_gb_b ico_businav"></span>
+                    <span class="menu_left_hd_m">购物返彩贝商家</span>
+                </a></h2>
+            </div>
+            <!--左边下方主题菜单-->
+            <div class="menu-left-bd " id="menu-left">
+                <div class="busi-nav" group_id="4">
+                    <h3>数码家电</h3>
+                    <!--子项-->
+                    <ul class="busi-nav-item">
+                        <li style="margin-right: 7px;"><a href="#">苏宁易购</a></li>
+                        <li style="margin-right: 7px;"><a href="#">新蛋商城</a></li>
+                        <li style="margin-right: 7px;"><a href="#">数码手机</a></li>
+                    </ul>
+                    <!--链接更多商品-->
+                    <span class="index-more">更多</span>
+                    <!--扩展到详细商品-->
+                    <div class="busi-nav-panel">
+                        <div class="busi_nav_panel_hd">
+                            <h4>热门分类</h4>
+                            <div class="sub-groups">
+                                <a href="#" class="">苏宁易购</a>
+                                <a href="#" class="">新蛋商城</a>
+                                <a href="#" class="">手机数码</a>
+                                <a href="#" class="">摄像音响</a>
+                                <a href="#" class="">耳麦音响</a>
+                                <a href="#" class="">国美在线</a>
+                            </div>
+                        </div>
+                        <div class="busi_nav_panel_bd">
+                            <h4>热门商家</h4>
+                            <div class="mod_busilist lunbo_loading">
+                                <ul class="detail" name="sub_group_malls">
+                                    <li class="busi-list">
+                                        <a href="#">
+                                            <img src="img/suning.png" alt="" width="80" height="27">
+                                        </a>
+                                        <!--黑色背景-->
+                                        <span class="bushi-fanli-bg"
+                                              style=" display: block;left: 0;transition: all 300ms ease;">
+                                            <b style="color: #fff;"> "最高返"</b> <b>2.72%</b>
+                                        </span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/guomei.jpg" alt="" width="80" height="27">
+                                    </a>
+                                        <span class="bushi-fanli-bg"
+                                              style=" display: block;left: 0;transition: all 300ms ease;">
+                                            <b style="color: #fff;"> "最高返"</b> <b>0.7%</b>
+                                        </span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/xindan.png" alt="" width="80" height="27">
+                                    </a>
+                                        <span class="bushi-fanli-bg"
+                                              style=" display: block;left: 0;transition: all 300ms ease;">
+                                            <b style="color: #fff;"> "最高返"</b>  <b>11152彩贝</b>
+                                        </span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/huawei.png" alt="" width="80" height="27">
+                                    </a>
+                                        <span class="bushi-fanli-bg"
+                                              style=" display: block;left: 0;transition: all 300ms ease;">
+                                             <b style="color: #fff;">"最高返" </b><b>3.4%</b>
+                                        </span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/xianfeng.png" alt="" width="80" height="27">
+                                    </a>
+                                        <span class="bushi-fanli-bg"
+                                              style=" display: block;left: 0;transition: all 300ms ease;">
+                                            <b style="color: #fff;">"最高返"</b><b>4.7%</b>
+                                        </span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/guiyou.png" alt="" width="80" height="27">
+                                    </a>
+                                        <span class="bushi-fanli-bg"
+                                              style=" display: block;left: 0;transition: all 300ms ease;">
+                                            <b style="color: #fff;">"最高返"</b><b>4%</b>
+                                        </span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/kupai.png" alt="" width="80" height="27">
+                                    </a>
+                                        <span class="bushi-fanli-bg"
+                                              style=" display: block;left: 0;transition: all 300ms ease; overflow: hidden;"> <b
+                                                style="color: #fff;">"最高返"</b> <b>1.7%</b></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="busi_nav_panel_btn">
+                            <span>查看全部商家</span><em></em>
+                        </a>
+                    </div>
+                </div>
+                <div class="busi-nav busi-nav-even" group_id="11">
+                    <h3>食品酒水</h3>
+                    <!--子项-->
+                    <ul class="busi-nav-item">
+                        <li style="margin-right: 7px;"><a href="#">美食特产</a></li>
+                        <li style="margin-right: 7px;"><a href="#">酒水茶叶</a></li>
+                        <li style="margin-right: 7px;"><a href="#">蛋糕预定</a></li>
+                    </ul>
+                    <!--链接更多商品-->
+                    <span class="index-more">更多</span>
+                    <!--扩展到详细商品-->
+                    <div class="busi-nav-panel">
+                        <div class="busi_nav_panel_hd">
+                            <h4>热门分类</h4>
+                            <div class="sub-groups">
+                                <a href="#" class="">美食特产</a>
+                                <a href="#" class="">酒水茶叶</a>
+                                <a href="#" class="">蛋糕预定</a>
+                            </div>
+                        </div>
+                        <div class="busi_nav_panel_bd">
+                            <h4>热门商家</h4>
+                            <div class="mod_busilist lunbo_loading">
+                                <ul class="detail" name="sub_group_malls">
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/1haodian.png" alt="" width="80" height="27">
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/feiniu.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/zuikun.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/yiguo.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/pingshang.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/wangjiu.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/maichawang.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/maimaicha.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/cangmaiwang.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="busi_nav_panel_btn">
+                            <span>查看全部商家</span><em></em>
+                        </a>
+                    </div>
+                </div>
+                <div class="busi-nav " group_id="14">
+                    <h3>商旅出行 <span class="ico_gb_b ico_hot">热门</span></h3>
+                    <!--子项-->
+                    <ul class="busi-nav-item">
+                        <li style="margin-right: 7px;"><a href="#">酒店预定</a></li>
+                        <li style="margin-right: 7px;"><a href="#">机票预定</a></li>
+                        <li style="margin-right: 7px;"><a href="#">商旅综合</a></li>
+                    </ul>
+                    <!--链接更多商品-->
+                    <span class="index-more">更多</span>
+                    <!--扩展到详细商品-->
+                    <div class="busi-nav-panel">
+                        <div class="busi_nav_panel_hd">
+                            <h4>热门分类</h4>
+                            <div class="sub-groups">
+                                <a href="#" class="">酒店预定</a>
+                                <a href="#" class="">机票预定</a>
+                                <a href="#" class="">商旅综合</a>
+                                <a href="#" class="">度假预定</a>
+                                <a href="#" class="">火车票预定</a>
+                            </div>
+                        </div>
+                        <div class="busi_nav_panel_bd">
+                            <h4>热门商家</h4>
+                            <div class="mod_busilist lunbo_loading">
+                                <ul class="detail" name="sub_group_malls">
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/xiecheng.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/lumama.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/yilong.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/tieyou.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/mangguo.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/mangguo2.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/xiaoyaoxing.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/kaopu.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/zhunawang.gif" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/kuxun.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="busi_nav_panel_btn">
+                            <span>查看全部商家</span><em></em>
+                        </a>
+                    </div>
+                </div>
+                <div class="busi-nav busi-nav-even" group_id="99">
+                    <h3>日用百货</h3>
+                    <!--子项-->
+                    <ul class="busi-nav-item">
+                        <li style="margin-right: 7px;"><a href="#">飞飞商城</a></li>
+                        <li style="margin-right: 7px;"><a href="#">图书教育</a></li>
+                        <li style="margin-right: 7px;"><a href="#">百货</a></li>
+                    </ul>
+                    <!--链接更多商品-->
+                    <span class="index-more">更多</span>
+                    <!--扩展到详细商品-->
+                    <div class="busi-nav-panel">
+                        <div class="busi_nav_panel_hd">
+                            <h4>热门分类</h4>
+                            <div class="sub-groups">
+                                <a href="#" class="">飞飞商城</a>
+                                <a href="#" class="">图书教育</a>
+                                <a href="#" class="">百货</a>
+                                <a href="#" class="">家纺家具</a>
+                            </div>
+                        </div>
+                        <div class="busi_nav_panel_bd">
+                            <h4>热门商家</h4>
+                            <div class="mod_busilist lunbo_loading">
+                                <ul class="detail" name="sub_group_malls">
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/1haodian.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/feiniu.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/dangdang.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/hongxin.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/youya.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/booluu.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/boyang.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/wangshangshucheng.png" alt="" width="80" height="27">
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/taoshuwang.png" alt="" width="80" height="27">
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/youmi.png" alt="" width="80" height="27">
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/lovo.png" alt="" width="80" height="27">
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/boqiwang.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/youjiping.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/echongshangcheng.png" alt="" width="80" height="27">
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/wangfujing.jpg" alt="" width="80" height="27">
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="busi_nav_panel_btn">
+                            <span>查看全部商家</span><em></em>
+                        </a>
+                    </div>
+                </div>
+                <div class="busi-nav " group_id="3">
+                    <h3>男女服装</h3>
+                    <!--子项-->
+                    <ul class="busi-nav-item">
+                        <li style="margin-right: 7px;"><a href="#">时尚女装</a></li>
+                        <li style="margin-right: 7px;"><a href="#">精品男装</a></li>
+                        <li style="margin-right: 7px;"><a href="#">男女内衣</a></li>
+                    </ul>
+                    <!--链接更多商品-->
+                    <span class="index-more">更多</span>
+                    <!--扩展到详细商品-->
+                    <div class="busi-nav-panel">
+                        <div class="busi_nav_panel_hd">
+                            <h4>热门分类</h4>
+                            <div class="sub-groups">
+                                <a href="#" class="">时尚女装</a>
+                                <a href="#" class="">精品男装</a>
+                                <a href="#" class="">男女内衣</a>
+                                <a href="#" class="">综合商城</a>
+                                <a href="#" class="">限时特卖</a>
+                                <a href="#" class="">淘宝品牌</a>
+                                <a href="#" class="">休闲服饰</a>
+                                <a href="#" class="">运动户外</a>
+                            </div>
+                        </div>
+                        <div class="busi_nav_panel_bd">
+                            <h4>热门商家</h4>
+                            <div class="mod_busilist lunbo_loading">
+                                <ul class="detail" name="sub_group_malls">
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/weipinghui.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/v+.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/justyle.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/megnbasha.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/m18.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/lining.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/kapa.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/menglu.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/masa.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/youyi.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/weijiesi.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/mingxie.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/yougou.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/pingju.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/yignman.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="busi_nav_panel_btn">
+                            <span>查看全部商家</span><em></em>
+                        </a>
+                    </div>
+                </div>
+                <div class="busi-nav busi-nav-even" group_id="49">
+                    <h3>鞋包配饰</h3>
+                    <!--子项-->
+                    <ul class="busi-nav-item">
+                        <li style="margin-right: 7px;"><a href="#">潮流女鞋</a></li>
+                        <li style="margin-right: 7px;"><a href="#">商务男鞋</a></li>
+                        <li style="margin-right: 7px;"><a href="#">时尚包包</a></li>
+                    </ul>
+                    <!--链接更多商品-->
+                    <span class="index-more">更多</span>
+                    <!--扩展到详细商品-->
+                    <div class="busi-nav-panel">
+                        <div class="busi_nav_panel_hd">
+                            <h4>热门分类</h4>
+                            <div class="sub-groups">
+                                <a href="#" class="">潮流女鞋</a>
+                                <a href="#" class="">商务男鞋</a>
+                                <a href="#" class="">时尚包包</a>
+                                <a href="#" class="">运动休闲</a>
+                                <a href="#" class="">珠宝首饰</a>
+                                <a href="#" class="">金典腕表</a>
+                                <a href="#" class="">户外生活</a>
+                                <a href="#" class="">奢侈品</a>
+                            </div>
+                        </div>
+                        <div class="busi_nav_panel_bd">
+                            <h4>热门商家</h4>
+                            <div class="mod_busilist lunbo_loading">
+                                <ul class="detail" name="sub_group_malls">
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/yougou.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/zhoudafu.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/zuanshi.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/paixiewang.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/luotuo.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/maibaoabo.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/mingxie.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/zuoyi.png" alt="" width="80" height="27">
+
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/youyi.png" alt="" width="80" height="27">
+
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/kapa.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/wanbiao.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/rax.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/lining.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/longfeng.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/zengaoxie.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="busi_nav_panel_btn">
+                            <span>查看全部商家</span><em></em>
+                        </a>
+                    </div>
+                </div>
+                <div class="busi-nav " group_id="5">
+                    <h3>美容美妆</h3>
+                    <!--子项-->
+                    <ul class="busi-nav-item">
+                        <li style="margin-right: 7px;"><a href="#">天天网</a></li>
+                        <li style="margin-right: 7px;"><a href="#">美妆商城</a></li>
+                        <li style="margin-right: 7px;"><a href="#">眼镜美瞳</a></li>
+                    </ul>
+                    <!--链接更多商品-->
+                    <span class="index-more">更多</span>
+                    <!--扩展到详细商品-->
+                    <div class="busi-nav-panel">
+                        <div class="busi_nav_panel_hd">
+                            <h4>热门分类</h4>
+                            <div class="sub-groups">
+                                <a href="#" class="">天天网</a>
+                                <a href="#" class="">美妆商城</a>
+                                <a href="#" class="">眼镜美瞳</a>
+                                <a href="#" class="">品牌商城</a>
+                            </div>
+                        </div>
+                        <div class="busi_nav_panel_bd">
+                            <h4>热门商家</h4>
+                            <div class="mod_busilist lunbo_loading">
+                                <ul class="detail" name="sub_group_malls">
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/lefengwang.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/shikeyanjin.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/yishi.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/keede.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/dhc.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/huimei.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/aidaiwang.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/youleshi.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/taintainwang.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/ciji.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/yousahgn.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="busi_nav_panel_btn">
+                            <span>查看全部商家</span><em></em>
+                        </a>
+                    </div>
+                </div>
+                <div class="busi-nav busi-nav-even" group_id="9">
+                    <h3>母婴保健</h3>
+                    <!--子项-->
+                    <ul class="busi-nav-item">
+                        <li style="margin-right: 7px;"><a href="#">壹药网</a></li>
+                        <li style="margin-right: 7px;"><a href="#">康爱多</a></li>
+                        <li style="margin-right: 7px;"><a href="#">医药保健</a></li>
+                    </ul>
+                    <!--链接更多商品-->
+                    <span class="index-more">更多</span>
+                    <!--扩展到详细商品-->
+                    <div class="busi-nav-panel">
+                        <div class="busi_nav_panel_hd">
+                            <h4>热门分类</h4>
+                            <div class="sub-groups">
+                                <a href="#" class="">壹药网</a>
+                                <a href="#" class="">康爱多</a>
+                                <a href="#" class="">医药保健</a>
+                                <a href="#" class="">成人用品</a>
+                                <a href="#" class="">母婴用品</a>
+                            </div>
+                        </div>
+                        <div class="busi_nav_panel_bd">
+                            <h4>热门商家</h4>
+                            <div class="mod_busilist lunbo_loading">
+                                <ul class="detail" name="sub_group_malls">
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/muying.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/zhufu.png" alt="" width="80" height="27">
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/chuanshuitang.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/babaifang.png" alt="" width="80" height="27">
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="busi_nav_panel_btn">
+                            <span>查看全部商家</span><em></em>
+                        </a>
+                    </div>
+                </div>
+                <div class="busi-nav " group_id="46">
+                    <h3>娱乐生活</h3>
+                    <!--子项-->
+                    <ul class="busi-nav-item">
+                        <li style="margin-right: 7px;"><a href="#">游戏</a></li>
+                        <li style="margin-right: 7px;"><a href="#">彩票</a></li>
+                        <li style="margin-right: 7px;"><a href="#">演出票务</a></li>
+                    </ul>
+                    <!--链接更多商品-->
+                    <span class="index-more">更多</span>
+                    <!--扩展到详细商品-->
+                    <div class="busi-nav-panel">
+                        <div class="busi_nav_panel_hd">
+                            <h4>热门分类</h4>
+                            <div class="sub-groups">
+                                <a href="#" class="">游戏</a>
+                                <a href="#" class="">彩票</a>
+                                <a href="#" class="">演出票务</a>
+                                <a href="#" class="">线上冲印</a>
+                                <a href="#" class="">生活服务</a>
+                            </div>
+                        </div>
+                        <div class="busi_nav_panel_bd">
+                            <h4>热门商家</h4>
+                            <div class="mod_busilist lunbo_loading">
+                                <ul class="detail" name="sub_group_malls">
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/damai.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/caipiao.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/cai88.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/yognlepiaowu.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/zhizhuwang.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/zhognming.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/gaohongcaipiao.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/bayu.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/139cai.png" alt="" width="80" height="27">
+
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/jieji.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/lieyan.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/daxiafu.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/qianghun.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/pingan.png" alt="" width="80" height="27">
+
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                    <li class="busi-list"><a href="#">
+                                        <img src="img/yimeng.png" alt="" width="80" height="27">
+                                    </a>
+                                        <span class="bushi-fanli-bg"> <b style="color: #fff;">"最高返"</b><b>4%</b></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="busi_nav_panel_btn">
+                            <span>查看全部商家</span><em></em>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--中间轮播加登陆按钮-->
+        <div class="sec-main-body">
+            <div class="sec-main-top  clearfix">
+                <!--轮播-->
+                <div class="sec-main-lunbo">
+                    <ul class="img">
+                        <li><a href="#"><img src="img/0.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/0.jpg" alt=""></a></li>
+                    </ul>
+                    <ul class="num">
+                        <li class="active">新年新豪礼</li>
+                        <li>腾讯积分会员店</li>
+                    </ul>
+                </div>
+                <!--登陆-->
+                <div class="sec-main-login">
+                    <div class="btnlogin">
+                        <a href="#" class="login">用户登陆</a>
+                    </div>
+                    <hr>
+                    <div class="login-do">
+                        <span>彩贝能做什么？</span>
+                        <ul>
+                            <li><span class="list-desc"></span><a href="#">100彩贝=￥1.00元</a></li>
+                            <li><span class="list-desc"></span><a href="#">尊享优质商旅预订服务</a></li>
+                            <li><span class="list-desc"></span><a href="#">可兑换近千款精美礼品</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--下方图片-->
+            <div class="sec-main-buttom ">
+                <div class="buttom-left">
+                    <div class="left-one">
+                        <a href="#"><img src="img/1.jpg" alt=""></a>
+                    </div>
+                    <div class="left-two">
+                        <div class="left-two-up"><a href="#"><img src="img/1.png" alt=""></a></div>
+                        <div class="left-two-down"><a href="#"><img src="img/3.jpg" alt=""></a></div>
+                    </div>
+                    <div class="left-three">
+                        <div class="left-three-up"><a href="#"><img src="img/2.jpg" alt="" width="200" height="143"></a>
+                        </div>
+                        <div class="left-three-down"><a href="#"><img src="img/2.png" alt="" width="200"
+                                                                      height="150"></a></div>
+                    </div>
+                </div>
+                <div class="buttom-right">
+                    <div class="buttom-right-list">
+                        <div class="rukou">快速入口</div>
+                        <ul class="clearfix">
+                            <li><a href="#"><span class="ico_index ico_index_a"></span>商家导航</a></li>
+                            <li><a href="#"><span class="ico_index ico_index_b"></span>拍拍返利</a></li>
+                            <li><a href="#"><span class="ico_index ico_index_c"></span>腾讯业务</a></li>
+                            <li><a href="#"><span class="ico_index ico_index_d"></span>拾贝任务</a></li>
+                            <li><a href="#" style="width: 80px;display: block;"><span
+                                    class="ico_index ico_index_e"></span>兑换码激活</a></li>
+                        </ul>
+                    </div>
+                    <div class="buttom-right-code">
+                        <div class="rukou">关注彩贝微信有惊喜</div>
+                        <span class="weixincode">
+                            <img src="img/showqrcode.jpg" alt="" width="80" height="80">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--积分商城-->
+    <div class="jifenStroy">
+        <div class="jifen">
+            <span class="gift"></span>
+            <h2><a href="#">积分商城</a></h2>
+            <span class="num">100</span>彩贝=¥ <span class="num">1.00</span>元
+        </div>
+        <div class="jifen-detail">
+            <ul>
+                <li><a href="CB%20QQ.html" TARGET="_blank">一积分抽大奖</a><span>|</span></li>
+                <li><a href="#">游戏兑换</a><span>|</span></li>
+                <li><a href="#">玩具公仔</a><span>|</span></li>
+                <li><a href="#">数码家电</a><span>|</span></li>
+                <li><a href="#">家具生活</a><span>|</span></li>
+                <li><a href="#">全部</a><span class="jifen-all"></span></li>
+            </ul>
+        </div>
+    </div>
+    <!--具体图片显示-->
+    <div class="jifen-img">
+        <div class="huawei">
+            <a href="#"><img src="img/3.png" alt="" width="400"></a>
+        </div>
+        <div class="qqhuiyuan">
+            <a href="#"><img src="img/4.png" alt=""></a>
+        </div>
+        <div class="qqhuiyuan">
+            <a href="#"><img src="img/5.png" alt=""></a>
+        </div>
+        <div class="qqhuiyuan">
+            <a href="#"><img src="img/6.png" alt=""></a>
+        </div>
+    </div>
+    <!--彩贝商旅-->
+    <div class="shanglv">
+        <div class="shanglv-plan">
+            <span class="plan"></span>
+            <h2><a href="#">彩贝商旅</a></h2>
+            <span class="plan-mark">通过彩贝预订机票酒店，彩贝返还又快又多</span>
+        </div>
+        <div class="shanglv-other">
+            <ul>
+                <li><a href="#" class="on">特价机票</a><span class="upico"></span></li>
+                <li><a href="#">精选酒店</a></li>
+                <li><a href="#">度假预定</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--下方图片-->
+    <div class="shanglv-img">
+        <div class="shanglv-img-left">
+            <a href="#"><img src="img/4.jpg" alt="" width="434" height="250"></a>
+        </div>
+        <div class="shanglv-img-mid">
+            <table>
+                <tr>
+                    <td class="ticket-pay">
+                        <div class="ticket-price">&yen;310</div>
+                        <div>返 <span class="tickt-fanli">837</span>彩贝</div>
+                    </td>
+                    <td>
+                        <div>深圳</div>
+                        <div>11-08</div>
+                    </td>
+                    <td>
+                        <span class="ticket-plan"></span>
+                    </td>
+                    <td class="ticket-arrival">合肥</td>
+                    <td class="ticket-busi">
+                        <img src="img/7.png" alt="" width="80" height="27">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ticket-pay">
+                        <div class="ticket-price">&yen;590</div>
+                        <div>返 <span class="tickt-fanli">1539</span>彩贝</div>
+                    </td>
+                    <td>
+                        <div>深圳</div>
+                        <div>10-24</div>
+                    </td>
+                    <td>
+                        <span class="ticket-plan"></span>
+                    </td>
+                    <td class="ticket-arrival">青岛</td>
+                    <td class="ticket-busi">
+                        <img src="img/7.png" alt="" width="80" height="27">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ticket-pay">
+                        <div class="ticket-price">&yen;390</div>
+                        <div>返 <span class="tickt-fanli">1053</span>彩贝</div>
+                    </td>
+                    <td>
+                        <div>深圳</div>
+                        <div>10-22</div>
+                    </td>
+                    <td>
+                        <span class="ticket-plan"></span>
+                    </td>
+                    <td class="ticket-arrival"></td>
+                    <td class="ticket-busi">
+                        <img src="img/7.png" alt="" width="80" height="27">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ticket-pay">
+                        <div class="ticket-price">&yen;270</div>
+                        <div>返 <span class="tickt-fanli">729</span>彩贝</div>
+                    </td>
+                    <td>
+                        <div>深圳</div>
+                        <div>10-31</div>
+                    </td>
+                    <td>
+                        <span class="ticket-plan"></span>
+                    </td>
+                    <td class="ticket-arrival">南宁</td>
+                    <td class="ticket-busi">
+                        <img src="img/7.png" alt="" width="80" height="27">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="shanglv-img-right">
+            <ul style="zoom: 1;">
+                <li class="xiaobg">
+                    <a href="#"><img src="img/xiaoyaoxing.png" alt="">
+                        <span class="xiaoyao-fanli" style="display: block;left: 0;top:100%;transition: all 300ms ease;">
+                         <span class="gaoganli">
+                             最高返 <strong class="cel">0.8%</strong>
+                         </span>
+                            <span class="bgfanli"></span>
+                        </span>
+                    </a></li>
+                <li class="xiaobg2"><a href="#"><img src="img/kaopu.png" alt="">
+                    <span class="xiaoyao-fanli" style="display: block;left: 0;top:100%;transition: all 300ms ease;">
+                         <span class="gaoganli2">
+                             最高返 <strong class="cel">9%</strong>
+                         </span>
+                            <span class="bgfanli2"></span>
+                        </span>
+                </a></li>
+                <li class="xiaobg3"><a href="#"><img src="img/kuxun.png" alt="">
+                    <span class="xiaoyao-fanli" style="display: block;left: 0;top:100%;transition: all 300ms ease;">
+                         <span class="gaoganli3">
+                             最高返 <strong class="cel">0.9%</strong>
+                         </span>
+                            <span class="bgfanli3"></span>
+                        </span>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+    <!--三个介绍图标-->
+    <div class="mod-click-top">
+        <div class="mod-click-left" style="margin-left: -10px;">
+            <span class="mod-l-ico"></span>
+            <p class="mod-l-hanzi">赚取彩贝方式多</p>
+            <p class="mod-l-hanzi2">网上购物 商旅出行 超多方式累计彩贝</p>
+        </div>
+        <div class="mod-click-midd">
+            <span class="mod-m-ico"></span>
+            <p class="mod-l-hanzi">彩贝积分用处多</p>
+            <p class="mod-l-hanzi2">好礼任您兑 彩贝当钱花 100彩贝=1元钱</p>
+        </div>
+        <div class="mod-click-right">
+            <span class="mod-r-ico"></span>
+            <p class="mod-l-hanzi">腾讯品质保证</p>
+            <p class="mod-l-hanzi2">彩贝积分是由腾讯财付通提供的积分服务</p>
+        </div>
+    </div>
+    <!--帮助部分-->
+    <div class="mod-click-bd">
+        <div class="mod-help-left">
+            <div class="help-one">
+                <span>彩贝积分服务</span>
+                <ul>
+                    <li><a href="#">什么是彩贝积分</a></li>
+                    <li><a href="#">彩贝积分账户</a></li>
+                    <li><a href="#">新手操作指引</a></li>
+                    <li><a href="#">为什么要开通财付通</a></li>
+                    <li><a href="#">最新彩贝广告</a></li>
+                    <li><a href="#">如何查看我得彩贝积分</a></li>
+                </ul>
+            </div>
+
+            <div class="help-two">
+                <span>赚取彩贝积分</span>
+                <ul>
+                    <li><a href="#">怎样获得彩贝积分</a></li>
+                    <li><a href="#">获得彩贝积分的时长</a></li>
+                    <li><a href="#">彩贝的有效期是多久</a></li>
+                    <li><a href="#">支持彩贝的商家</a></li>
+                    <li><a href="#">哪里能赚取彩贝</a></li>
+                </ul>
+            </div>
+            <div class="help-three">
+                <span>使用彩贝积分</span>
+                <ul>
+                    <li><a href="#">在哪里兑换彩贝积分</a></li>
+                    <li><a href="#">填写收货地址</a></li>
+                    <li><a href="#">兑换实物包邮吗</a></li>
+                </ul>
+            </div>
+            <div class="help-four">
+                <span>客服服务</span>
+                <ul>
+                    <li><a href="#">帮助中心</a></li>
+                    <span class="help-ico"></span>
+                </ul>
+            </div>
+        </div>
+        <div class="mod-help-right">
+            <div class="about-top">
+                <div class="about-top-left">
+                    <span>关注我们</span>
+                    <p style="color: grey; margin-top: 10px;">这里有你爱的贝友</p>
+                    <ul>
+                        <li><a href="#"><span class="ico_bbs"></span></a></li>
+                        <li><a href="#"><span class="ico_wb"></span></a></li>
+                        <li><a href="#"><span class="ico_email"></span></a></li>
+                    </ul>
+                </div>
+                <div class="about-top-right">
+                    <span>QQ彩贝联盟开放平台</span>
+                    <span class="qqmeng"><img src="img/logo_cba.png" alt=""></span>
+                </div>
+            </div>
+            <div class="about-bottom">
+                <span class="about-bottom-left">
+                    <p style="margin-top: 0px;display: block;">彩贝官方微信</p>
+                    <span class="cbweiixn"><img src="img/showqrcode.jpg" alt="" width="60" height="60"></span>
+                </span>
+                <span class="about-bottom-right">
+                     <p style="margin-top: 15px;display: block;">商旅频道官方微信</p>
+                    <span class="svweiixn"><img src="img/shagnlvweixin.jpg" alt="" width="60" height="60"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <div class="copy">
+        <div class="about-tx">
+            <ul>
+                <li><a href="">关于腾讯</a><span>|</span></li>
+                <li><a href="">About Tencent</a><span>|</span></li>
+                <li><a href="">服务条款</a><span>|</span></li>
+                <li><a href="">广告服务</a><span>|</span></li>
+                <li><a href="">腾讯招聘</a><span>|</span></li>
+                <li><a href="">客服中心</a><span>|</span></li>
+                <li><a href="">网站导航</a><span>|</span></li>
+            </ul>
+        </div>
+        <p class="foot-copy">Copyright©1998-2017 Tencent. All Rights Reserved.</p>
+        <p class="foot-end">腾讯公司 版权所有</p>
+    </div>
+
+</div>
+<!--扫码登陆-->
+<div class="login1">
+    <span>快速安全登陆</span>
+    <p class="close"></p>
+    <div class="qlogin-tips">
+        请使用 <a href="#" style="color: blue;">QQ手机版</a>扫描二维码，<br>安全登陆，防止盗号。
+    </div>
+    <span><img src="img/ptqrshow.png" alt=""></span>
+    <ul>
+        <li><a href="#">账号密码登陆</a><span>|</span></li>
+        <li><a href="xiangmu.html" class="goregis" target="_blank">注册新账号</a><span>|</span></li>
+        <li><a href="#">意见反馈</a></li>
+    </ul>
+</div>
+<!--靠右的盒子-->
+<div class="right-box">
+    <div class="message">
+        <a href="#">中信QQ彩贝卡 <br>
+            &nbsp;&nbsp;&nbsp; 线上线下消费 <strong>可累积彩&nbsp;贝积分的超级信用卡</strong>
+        </a>
+    </div>
+    <div class="watch"><a href="#" class="watch-a">立即查看</a></div>
+</div>
+<!--向上-->
+<div class="toTop">
+    <a href="#" class="mod-top-btn"></a>
+    <a href="#" class="mod-top-edu">
+        <span class="edu-cb"></span>
+    </a>
+    <a href="#" class="mod-top-wx"><span class="wx-sc"></span></a>
+</div>
+<!--微信二维码-->
+<div class="wx-bd" style="display: none;">
+    <span class="item_img"><img src="img/showqrcode.jpg" alt="" width="80" height="80"></span>
+    <span class="item_txt ">关注彩贝微信，获取优惠信息</span>
+</div>
+<!--彩贝下单步骤-->
+<div class="edu-db" style="display: none;">
+    <ul>
+        <li>
+            <span class="edu-img"></span>
+            <span class="edu-step">
+            <p>登录QQ彩贝 <br>返利商城</p>
+        </span>
+        </li>
+        <li>
+            <span class="edu-img2"></span>
+            <span class="edu-step2">
+            <p>去商家购物，免注册、 <br>逾300家认证商家</p>
+        </span>
+        </li>
+        <li>
+            <span class="edu-img3"></span>
+            <span class="edu-step3">
+            <p>完成交易<br>商家核对订单</p>
+        </span>
+        </li>
+        <li>
+            <span class="edu-img4"></span>
+            <span class="edu-step4">
+            <p>订单核对有效<br>彩贝到账</p>
+        </span>
+        </li>
+    </ul>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/xiangmu.css"/>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/xiangmu.js"></script>
+
+</head>
+<body>
+<img style="float: left" src="img/zhuce/lefttou.png" alt=""/>
+<img style="float: right;padding-right: 2px" src="img/zhuce/right.png" alt=""/>
+
+<div class="kj">
+    <!-- 头部-->
+    <div class="tou">
+        <a href=""><img src="img/zhuce/qqtou.png" alt=""/></a>
+        <a class="jiantou" href=""><img src="img/zhuce/jiantou.png" alt=""/></a>
+        <span style="margin-left: -50px;display: block;right: 110px;float: right;">简体中文|</span>
+        <ul>
+            <li><a href="">繁体中文|</a></li>
+            <li><a href=""><span>English</span></a></li>
+        </ul>
+        <span style="right: 20px;top: 70px;">意见反馈</span>
+    </div>
+
+    <!-- 左侧 -->
+    <div class="zuoce">
+        <div class="left">
+            <!-- 选择注册账号或者邮箱部分-->
+            <a class="left_a" href="javascript:void (0)" id="QQzhanghao">
+                <span class="QQzhanghao">QQ账号</span>
+                <span class="QQzhanghao2">由数字组成，经典通行账号</span>
+            </a>
+
+            <a class="left_a" href="javascript:void(0)" id="xuanzeyouxiang">
+                <span class="QQzhanghao youxiangzhanghao">邮箱账号</span>
+                <span class="QQzhanghao2">用邮箱地址注册，便于记忆</span>
+            </a>
+
+            <div class="left_3">
+                <!--左侧搜索部分-->
+                <form action="">
+                    <input type="text" value="输入想要的4-10位数字"/>
+                    <input type="submit" id="btn" value=""/>
+                </form>
+                <!--生日部分-->
+            </div>
+            <div class="left_4" style="position: relative;">
+                <ul>
+                    <li><a href="javascript:void (0)" class="lia1">生日</a></li>
+                    <li><a href="javascript:void (0)" class="lia2">爱情</a></li>
+                    <li><a href="javascript:void (0)" class="lia3">手机</a></li>
+                    <li><a href="javascript:void (0)" class="lia4">年度</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!--  右侧-->
+    <div class="youce">
+        <a href=""><img src="img/zhuce/enterBannerC.jpg" alt=""/></a>
+
+        <h1>注册账号</h1>
+        <hr/>
+        <!-- 表单验证部分-->
+        <form action method="post" id="biaodan">
+            <!-- 昵称部分-->
+            <div class="inputdiv">
+                <label for="nicheng">昵称</label>
+                <input type="text" name="nicheng" id="nicheng"/>
+                <span id="nichengspan"
+                      style="width: 100px;color: grey;line-height: 34px;padding-left: 15px;font-size: 13px">
+
+                </span>
+            </div>
+
+            <!--密码部分-->
+            <div class="inputdiv">
+                <label for="pwd">密码</label>
+                <input type="password" name="pwd" id="pwd"/>
+                <span id="mimaspan">
+                    <div>长度为6-16个字符</div>
+                    <div>不能包含空格</div>
+                    <div>不能是9位以下纯数字</div>
+                </span>
+            </div>
+
+            <!-- 确认密码部分-->
+            <div class="inputdiv" id="querenmimadiv">
+                <label for="querenmima">确认密码</label>
+                <input type="password" name="querenmima" id="querenmima"/>
+
+                <div id="querenspan">
+                </div>
+            </div>
+
+            <!-- 性别单选框-->
+            <div class="inputdiv">
+                <span id="xingbie">性别</span>
+                <label class="xingbie">
+                    <input type="radio" name="dxk" class="dxk" value="1" checked/><span>男</span>
+                </label>
+                <label class="xingbie2">
+                    <input type="radio" name="dxk" class="dxk" value="2"/><span>女</span>
+                </label>
+            </div>
+
+            <!-- 文字部分-->
+            <div class="box1">
+                <ul>
+                    <li>生日</li>
+                    <li>所在地</li>
+                    <li style="height: 50px;margin-top: 10px;">手机号码</li>
+                </ul>
+            </div>
+            <!--  表单部分-->
+            <div class="box2">
+                <div style="position: relative">
+                    <a href="javascript:void (0)" id="a1" class="aimg">公历</a>
+                    <ul class="gongliul">
+                        <li id="gongli">公历</li>
+                        <li id="nongli">农历</li>
+                    </ul>
+                    <a href="javascript:void (0)" id="a2">年</a>
+                    <ul id="nian">
+
+                    </ul>
+                    <a href="javascript:void (0)" id="a3" class="aimg">月</a>
+                    <ul id="yue">
+
+                    </ul>
+                    <a href="javascript:void (0)" id="a4" class="aimg">日</a>
+                    <ul id="ri">
+
+                    </ul>
+                    <div id="imgtu"></div>
+                </div>
+                <div>
+                    <select class="bg" id="s_province" name="s_province"></select>  
+
+                    <select class="bg" id="s_city" name="s_city"></select>  
+
+                    <select class="bg" id="s_county" name="s_county"></select>
+
+                    <script class="resources library" src="js/area.js" type="text/javascript"></script>
+
+
+                    <script type="text/javascript">_init_area();</script>
+
+
+                    <div id="show"></div>
+
+                </div>
+
+                <input type="text" name="phone" id="phone"/>
+
+                <div style="padding-top: 10px;line-height: 20px;color: #818181;font-size: 12px;position: relative">
+                    可通过该手机号码快速找回密码 <br/>
+                    中国大陆地区以外手机号码&nbsp;<a href="" style="position: absolute;top: 29px;">点击这里</a>
+
+                </div>
+
+            </div>
+            <button>立即注册</button>
+            <div class="weiba">
+                <label><input type="checkbox" checked/>同时开通QQ空间</label><br/>
+                <label><input type="checkbox" checked/>我已阅读并同意相关服务条款和隐私政策</label>
+
+                <div id="bg">
+                    <span>123</span>
+
+                    <div>
+                        <p></p>
+                        <a href="javascript:void (0)">《QQ号码规则》</a><br/>
+                        <a href="javascript:void (0)">《QQ空间服务协议》</a><br/>
+                        <a href="javascript:void (0)">《隐私政策》</a>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <!-- 第二个页面-->
+    <div>
+        <div class="youce2">
+            <a href=""><img src="img/zhuce/enterBannerC.jpg" alt=""/></a>
+
+            <h1>注册邮箱账号</h1>
+            <hr/>
+            <!-- 表单验证部分-->
+            <form action method="post" class="biaodan">
+                <div class="inputdiv" style="margin-left: -13px">
+
+                    <label>
+                        邮箱帐号 <input type="text" name="youxiang" class="youxiangtext"/>
+                    </label>
+                    <span class="youxiang2" style="color: grey">
+                            请输入您常用的电子邮箱 <br/>
+                            <a href="javascript:void (0)">创建邮箱</a> 或 <a href="javascript:void (0)">注册普通QQ号</a>
+                    </span>
+
+                </div>
+
+                <!-- 昵称部分-->
+                <div class="inputdiv">
+                    <label for="nicheng">昵称</label>
+                    <input type="text" name="nicheng" class="nicheng"/>
+                    <span class="nichengspan"
+                          style="width: 100px;color: grey;line-height: 34px;padding-left: 15px;font-size: 13px">
+
+                </span>
+                </div>
+
+                <!--密码部分-->
+                <div class="inputdiv">
+                    <label for="pwd1">密码</label>
+                    <input type="password" name="pwd" id="pwd1"/>
+                    <span class="mimaspan">
+                    <div>长度为6-16个字符</div>
+                    <div>不能包含空格</div>
+                    <div>不能是9位以下纯数字</div>
+                </span>
+                </div>
+                <!-- 确认密码部分-->
+                <div class="inputdiv" id="querenmimadiv2">
+                    <label for="querenmima">确认密码</label>
+                    <input type="password" name="querenmima" id="querenmima2"/>
+
+                    <div class="querenspan">
+                    </div>
+                </div>
+                <!-- 性别单选框-->
+                <div class="inputdiv">
+                    <span id="xingbie2">性别</span>
+                    <label class="xingbie">
+                        <input type="radio" name="dxk" class="dxk" value="1" checked/><span>男</span>
+                    </label>
+                    <label class="xingbie2">
+                        <input type="radio" name="dxk" class="dxk" value="2"/><span>女</span>
+                    </label>
+                </div>
+
+                <div class="box1">
+                    <ul>
+                        <li>生日</li>
+                        <li>所在地</li>
+                        <li style="height: 50px;margin-top: 10px;">验证码</li>
+                    </ul>
+                </div>
+
+                <!--  表单部分-->
+                <div class="box2">
+                    <div style="position: relative">
+                        <a href="javascript:void (0)" id="a11" class="aimg">公历</a>
+                        <ul class="gongliul">
+                            <li id="gongli2">公历</li>
+                            <li id="nongli2">农历</li>
+                        </ul>
+                        <a href="javascript:void (0)" id="a22">年</a>
+                        <ul id="nian2">
+
+                        </ul>
+                        <a href="javascript:void (0)" id="a33" class="aimg">月</a>
+                        <ul id="yue2">
+
+                        </ul>
+                        <a href="javascript:void (0)" id="a44" class="aimg">日</a>
+                        <ul id="ri2">
+
+                        </ul>
+                        <div id="imgtu2"></div>
+                    </div>
+                    <div>
+                        <select class="bg" id="s_province2" name="s_province2"></select>  
+
+                        <select class="bg" id="s_city2" name="s_city2"></select>  
+
+                        <select class="bg" id="s_county2" name="s_county2"></select>
+
+                        <script class="resources library" src="js/area2.js" type="text/javascript"></script>
+
+
+                        <script type="text/javascript">_init_area();</script>
+
+
+                        <div id="show2"></div>
+                    </div>
+
+
+                </div>
+                <button style="margin-top: 60px">立即注册</button>
+                <div class="weiba">
+                    <label><input type="checkbox" checked/>我已阅读并同意相关服务条款和隐私政策</label>
+
+                    <div id="bg2">
+                        <span>123</span>
+
+                        <div>
+                            <p></p>
+                            <a href="javascript:void (0)">《QQ号码规则》</a><br/>
+                            <a href="javascript:void (0)"> </a><br/>
+                            <a href="javascript:void (0)">《隐私政策》</a>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        Copyright &copy; 1998-2016 Tencent All Rights Reserved 腾讯公司 版权所有
+    </div>
+</div>
+</body>
+
+</html>

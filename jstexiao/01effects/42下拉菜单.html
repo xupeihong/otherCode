@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+</head>
+<body style="text-align: center;">
+<form action="" method="post">
+    <select name="mySelect" id="ck">
+        <option value="" selected>--请选择--</option>
+        <option value="2010">2010</option>
+        <option value="2011">2011</option>
+        <option value="2012">2012</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+        <option value="2017">2017</option>
+    </select>
+    <input type="button" value="选择当年" onclick="selectYear()">
+</form>
+<script type="application/javascript">
+    function selectYear() {
+        var y = new Date().getYear() + 1900;
+        document.forms[0].mySelect.value = y;
+    }
+    //setTimeout(selectYear, 1000);
+</script>
+</body>
+</html>

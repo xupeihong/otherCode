@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="text-align: center;" onload="init()">
+<p>请认真阅读本协议...</p><br>
+<input type="button" value="注册(10)" id="btn" disabled>
+</body>
+<script type="application/javascript">
+    var sec = 10;
+    function init() {
+        timer = setInterval(function () {
+            var btn = document.getElementById("btn");
+            sec--;
+            btn.value = "注册(" + sec + ")";
+            if (sec == 0) {
+                clearInterval(timer);
+                btn.disabled = false;
+                btn.value = "注册";
+            }
+        }, 1000);
+    }
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #ad {
+            border: 1px solid black;
+            z-index: 99999;
+            width: 180px;
+            position: absolute;
+
+            height: 116px;
+            background-color: rgb(201, 211, 243);
+        }
+    </style>
+</head>
+<body style="margin: 0px;text-align: center;">
+<div id="ad">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f0f8ff">
+        <tbody>
+        <tr>
+            <td width="90%" valign="middle" height="24"></td>
+            <td width="" valign="middle" align="right">
+                <a href="#" onclick="closeAD()" style="cursor:pointer;">X</a>
+            </td>
+        </tr>
+        <tr>
+            <td height="90" colspan="3">广告部分请勿关闭
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script type="application/javascript">
+    var ad = document.getElementById("ad");
+    function posRight() {
+        //120是盒子的高度，top放到-120的高度
+        ad.style.bottom = document.body.scrollTop + document.body.clientHeight - 120 + "px";
+        ad.style.left = document.body.scrollLeft + document.body.clientWidth - 200 + "px";
+        setTimeout(posRight, 100);
+    }
+    function closeAD() {
+        ad.style.display = "none";
+    }
+    window.onload = function () {
+        var ad = document.getElementById("ad");
+        posRight();
+    }
+
+</script>
+</body>
+</html>

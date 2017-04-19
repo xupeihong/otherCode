@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #bottom_nav_warp {
+            bottom: 0;
+            height: 34px;
+            left: 0;
+            overflow: visible;
+            position: fixed;
+            width: 100%;
+            z-index: 10000;
+
+        }
+
+        #boottom_nav {
+            color: #fff;
+            height: 34px;
+            margin: 0 auto;
+            max-width: 1255px;
+            position: relative;
+            width: 1225px;
+        }
+
+        #boottom_nav .bottom-bg {
+            background: none repeat scroll 0 0 #9933cc;
+            border: 1px solid #46577e;
+            padding-top: 1px;
+        }
+
+        #boottom_nav * {
+            font-family: "宋体";
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+        #boottom_nav .ul-nav {
+            background: none repeat scroll 0 0 #500a6f;
+            height: 32px;
+            text-align: left;
+            width: 100%;
+        }
+
+        #boottom_nav .ul-nav li {
+            float: left;
+            height: 32px;
+            width: 200px;
+            border-right: 1px solid #46577e;
+            text-align: center;
+            padding-top: 10px;
+            cursor: pointer;
+        }
+
+        #boottom_nav .ul-nav li a {
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<div id="bottom_nav_warp">
+    <div id="boottom_nav" style="width: 1255px;">
+        <div class="bottom-bg">
+            <ul class="ul-nav">
+                <li><a href="#">菜单01</a></li>
+                <li><a href="#">菜单02</a></li>
+                <li><a href="#">菜单03</a></li>
+                <li><a href="#">菜单04</a></li>
+                <li><a href="#">菜单05</a></li>
+                <li><a href="#">菜单06</a></li>
+                <li><a href="#">菜单07</a></li>
+            </ul>
+        </div>
+    </div>
+    <div style="height: 1800px;background: #666;"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body style="text-align: center;">
+<p>
+    <input type="button" value="创建新元素" onclick="createEle()">
+</p>
+<p id="p1"></p>
+<p id="p2"></p><br>
+<input type="button" value="删除元素" onclick="deleteEle()"><br>
+<span id="del">要被删除的dom文件</span>
+<script type="application/javascript">
+    function createEle() {
+        var p1 = document.getElementById("p1");
+        p1.innerHTML = "<span style='color: lightgrey;'>文本1</span>";
+        var span = document.createElement("span");
+        span.appendChild(document.createTextNode("文本2"));
+        var p2 = document.getElementById("p2");
+        p2.appendChild(span);
+    }
+    function deleteEle() {
+        var del = document.getElementById("del");
+        if (del != null) {
+            del.parentNode.removeChild(del);
+        }
+
+    }
+</script>
+</body>
+</html>

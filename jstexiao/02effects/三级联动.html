@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="text-align: center;" onload="fillOptions('province')">
+省：<select name="" id="province" onchange="fillOptions('city')"></select>
+市: <select name="" id="city" onchange="fillOptions('area')"></select>
+县：<select name="" id="area"></select>
+<script type="application/javascript">
+    var arr = [
+        [1, "北京市", null],
+        [2, "湖北省", null],
+        [3, "广东省", null],
+        [4, "北京市", 1],
+        [5, "武汉市", 2],
+        [6, "广州市", 3],
+        [7, "武昌区", 5],
+        [8, "白云区", 6],
+        [9, "从化市", 6],
+        [10, "海淀区", 4],
+        [11, "朝阳区", 4],
+        [12, "汉口区", 5]
+    ];
+    function fillOptions(type) {
+        if (type == "province") {
+            //获得省级名称
+            var province = document.getElementById("province");
+            province.innerHTML = "";
+            //下拉初始化
+            var prostr = "<option value=''>请选择</option>";
+            for (var i = 0; i < arr.length; i++) {
+                var item = arr[i];
+                //如果二维数组第三项为null，说明是省级
+                if (item[2] == null)
+                    prostr += "<option value=" + item[0] + ">" + item[1] + "</option>";
+                province.innerHTML = prostr;
+            }
+        }
+        else if (type == "city") {
+            //获取省级名称
+            var pro = document.getElementById("province").value;
+            //如果省级名称为空，则后面不能选
+            if (pro == "")
+                return false;
+            //获取城市名称
+            var city = document.getElementById("city");
+            city.innerHTML = "";
+            //初始化市级名称
+            var citystr = "<option value=''>请选择</option>";
+            for (var i = 0; i < arr.length; i++) {
+                var item = arr[i];
+                if (item[2] == pro)
+                    citystr += "<option value=" + item[0] + ">" + item[1] + "</option>";
+                city.innerHTML = citystr;
+            }
+        }
+        else if (type == "area") {
+            //判断市级名称是否为空
+            var city = document.getElementById("city").value;
+            if (city == "")
+                return false;
+            var area = document.getElementById("area");
+            area.innerHTML = "";
+            var areastr = "<option value=''>请选择</option>";
+            for (var i = 0; i < arr.length; i++) {
+                var item = arr[i];
+                if (item[2] == city)
+                    areastr += "<option value=" + item[0] + ">" + item[1] + "</option>";
+                area.innerHTML = areastr;
+            }
+        }
+    }
+</script>
+</body>
+</html>

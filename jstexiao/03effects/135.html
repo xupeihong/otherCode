@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body style="text-align: center;">
+<input type="button" onclick="start()" value="开始"><br>
+<span id="info"></span>
+<script>
+    function start() {
+        setInterval(function () {
+            var date = new Date();
+            var end = new Date("2017-04-15");
+            var time = end.getTime() - date.getTime();
+            var str = getTimeTxt(time);
+            document.getElementById("info").innerHTML = "距离劳动节还有" + str + "天";
+        }, 1000)
+    }
+    function getTimeTxt(time) {
+        time /= 1000;
+        var days = time / (24 * 60 * 60);
+        var hour = time % (24 * 60 * 60) / (60 * 60);
+        var min = time % (24 * 60 * 60) % (60 * 60) / 60;
+        var sec = time % (24 * 60 * 60) % (60 * 60) % 60;
+        var str = "";
+        if (days > 0) {
+            str += Math.floor(days) + "天";
+        }
+        if (hour > 0) {
+            str += Math.floor(hour) + "时";
+        }
+        if (min > 0) {
+            str += Math.floor(min) + "分";
+        }
+        str += Math.floor(sec) + "秒";
+        return str;
+    }
+</script>
+</body>
+</html>

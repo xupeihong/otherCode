@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<br>
+<input type="button" value="倒排序子元素" onclick="daoxu()">
+<script type="application/javascript">
+    function daoxu() {
+        var ul = document.getElementsByTagName("ul")[0];
+        //判断是否包含子元素
+        if (ul.hasChildNodes()) {
+            //子元素的个数
+            var len = ul.childNodes.length;
+            //存储新节点
+            var arr = [];
+            for (var i = 0; i < len; i++) {
+                //将节点存放在数组中
+                arr[i] = ul.childNodes[0];
+                //从第一个元素开始删除
+                ul.removeChild(ul.childNodes[0]);
+            }
+            //倒过来遍历所有节点
+            for (var i = len - 1; i >= 0; i--) {
+                //将子元素添加到ul上
+                ul.appendChild(arr[i]);
+            }
+        }
+    }
+</script>
+</body>
+</html>

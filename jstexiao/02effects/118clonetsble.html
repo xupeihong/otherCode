@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body style="text-align: center;">
+<table id="tb1" align="center" border="1">
+    <tr onclick="copytb()">
+        <th>名字</th>
+        <th>年龄</th>
+    </tr>
+    <tr>
+        <td>A</td>
+        <td>23</td>
+    </tr>
+    <tr>
+        <td>B</td>
+        <td>33</td>
+    </tr>
+    <tr>
+        <td>C</td>
+        <td>33</td>
+    </tr>
+</table>
+<script type="application/javascript">
+    var type = false;
+    function copytb() {
+        var tb1 = document.getElementById("tb1");
+        var t = document.createElement("table");
+        t.align = tb1.align;
+        t.border = tb1.border;
+        t.innerHTML = tb1.innerHTML;
+        t.style.float="left";
+        document.body.appendChild(t);
+        type=true;
+    }
+</script>
+</body>
+</html>

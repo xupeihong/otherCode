@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="button" value="前进" onclick="goForwrd()">
+<input type="button" value="后退" onclick="goBack()">
+<input type="button" value="关闭" onclick="closeWin()">
+<div id="doing"
+     style="z-index: 99;left: 0px;top:0px;display: none;width: 100%;position: absolute;height: 100%;background: gray;"></div>
+<br><br>载入中，请等待...<p><input type="button" value="提交表单" onclick="submitForm()"></p>
+<script type="application/javascript">
+    /* function goForwrd() {
+     window.history.forward();//到之前的页面
+     }
+     function goBack() {
+     window.history.back();//之后的页面
+     }*/
+    /*   function closeWin() {
+     //        window.close();
+     this.close();*/
+    function submitForm() {
+        var dod = document.getElementById("doing");
+        dod.style.display ="";//显示
+        self.location.reload();//重新加载
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <style type="text/css">
+        #con1 {
+            background: grey;
+            left: 0;
+            top: 100px;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body style="text-align: center;" onload="init()">
+<div id="con1">这是一个广告</div>
+<script type="application/javascript">
+    function init() {
+        //得到层到顶部的距离
+        var sapce = document.getElementById("con1").offsetTop;
+        document.getElementById("con1").style.top = sapce + "px";
+        //定义需要移动距离的变量
+        var goto = 0;
+        setInterval(function () {
+            //计算高度
+            var height = document.documentElement.scrollTop + document.body.scrollTop + sapce;
+            //计算层的top值
+            var top = parseInt(document.getElementById("con1").style.top);
+            //如果两者不一致，则需要移动
+            if (height != top) {
+                //需要移动的距离为高度-top
+                goto = height - parseInt((height - top) * 0.9);
+                document.getElementById("con1").style.top = goto + "px";
+            }
+        }, 50);
+    }
+</script>
+</body>
+</html>

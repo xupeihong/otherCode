@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="javascript:addFav();"></a>
+<script type="application/javascript">
+    function addFav() {
+        //兼容性问题对IE和火狐分别处理
+        if (window.external.AddFavorite) {
+            window.external.AddFavorite("../../01effects/12收藏.html", "javascript300实例");
+        } else {
+            window.sidebar.addPanel("Javascript300实例", "http://baidu.com", "");
+        }
+    }
+</script>
+</body>
+</html>

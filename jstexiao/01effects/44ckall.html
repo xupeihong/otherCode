@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="text-align: center;">
+<form action="" method="post">
+    <input type="checkbox" name="myall" onclick="ckall(this.checked)">全选
+    <br>
+    <input type="checkbox" name="myname">
+    <input type="checkbox" name="myname">
+    <input type="checkbox" name="myname">
+    <input type="checkbox" name="myname">
+</form>
+<script type="application/javascript">
+    function ckall(c) {
+        var arr = document.getElementsByName("myname");
+        if (c) {
+            for (var i = 0; i < arr.length; i++) {
+                arr[i].checked = true;
+            }
+        }
+        else {
+            for (var i = 0; i < arr.length; i++) {
+                arr[i].checked = false;
+            }
+        }
+    }
+</script>
+</body>
+</html>

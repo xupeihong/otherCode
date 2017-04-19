@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body style="text-align: center;" onload="chcell()">
+<table border="1" id="tb1" align="center">
+    <tr>
+        <th>名字</th>
+        <th>年龄</th>
+    </tr>
+    <tr>
+        <td>A</td>
+        <td>23</td>
+    </tr>
+    <tr>
+        <td>B</td>
+        <td>23</td>
+    </tr>
+    <tr>
+        <td>C</td>
+        <td>23</td>
+    </tr>
+</table>
+<SCRIPT type="application/javascript">
+    function chcell() {
+        var tb1 = document.getElementById("tb1");
+        var rows = tb1.rows;
+//        var len = tb1.rows.length;
+        for (var i = 1; i < rows.length; i++) {
+            var r = rows[i];
+            r.onmouseover = function () {
+                this.style.backgroundColor = "pink";
+            };
+            r.onmouseout = function () {
+                this.style.backgroundColor = "white";
+            };
+        }
+    }
+</SCRIPT>
+</body>
+</html>

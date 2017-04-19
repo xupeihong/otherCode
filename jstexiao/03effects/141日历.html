@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用table创建日历</title>
+</head>
+<body style="text-align: center;" onload="init();">
+<p>单击选择日期</p>
+<p><select name="" id="y"></select>年<select name="" id="m"></select>月</p>
+<table id="tb1" border="1" align="center"></table>
+<script type="application/javascript">
+    function init() {
+        //获取年月时间
+        var y = document.getElementById("y");
+        var m = document.getElementById("m");
+        var str = "";
+        //填充年份
+        for (var i = 2000; i <= 2050; i++) {
+            str += "<option value='" + i + "'>" + i + "</option>";
+        }
+        y.innerHTML = str;
+        str = "";
+        //填充月份
+        for (var i = 1; i <= 12; i++) {
+            str += "<option value='" + i + "'>" + i + "</option>";
+        }
+        m.innerHTML = str;
+        //月份点击变化事件
+        m.onchange = function () {
+            var year = document.getElementById("y").value;
+            year = parseInt(year);
+            var month = document.getElementById("m").value;
+            month = parseInt(month);
+            var days = 30;
+            //如果是闰年的2月就有29天
+            if (isRunNian(year) && month == 2) {
+                days = 29;
+            }
+            //如果不是闰年的2月就28天
+            else if (!isRunNian(year) && month == 2) {
+                days = 28;
+            }
+            //如果是其他月份则是31天
+            else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+                days = 31;
+            }
+            //循环显示星期几
+            var str = "<tr>";
+            for (var i = 1; i <= 7; i++) {
+                str += "<td>星期" + i + "</td>";
+            }
+            str += "</tr>";
+            //创建指定日期
+            var date = new Date(year, month - 1, 1);
+            //它对应的星期几
+            var week = date.getDay();
+            var j = 1;
+            while (true) {
+                str += "<tr>";
+                for (var i = 1; i <= 7; i++) {
+                    //如果星期对上了，则打印1号
+                    if (j == 1 && i == week) {
+                        str += "<td onclick='showDay(" + j + ")'>1</td>";
+                        j++;
+                        //满足条件，打印1以后的
+                    } else if (j > 1 && j <= days) {
+                        str += "<td onclick='showDay(" + j + ")'>" + j + "</td>";
+                        j++;
+                    }
+                    else {
+                        str += "<td>&nbsp;</td>";
+                    }
+                }
+                str += "</tr>";
+                if (j >= days) break;
+            }
+            document.getElementById("tb1").innerHTML = str;//填充数据
+        }
+    }
+    //判断是否是闰年
+    function isRunNian(y) {
+        return y % 4 == 0;
+    }
+    //显示选中的日期
+    function showDay(d) {
+        var y = document.getElementById("y").value;
+        var m = document.getElementById("m").value;
+        alert("您选择的日期是：" + y + "年" + m + "月" + d + "日");
+    }
+</script>
+</body>
+</html>

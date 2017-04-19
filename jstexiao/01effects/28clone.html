@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body style="text-align: center;">
+<p id="mycontent">
+    <input type="button" value="克隆元素" onclick="cloneChild()"><br>
+    <img src="../img/1.jpg" alt="" width="500" height="333" id="img">
+    <img src="../img/2.jpg" alt="" width="500" height="333" id="img2">
+</p>
+<script type="application/javascript">
+    function cloneChild() {
+        //获得图片内容
+        var img = document.getElementById("img2");
+        //将选中的图片克隆
+        var newimg = img.cloneNode(true);
+        //在p中追加图片
+        document.getElementById("mycontent").appendChild(newimg);
+    }
+</script>
+</body>
+</html>

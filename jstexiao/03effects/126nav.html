@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <title>Title</title>
+    <style type="text/css">
+        .menu {
+            list-style: none;
+            width: 400px;
+            margin: 10px auto 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .menu li {
+            float: left;
+            width: 98px;
+            border: 1px solid black;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: black;
+            width: 100%;
+        }
+
+        .certix:after {
+            display: block;
+            visibility: hidden;
+            font-size: 0;
+            content: "";
+            clear: both;
+            height: 0;
+        }
+
+        .sub_menu {
+            border: 1px solid black;
+            width: 100px;
+            padding: 0;
+            display: none;
+            margin: 0;
+        }
+
+        .sub_div {
+            width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+    <script type="application/javascript">
+        $(function () {
+            //获取所有链接
+            var menus = $(".menu a");
+            for (var i = 0; i < menus.length; i++) {
+                //得到当前的链接
+                var m = menus[i];
+                $(m).mouseover(function () {
+                    //获取当前鼠标移入的下标
+                    var index = $(".menu a").index(this);
+                    //把所有的二级菜单隐藏
+                    $(".sub_menu").hide();
+                    $(".sub_menu:eq(" + index + ")").show();
+                    $(".sub_menu:eq(" + index + ")").css("margin-left", (100 * index) + "px");
+                })
+            }
+
+        })
+    </script>
+</head>
+<body style="text-align: center;">
+<ul class="menu certix">
+    <li><a href="#">菜单</a></li>
+    <li><a href="#">菜单</a></li>
+    <li><a href="#">菜单</a></li>
+    <li><a href="#">菜单</a></li>
+</ul>
+<div class="sub_div">
+    <ul class="sub_menu">
+        <li><a href="#">菜单</a></li>
+    </ul>
+    <ul class="sub_menu">
+        <li><a href="#">菜单</a></li>
+        <li><a href="#">菜单</a></li>
+    </ul>
+    <ul class="sub_menu">
+        <li><a href="#">菜单</a></li>
+    </ul>
+    <ul class="sub_menu">
+        <li><a href="#">菜单</a></li>
+        <li><a href="#">菜单</a></li>
+        <li><a href="#">菜单</a></li>
+        <li><a href="#">菜单</a></li>
+    </ul>
+</div>
+</body>
+</html>

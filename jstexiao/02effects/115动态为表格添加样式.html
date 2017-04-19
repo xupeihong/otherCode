@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body style="text-align: center;" onload="init()">
+<table id="tb1" style="text-align: center; " border="1">
+    <tr>
+        <th>名字</th>
+        <th>年龄</th>
+    </tr>
+    <tr>
+        <td>A</td>
+        <td>23</td>
+    </tr>
+    <tr>
+        <td>B</td>
+        <td>42</td>
+    </tr>
+    <tr>
+        <td>C</td>
+        <td>31</td>
+    </tr>
+</table>
+<script type="application/javascript">
+    function init() {
+        var tb1 = document.getElementById("tb1");
+        //获取表格的行数
+        var rows = tb1.rows;
+        //获取所有行数的长度
+        var len = tb1.rows.length;
+        for (var i = 1; i < len; i++) {
+            //得到这行的每个单元格
+            var cells = rows[i].cells;
+            for (var j = 0; j < cells.length; j++) {
+                //每个单元格点击事件
+                cells[j].onclick = function () {
+                    //每个单元格颜色
+                    if (this.style.color == "" || this.style.color == "black") {
+                        this.style.color = "red";
+                        this.style.cursor = "pointer";
+                    }
+                    else {
+                        this.style.color = "black";
+                        this.style.cursor = "pointer";
+                    }
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

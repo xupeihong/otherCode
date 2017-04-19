@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onclick="clickBody()">
+<p>10</p>
+<script type="application/javascript">
+    var type = true;//开关量
+    function clickBody() {
+        type = false;
+    }
+    setTimeout(function () {
+        if (type)
+            window.close();//判断是否需要关闭
+        else
+            type = false;
+    }, 1000);
+
+</script>
+</body>
+</html>

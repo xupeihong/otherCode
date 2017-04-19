@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>英雄难过棍子关</title>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <link href="css/style.css" rel="stylesheet"/>
+    <!--<script src="js/index.js"></script>-->
+    <!--<script src="js/play.js"></script>-->
+    <script src="js/infoDate.js"></script>
+    <script type="application/javascript">
+        /*<div class="dialog">
+         <p class="dialog-btn">
+         dffsdfsdfdsffddsfdsfsdfsdfdsfsdfsdfsdfsd
+         <a href="javascript:void(0)" class="play-agin">成功</a>
+         <a href="javascript:void(0)" class="play-agin">再来一次</a>
+         </p>
+         </div>*/
+        $(function () {
+
+            //初始化墙和棍子的居左的距离
+            function initvalue(val) {
+                //获取墙的宽度
+                var width = $(".well:eq(" + val + ")").width();
+                //获取每个墙的left的距离
+                var welleft = parseInt($(".well:eq(" + val + ")").css("left"));
+                //添加
+                $(".stick").css("left", (welleft + width) + "px");
+                $(".man").css("left", (welleft + width - 65) + "px");
+                $(".stick").width(0);
+                $(".stick").removeClass("stickDown");
+                //小人掉下
+                $(".man img").removeClass("rotate");
+                type = true;
+                index = val;
+            }
+
+            //创建墙
+            //var sui = parseInt((Math.random() + 1) * 5);
+            createWell(4);
+            //方法调用
+            initvalue(0);
+            var type = true;
+            //鼠标按下事件
+            $(".btnClick").mousedown(function () {
+                if (type) {
+                    var top = $(".container").offset().top;
+                    $(".stick").animate({"width": top + "px"}, 1000);
+
+                }
+            })         //鼠标松开的事件
+                    .mouseup(function () {
+                        $(".stick").stop();//棍子停止绘画
+                        $(".stick").addClass("stickDown");//棍子添加类
+                        //点击按钮，开始跑
+                        if (type) {
+                            setTimeout(running, 350);
+                        }
+                        type = false;
+                    });
+            var index = 0;
+            var x=1;
+            //开始跑的方法
+            function running() {
+                //添加跑的动态图
+                $(".man img").attr("src", "img/stick.gif");
+                //获取棍子的宽度
+                var sticwidth = $(".stick").width();
+                //获取棍子的居左的距离
+                var stickleft = parseInt($(".stick").css("left"));
+                //获取墙的宽度
+                var wellwidth = $(".well:eq(" + index + ")").width();
+                //获取墙居左的距离
+                var wellLeft = parseInt($(".well:eq(" + index + ")").css("left"));
+                //获取下个墙的宽度
+                var nwellwidth = $(".well:eq(" + index + ")").next().width();
+                //获取下个墙居左的距离
+                var nwellLeft = parseInt($(".well:eq(" + index + ")").next().css("left"));
+
+                //小人移动的动画效果
+                $(".man").animate({"left": (sticwidth + stickleft - 32) + "px"}, 1000, function () {
+                    //初始状态下的图片
+                    $(".man img").attr("src", "img/stick_stand.png");
+                    //判断如果棍子的宽度比其他的宽度都小，则小人掉下去
+                    if (sticwidth < nwellLeft - wellwidth - wellLeft ||
+                            sticwidth > nwellLeft - wellwidth - wellLeft + nwellwidth) {
+                        $(".man img").addClass("rotate");
+                        //失败调用函数延迟
+                        setTimeout(fail, 350);
+                    }
+                    else {
+                        index++;
+                        //初始化墙的位置
+                        initvalue(index);
+                        //跑动一面墙，则前面的墙消失
+                        $(".container").animate({"left": (0 - nwellLeft) + "px"}, 1000, function () {
+                            //判断，如果墙的索引=墙的最后一个，闯关成功
+                            if (index == $(".well").length - 1) {
+                                //alert("成功");
+                                infosucess(x);
+                                x++;
+                                initvalue(0);
+                                //关键步骤
+                                $(".container").css("left", "0px");
+                            }
+                        });
+
+
+                    }
+                });
+            }
+
+            //闯关成功提示框
+            function infosucess(x) {
+                var type2 = true;
+
+                if (type2) {
+                    $(".dialog").remove();
+                    //创建div标签
+                    var str = $("<div></div>");
+                    //添加类
+                    str.addClass("dialog");
+                    //装汉字
+                    var p2 = $("<p></p>");
+                    p2.addClass("dialog-btn");
+                    str.append(p2);
+                    //成功的语句
+                    var txts = infoDAte.success;
+                    var i = 0;
+                    if (type2) {
+                        i = parseInt(Math.random() * 10);//判断奇偶数
+                        //  alert("随机数" + i);
+                        p2.html(txts[i]);
+                        type2 = false;
+                    }
+                    //创建p标签
+                    var p = $("<p></p>");
+                    //添加类
+                    p.addClass("dialog-btn");
+                    //创建a标签
+                    var a1 = $("<a></a>");
+                    //添加a类
+                    a1.addClass("close");
+                    //添加属性
+                    a1.attr("href", "javascript:void(0)");
+                    //添加内容
+                    a1.html("闯关成功");
+                    //创建a标签
+                    var a2 = $("<a></a>");
+                    //添加类
+                    a2.addClass("play-agin");
+                    //属性
+                    a2.attr("href", "javascript:void(0)");
+                    //添加内容
+                    a2.html("下一关");
+                    //将p添加到div标签
+                    str.append(p);
+                    //将a标签添加到p标签
+                    p.append(a1);
+                    p.append(a2);
+                    //将div添加到container后面
+                    $(".container").after(str);
+                    type2 = false;
+                }
+                //闯关成功关闭按钮
+                $("body").on("click", ".close", function () {
+                    $(this).parent().parent().hide();
+                    type2 = true;
+                });
+                $("body").on("click", ".play-agin", function () {
+                    $(this).parent().parent().hide();
+                    type2 = true;
+                    //关卡次数
+
+                    $(".play-title").html("关卡" + x);
+
+                });
+
+            }
+
+            //闯关失败提示框
+            function infoDefail() {
+                var type1 = true;
+                if (type1) {
+                    $(".dialog").remove();
+                    //创建div标签
+                    var str = $("<div></div>");
+                    //添加类
+                    str.addClass("dialog");
+                    //装汉字
+                    var p2 = $("<p></p>");
+                    p2.addClass("dialog-btn");
+                    str.append(p2);
+                    var txtd = infoDAte.fail;
+                    var i = 0;
+                    var num = 0;
+                    if (type1) {
+                        i = parseInt(Math.random() * 10);//判断奇偶数
+                        //alert("随机数" + i);
+                        p2.html(txtd[i]);
+                        type1 = false;
+                    }
+                    //创建p标签
+                    var p = $("<p></p>");
+                    //添加类
+                    p.addClass("dialog-btn");
+                    //创建a标签
+                    var a1 = $("<a></a>");
+                    //添加a类
+                    a1.addClass("close");
+                    //添加属性
+                    a1.attr("href", "javascript:void(0)");
+                    //奇数
+                    //添加内容
+                    a1.html("闯关失败");
+                    //创建a标签
+                    var a2 = $("<a></a>");
+                    //添加类
+                    a2.addClass("play-agin");
+                    //属性
+                    a2.attr("href", "javascript:void(0)");
+                    //添加内容
+                    a2.html("再来一次");
+                    //将p添加到div标签
+                    str.append(p);
+                    //将a标签添加到p标签
+                    p.append(a1);
+                    p.append(a2);
+                    //将div添加到container后面
+                    $(".container").after(str);
+                    type1 = false;
+                }
+                //点击按钮关闭
+                $("body").on("click", ".close", function () {
+                    $(this).parent().parent().hide();
+                    type1 = true;
+                });
+                $("body").on("click", ".play-agin", function () {
+                    $(this).parent().parent().hide();
+                    type1 = true;
+                    $(".play-title").html("关卡1");
+                });
+            }
+
+            //失败函数
+            function fail() {
+                infoDefail();//失败函数
+                initvalue(0);//初始化墙
+                //关键步骤
+                $(".container").css("left", "0px");
+            }
+
+            //创建墙
+            function createWell(num) {
+                var left = 0;
+                var width = 100;
+                var sep = 100;
+                //循环创建墙的个数
+                for (var i = 0; i < num; i++) {
+                    //创建墙
+                    var div = $("<div></div>");
+                    div.addClass("well");
+                    //获取装墙的盒子的高度
+                    var max = $(".container").offset().top;
+                    //人的高度
+                    var min = 65;
+                    //获取每个墙之间的距离
+                    width = parseInt(Math.random() * (max - min + 1) + min);
+                    //给每个墙添加样式
+                    div.css({"left": left + "px", "width": width + "px"});
+
+                    $(".well-box").append(div);
+                    min = 10;
+                    sep = parseInt(Math.random() * (max - min + 1) + min);
+                    left += width + sep;
+                }
+            }
+
+            //再来一次事件
+            /* $(".play-agin").click(function () {
+             initvalue(0);
+             createWell(3);
+             })*/
+        })
+    </script>
+</head>
+<body class="bg2">
+
+<div class="set-text">
+    <h2 class="play-title">关卡1</h2>
+    <a href="index.html">主菜单</a>
+</div>
+<a href="javascript:void(0);" class="btnClick"></a>
+<div class="container">
+    <div class="stick"></div>
+    <div class="man"><img src="img/stick_stand.png"/></div>
+    <div class="well-box">
+        <!-- <div class="well" style="left: 0;width: 100px;"></div>
+         <div class="well" style="left: 200px;width: 100px;"></div>
+         <div class="well" style="left:400px;width: 100px;"></div>
+         <div class="well" style="left:600px;width: 100px;"></div>-->
+    </div>
+</div>
+<!--<div class="dialog">
+    <p class="dialog-btn"> dffsdfsdfdsffddsfdsfsdfsdfdsfsdfsdfsdfsd</p>
+    <p class="dialog-btn">
+        <a href="javascript:void(0)" class="play-agin">成功</a>
+        <a href="javascript:void(0)" class="play-agin">再来一次</a>
+    </p>
+</div>-->
+</body>
+</html>

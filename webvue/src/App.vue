@@ -79,7 +79,7 @@ export default {
 
     },
     mounted() {
-        axios.get('http://127.0.0.1:3200/api/comments')
+        axios.get('http://127.0.0.1:3100/api/comments')
             .then(function(response) {
                 console.log(response.data);
                 // this指向的问题
